@@ -4,9 +4,6 @@ using System.Collections.Generic;
 
 public static class Static
 {
-    public static readonly string endSceneName = "End", creationSceneName = "CharacterCreation",
-        gameSceneName = "Game", loadingSceneName = "Loading", menuSceneName = "Menu";
-    
     public static bool TouchedOverUI
     {
         get { return EventSystem.current.IsPointerOverGameObject() || EventSystem.current.currentSelectedGameObject != null; }
