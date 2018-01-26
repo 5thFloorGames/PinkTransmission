@@ -4,6 +4,7 @@ uniform float _WireSmoothness = 3;
 uniform float4 _WireColor = float4(0.0, 1.0, 0.0, 1.0);
 uniform float4 _BaseColor = float4(0.0, 0.0, 0.0, 0.0);
 uniform float _MaxTriSize = 25.0;
+uniform float _Glow = 1.0;
 
 struct appdata
 {
@@ -102,5 +103,5 @@ fixed4 frag(g2f i) : SV_Target
     float t = exp2(_WireSmoothness * -1.0 * minDistanceToEdge * minDistanceToEdge);
     fixed4 finalColor = lerp(_BaseColor, _WireColor, t);
 
-    return finalColor;
+    return finalColor * _Glow;
 }
