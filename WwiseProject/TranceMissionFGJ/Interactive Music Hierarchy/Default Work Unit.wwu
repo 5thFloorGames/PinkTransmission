@@ -108,6 +108,22 @@
 											</SequenceList>
 										</MusicTrack>
 									</ChildrenList>
+									<StingerList>
+										<MusicStinger Name="" ID="{FFFDCADE-E6D4-4FD1-9D2E-59F9948B59B3}">
+											<PropertyList>
+												<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+											</PropertyList>
+											<TriggerRef Name="Crash" ID="{9663FA2F-F4C9-4A0B-8D59-815D9D1D320C}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<SegmentRef Name="Crash" ID="{CAC2C586-E9FB-463C-AE8A-699DF27E5890}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</MusicStinger>
+										<MusicStinger Name="" ID="{30E93D5B-2D3F-4158-B43E-80FACC38BC16}">
+											<PropertyList>
+												<Property Name="PlaySegmentAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<TriggerRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<SegmentRef Name="Stinger1" ID="{105768AB-C878-4F30-ADEB-DC76F085DF35}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</MusicStinger>
+									</StingerList>
 									<CueList>
 										<MusicCue Name="Entry Cue" ID="{55E2FCF8-09EB-471D-93F3-E215BE7F200B}"/>
 										<MusicCue Name="Exit Cue" ID="{55B94AC1-C1C5-4DD5-8CCD-7BA35C68720B}">
@@ -138,9 +154,8 @@
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{EDACE279-D4F5-4784-BA46-BCFCA47178DE}" ShortID="857747681">
+										<MusicPlaylistItem Name="" ID="{5F4A1AE0-28DA-42A6-B518-912C5755F1F8}" ShortID="406147613">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="BaseLoop" ID="{E026A7AB-DEA9-468D-ABD7-0B0B631B970C}"/>
@@ -162,34 +177,6 @@
 								<MusicSegment Name="IdleLoop" ID="{917D988E-CE6F-4F53-A4A9-E15204EFA5CB}" ShortID="156277770">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="4853.85959450182"/>
-										<Property Name="PlaybackSpeed" Type="Real64">
-											<RTPCList>
-												<RTPC Name="" ID="{C720C4D0-5FFF-4214-8D3D-1E3794D023DE}" ShortID="559252822">
-													<ReferenceList>
-														<Reference Name="ControlInput">
-															<ObjectRef Name="Playback_speed" ID="{C1B07EFF-F53F-47B9-BD50-F4C28271E3FD}" WorkUnitID="{A6C77BA2-E477-4C88-9DFD-BF6621EDE468}"/>
-														</Reference>
-													</ReferenceList>
-													<Curve Name="" ID="{F60F1D41-A8AF-4456-B7DC-C1D90694EFFA}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="1"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0.5</XPos>
-																<YPos>0.5</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>1.5</XPos>
-																<YPos>1.5</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</RTPC>
-											</RTPCList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -294,6 +281,22 @@
 											</SequenceList>
 										</MusicTrack>
 									</ChildrenList>
+									<StingerList>
+										<MusicStinger Name="" ID="{6B996A17-93F1-43CB-9885-4CDFF1FE8037}">
+											<PropertyList>
+												<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+											</PropertyList>
+											<TriggerRef Name="Crash" ID="{9663FA2F-F4C9-4A0B-8D59-815D9D1D320C}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<SegmentRef Name="Crash" ID="{CAC2C586-E9FB-463C-AE8A-699DF27E5890}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</MusicStinger>
+										<MusicStinger Name="" ID="{14CFCB62-5FCC-4859-8471-A2B846CBABA8}">
+											<PropertyList>
+												<Property Name="PlaySegmentAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<TriggerRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<SegmentRef Name="Stinger1" ID="{105768AB-C878-4F30-ADEB-DC76F085DF35}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</MusicStinger>
+									</StingerList>
 									<CueList>
 										<MusicCue Name="Entry Cue" ID="{06C55D68-54C9-44E6-8B00-B6F960F0A176}"/>
 										<MusicCue Name="Exit Cue" ID="{FD0BAFF6-E984-4C1D-98D3-27292CED2787}">
@@ -324,9 +327,8 @@
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{DB4BCDB8-FDC7-4922-A0B9-294724B4FD5C}" ShortID="807083166">
+										<MusicPlaylistItem Name="" ID="{55A8FADC-A615-41CB-823F-96C9A8F5BCE8}" ShortID="615849738">
 											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
 											<SegmentRef Name="IdleLoop" ID="{917D988E-CE6F-4F53-A4A9-E15204EFA5CB}"/>
@@ -509,11 +511,41 @@
 							<ChildrenList>
 								<MusicSegment Name="Stinger1" ID="{105768AB-C878-4F30-ADEB-DC76F085DF35}" ShortID="174810531">
 									<PropertyList>
+										<Property Name="EnablePositioning" Type="bool" Value="False"/>
 										<Property Name="EndPosition" Type="Real64" Value="7803.5625"/>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{58862AB7-E733-4F6F-A8B9-9E65BCFE4042}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="25"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>2</Value>
 											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5C877174-27AD-48EE-8E51-955F77FDB620}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -655,6 +687,9 @@
 											</SequenceList>
 										</MusicTrack>
 									</ChildrenList>
+									<PositioningInfo>
+										<Panner Name="" ID="{C8591C73-4E76-43BC-B09A-6B17DDD69BA5}"/>
+									</PositioningInfo>
 									<CueList>
 										<MusicCue Name="Entry Cue" ID="{1881E394-FD2B-4E07-A792-F7DADDDBB096}"/>
 										<MusicCue Name="Exit Cue" ID="{38C98434-D413-4F63-93EE-CC873E655265}">
@@ -694,6 +729,32 @@
 						</MusicPlaylistContainer>
 					</ChildrenList>
 				</Folder>
+				<MusicPlaylistContainer Name="Idle-Base" ID="{F8A5458C-AE5E-4F46-8B0A-AC9E8B826E81}" ShortID="216879354">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0CDB2994-C84D-4224-9209-9C7B4A09D60E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
+						</Reference>
+					</ReferenceList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{ADC5F50C-B263-4D59-BEE9-A958B083DA93}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{2B859D44-9141-4159-9F48-B735109923A5}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{9247E9DC-E800-4B68-BADF-EDDCC4D29EB8}" ShortID="841467975"/>
+					</Playlist>
+				</MusicPlaylistContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

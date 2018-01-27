@@ -1,9 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	131828339	ActionStinger			\Default Work Unit\Actions\ActionStinger	
 	854939776	ActionFirstMove			\Default Work Unit\Actions\ActionFirstMove	
 	1229115632	PlayPlaceholderLoop			\Default Work Unit\Music\PlayPlaceholderLoop	
 	1313304943	Marker			\Default Work Unit\Markers\Marker	
 	3076088854	StopPlaceholderLoop			\Default Work Unit\Music\StopPlaceholderLoop	
+	4202577283	ActionShroomStinger			\Default Work Unit\Actions\ActionShroomStinger	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	1281810935	Start			\Default Work Unit\Start	
