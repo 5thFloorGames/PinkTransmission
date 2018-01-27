@@ -7,16 +7,45 @@ public class FawnMovement : MonoBehaviour {
 	int i = 0;
 	GenerateBoard board;
 	Animator animator;
+	MusicManager music;
 
 	// Use this for initialization
 	void Start () {
 		animator = GetComponentInChildren<Animator>();
 		board = FindObjectOfType<GenerateBoard>();
-		MusicManager.OnBeat += Move;
+		music = FindObjectOfType<MusicManager>();
+		//MusicManager.OnBeat += Move;
+	}
+
+	void Update(){
+		if(Input.GetKeyDown(KeyCode.W)){
+			if(music.CloseToBeat()){
+				animator.SetTrigger("Jump");
+				board.MoveFawn(MoveDirection.Up);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.S)){
+			if(music.CloseToBeat()){
+				animator.SetTrigger("Jump");
+				board.MoveFawn(MoveDirection.Down);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.A)){
+			if(music.CloseToBeat()){
+				animator.SetTrigger("Jump");
+				board.MoveFawn(MoveDirection.Right);
+			}
+		}
+		if(Input.GetKeyDown(KeyCode.D)){
+			if(music.CloseToBeat()){
+				animator.SetTrigger("Jump");
+				board.MoveFawn(MoveDirection.Left);
+			}
+		}
 	}
     
 	void Move(){
-		if(i++ % 1 == 0)
+		if(i++ % 1 == 0 && music.CloseToBeat())
         {
 			animator.SetTrigger("Jump");
 			if(Input.GetAxis("HorizontalA") > 0){

@@ -28,14 +28,14 @@ public class MusicManager : MonoBehaviour {
 		}
 	}
 
-	bool CloseToBeat(){
+	public bool CloseToBeat(){
 		if(Time.time - lastBeat < 0.15 || 0.43 - (Time.time - lastBeat) < 0.15){
-			print("OnBeat");
-			print((Time.time - lastBeat < 0.2) + ": " + (Time.time - lastBeat));
-			print((0.43 - (Time.time - lastBeat) < 0.2) + ": " + (0.43 - (Time.time - lastBeat)));
+			// print("OnBeat");
+			// print((Time.time - lastBeat < 0.2) + ": " + (Time.time - lastBeat));
+			// print((0.43 - (Time.time - lastBeat) < 0.2) + ": " + (0.43 - (Time.time - lastBeat)));
 			return true;
 		} else {
-			print("OffBeat!");
+			//print("OffBeat!");
 		}
 		return false;
 	}
