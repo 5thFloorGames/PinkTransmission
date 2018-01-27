@@ -62,7 +62,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Glow: 3.07
+    - _Glow: 2.37
     - _MaxTriSize: 25
     - _Metallic: 0
     - _Mode: 0

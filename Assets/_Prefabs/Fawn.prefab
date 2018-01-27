@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4595351446377560}
   - component: {fileID: 33555364297305370}
   - component: {fileID: 23385637463199958}
+  - component: {fileID: 95382276821427170}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711983536164956}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -4.5, y: 0, z: -0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4595351446377560}
@@ -64,13 +65,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369083825031930}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4107998520212314}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!23 &23385637463199958
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -85,8 +86,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e716fa77392144f429f502f781e7f56b, type: 2}
-  - {fileID: 2100000, guid: e716fa77392144f429f502f781e7f56b, type: 2}
+  - {fileID: 2100000, guid: a183899b2a77945b4a4ae2e2c2d3cd09, type: 2}
+  - {fileID: 2100000, guid: 88b66bbfbbbc145d5abe78665d6ab076, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,6 +114,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369083825031930}
   m_Mesh: {fileID: 4300000, guid: e4fadd2f88f7d413cab0c8ab00f0dd62, type: 3}
+--- !u!95 &95382276821427170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369083825031930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e4fadd2f88f7d413cab0c8ab00f0dd62, type: 3}
+  m_Controller: {fileID: 9100000, guid: 611955e3a359a4d4a980a8d99975f6be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114729801222774830
 MonoBehaviour:
   m_ObjectHideFlags: 1
