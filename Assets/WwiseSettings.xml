@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WwiseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <WwiseProjectPath>../PinkTransmission_WwiseProject/PinkTransmission_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../PinkTransmission/WwiseProject/TranceMissionFGJ/TranceMissionFGJ.wproj</WwiseProjectPath>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
