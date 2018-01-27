@@ -29,8 +29,13 @@ public class ShroomSlotManager : MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            PopShroom();
+            SpawnShroom(Random.Range(0,GenerateBoard.Instance.XSize), Random.Range(0, GenerateBoard.Instance.YSize));
         }
+    }
+
+    public void SpawnShroom(Vector3 pos)
+    {
+        SpawnShroom((int)pos.x, (int)pos.y);
     }
 
     public void SpawnShroom(int x, int y)
