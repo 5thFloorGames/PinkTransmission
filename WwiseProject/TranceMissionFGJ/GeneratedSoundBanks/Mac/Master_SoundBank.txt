@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1229115632	PlayPlaceholderLoop			\Default Work Unit\Music\PlayPlaceholderLoop	
+	1313304943	Marker			\Default Work Unit\Markers\Marker	
 	3076088854	StopPlaceholderLoop			\Default Work Unit\Music\StopPlaceholderLoop	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
