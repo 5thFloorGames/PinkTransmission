@@ -44,9 +44,18 @@ public class GenerateBoard : MonoBehaviour {
 	
 	public void MoveFawn(MoveDirection direction)
     {
+		if(direction == MoveDirection.Right){
+			fawn.transform.rotation = Quaternion.Euler(0,0,0);
+		} else if(direction == MoveDirection.Left){
+			fawn.transform.rotation = Quaternion.Euler(0,180,0);
+		} else if(direction == MoveDirection.Up){
+			fawn.transform.rotation = Quaternion.Euler(0,90,0);
+		} else if(direction == MoveDirection.Down){
+			fawn.transform.rotation = Quaternion.Euler(0,-90,0);
+		}
 		if(!firstMove){
 			firstMove = true;
-			AkSoundEngine.PostEvent("ActionFirstMove",gameObject);
+			FindObjectOfType<MusicManager>().FirstMove();
 		}
         Vector2 newPos = FawnPosition;
         Vector3 delta = Vector3.zero;
@@ -91,7 +100,7 @@ public class GenerateBoard : MonoBehaviour {
         Vector2 newPos = shroomPosition;
 		if(!firstMove){
 			firstMove = true;
-			AkSoundEngine.PostEvent("ActionFirstMove",gameObject);
+			FindObjectOfType<MusicManager>().FirstMove();
 		}
         Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down)
@@ -144,6 +153,7 @@ public class GenerateBoard : MonoBehaviour {
 
     public void SpawnShroom()
     {
+		FindObjectOfType<MusicManager>().ShroomStinger();
         ShroomSlotManager.Instance.SpawnShroom((int)shroomPosition.x, (int)shroomPosition.y);
     }
 }
