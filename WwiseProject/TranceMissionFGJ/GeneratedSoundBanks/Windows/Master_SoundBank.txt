@@ -1,4 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
+	131828339	ActionStinger			\Default Work Unit\Actions\ActionStinger	
+	854939776	ActionFirstMove			\Default Work Unit\Actions\ActionFirstMove	
 	1229115632	PlayPlaceholderLoop			\Default Work Unit\Music\PlayPlaceholderLoop	
 	1313304943	Marker			\Default Work Unit\Markers\Marker	
 	3076088854	StopPlaceholderLoop			\Default Work Unit\Music\StopPlaceholderLoop	
@@ -18,11 +20,14 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	78830142	Playback_speed			\Default Work Unit\Playback_speed	
 
 Trigger	ID	Name			Wwise Object Path	Notes
+	2290034750	RandomStinger			\Default Work Unit\RandomStinger	
 	3048106310	Crash			\Default Work Unit\Crash	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	236054613	BaseLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\BaseLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\BaseLoop		2633204
+	4336932	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\Stinger3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\Stinger1\Stinger1		658352
 	359132591	Crash	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\Crash_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Crash\Crash		658348
-	483877852	Melody1Loop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\Melody1Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\Melody1Loop		2633204
-	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\IdleLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		987492
+	506096902	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\Stinger1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\Stinger1\Stinger1		740636
+	532581590	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\Stinger2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\Stingers\Stinger1\Stinger1		658348
+	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\IdleLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		822920
+	908220631	BaseLoop2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\BaseLoop2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\BaseLoop2		2962348
 
