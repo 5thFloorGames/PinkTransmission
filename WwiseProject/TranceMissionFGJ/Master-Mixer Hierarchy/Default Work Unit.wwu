@@ -8,6 +8,9 @@
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{AA936410-8149-4F9D-9C64-6AEE9F51EF79}" WorkUnitID="{DBC73CB8-4D74-4BC0-9C63-B1E7449CF995}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+							<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
 					</ReferenceList>
 				</Bus>
 			</ChildrenList>

@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<Trigger Name="Crash" ID="{9663FA2F-F4C9-4A0B-8D59-815D9D1D320C}"/>
 				<Trigger Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}"/>
+				<Trigger Name="RandomStinger2" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}"/>
+				<Trigger Name="PercStinger" ID="{F2A352BC-4032-4B77-982E-DAB2E2B4EC3C}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Triggers>

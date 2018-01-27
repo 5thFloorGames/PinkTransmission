@@ -77,6 +77,7 @@
 								<Action Name="" ID="{853CE810-EF52-4E7D-85A6-37CA5F16D5F2}" ShortID="892440041">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="35"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -101,10 +102,41 @@
 								<Action Name="" ID="{8560F589-FB51-4E54-A3E9-D07847629D71}" ShortID="802112285">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="35"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ActionStinger2" ID="{5AA99EC0-B5E9-412E-B4F0-DFD072264A92}">
+							<ChildrenList>
+								<Action Name="" ID="{B8E622F7-5A06-42F2-8B27-4055143ED610}" ShortID="768215912">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RandomStinger2" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PercussionStinger" ID="{EDD4A3FD-1184-4900-B27A-D281CD1E89A5}">
+							<ChildrenList>
+								<Action Name="" ID="{BCB83692-4EF4-4087-A9A2-47CE1980E437}" ShortID="997400461">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PercStinger" ID="{F2A352BC-4032-4B77-982E-DAB2E2B4EC3C}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
