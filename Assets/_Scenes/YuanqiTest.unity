@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fawn: {fileID: 1898416428}
-  shroom: {fileID: 509110806}
+  shroomPlayer: {fileID: 509110806}
 --- !u!1001 &1790234497
 Prefab:
   m_ObjectHideFlags: 0
