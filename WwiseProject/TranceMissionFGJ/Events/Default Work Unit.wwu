@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" SchemaVersion="85">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{F9C9424A-8409-4960-921E-0A75BC7F5F09}" ShortID="167927475">
+					<ChildrenList>
+						<Event Name="PlayPlaceholderLoop" ID="{131612B8-8E64-4A97-9F28-5EE702207918}">
+							<ChildrenList>
+								<Action Name="" ID="{2243E9E8-CA53-4E8B-A8BC-8CCCC1DD2E0B}" ShortID="118871810">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlacwholderLoop" ID="{CC01FB1A-4D2B-4DAA-846A-815E0CA50ED4}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopPlaceholderLoop" ID="{4B3144A0-C793-47BF-A9AE-44EE2F993EF6}">
+							<ChildrenList>
+								<Action Name="" ID="{F3E9BC45-813F-4BF7-92FB-58B5FF97F403}" ShortID="985282449">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlacwholderLoop" ID="{CC01FB1A-4D2B-4DAA-846A-815E0CA50ED4}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

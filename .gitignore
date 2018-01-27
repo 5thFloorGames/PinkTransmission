@@ -37,12 +37,9 @@ sysinfo.txt
 *.unitypackage
 
 #WWise
-/PasilaValley_WwiseProject/.cache/
-/Assets/Wwise/Deployment/Plugins/
 WwiseUnityIntegration*
 
 .DS_Store
-Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
 
 *.akd

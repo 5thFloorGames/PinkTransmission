@@ -15,20 +15,22 @@ public class WwiseSettings
 {
 	public string WwiseProjectPath;
 	public string SoundbankPath;
-    public bool CreateWwiseGlobal = true;
-    public bool CreateWwiseListener = true;
+	public bool CopySoundBanksAsPreBuildStep = true;
+	public bool GenerateSoundBanksAsPreBuildStep = false;
+	public bool CreateWwiseGlobal = true;
+	public bool CreateWwiseListener = true;
 	public bool ShowMissingRigidBodyWarning = true;
-    public string WwiseInstallationPathWindows;
-    public string WwiseInstallationPathMac;
-    public bool CreatedPicker = false;
+	public string WwiseInstallationPathWindows;
+	public string WwiseInstallationPathMac;
+	public bool CreatedPicker = false;
 
 	public const string WwiseSettingsFilename = "WwiseSettings.xml";
-	
-	static WwiseSettings s_Instance = null;    
 
-    public WwiseSettings()
-    {
-    }
+	static WwiseSettings s_Instance = null;
+
+	public WwiseSettings()
+	{
+	}
 
 	// Save the WwiseSettings structure to a serialized XML file
 	public static void SaveSettings(WwiseSettings Settings)
@@ -87,7 +89,7 @@ public class WwiseSettings
 					Settings.WwiseProjectPath = AkUtilities.MakeRelativePath(Application.dataPath + "/fake_depth", foundWwiseProjects[0]);
 				}
 
-                Settings.SoundbankPath = AkInitializer.c_DefaultBasePath;
+                Settings.SoundbankPath = AkSoundEngineController.s_DefaultBasePath;
 			}
 			
 			s_Instance = Settings;
@@ -107,8 +109,13 @@ public partial class AkUtilities
     // Unity platform enum to Wwise soundbank reference platform name mapping.
     private static IDictionary<BuildTarget, string[]> platformMapping = new Dictionary<BuildTarget, string[]>()
     {
+#if UNITY_2017_3_OR_NEWER
         { BuildTarget.StandaloneOSX, new string[] { "Mac" } },
+#else
+        { BuildTarget.StandaloneOSXUniversal, new string[] { "Mac" } },
         { BuildTarget.StandaloneOSXIntel, new string[] { "Mac" } },
+        { BuildTarget.StandaloneOSXIntel64, new string[] { "Mac" } },
+#endif
         { BuildTarget.StandaloneWindows, new string[] { "Windows" } },
         // { BuildTarget.WebPlayer, null },
         // { BuildTarget.WebPlayerStreamed, null },
@@ -124,7 +131,6 @@ public partial class AkUtilities
         { BuildTarget.StandaloneLinux64, new string[] { "Linux" } },
         { BuildTarget.StandaloneLinuxUniversal, new string[] { "Linux" } },
         // { BuildTarget.WP8Player, null },
-        { BuildTarget.StandaloneOSXIntel64, new string[] { "Mac" } },
         // { BuildTarget.BlackBerry, null },
         // { BuildTarget.Tizen, null },
         { BuildTarget.PSP2, new string[] { "VitaHW", "VitaSW" } },
@@ -203,7 +209,7 @@ public partial class AkUtilities
     
     // Generate all the SoundBanks for all the supported platforms in the Wwise project. This effectively calls Wwise for the project
     // that is configured in the UnityWwise integration.
-    public static void GenerateSoundbanks()
+    public static void GenerateSoundbanks(List<string> platforms = null)
     {
         WwiseSettings Settings = WwiseSettings.LoadSettings();
         string wwiseProjectFullPath = GetFullPath(Application.dataPath, Settings.WwiseProjectPath);
@@ -231,10 +237,17 @@ public partial class AkUtilities
         command = "/bin/sh";
         arguments = "\"" + wwiseCli + "\"";
 #endif
-        
-        arguments += " \"" + wwiseProjectFullPath + "\" -GenerateSoundBanks";
-        
-        string output = ExecuteCommandLine(command, arguments);
+
+        arguments += " \"" + wwiseProjectFullPath + "\"";
+
+		if (platforms != null)
+			foreach (var platform in platforms)
+				if (!string.IsNullOrEmpty(platform))
+					arguments += " -Platform " + platform;
+
+		arguments += " -GenerateSoundBanks";
+
+		string output = ExecuteCommandLine(command, arguments);
 
         bool success = output.Contains("Process completed successfully.");
         bool warning = output.Contains("Process completed with warning");
@@ -770,12 +783,12 @@ public partial class AkUtilities
 }
 #endif // UNITY_EDITOR
 
-/// <summary>
-/// This is based on FNVHash as used by the DataManager
-/// to assign short IDs to objects. Be sure to keep them both in sync
-/// when making changes!
-/// </summary>
-public partial class AkUtilities
+        /// <summary>
+        /// This is based on FNVHash as used by the DataManager
+        /// to assign short IDs to objects. Be sure to keep them both in sync
+        /// when making changes!
+        /// </summary>
+    public partial class AkUtilities
 {
 	public class ShortIDGenerator
 	{
