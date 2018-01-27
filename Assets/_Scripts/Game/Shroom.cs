@@ -6,13 +6,14 @@ public class Shroom : MonoBehaviour {
 
     public Sprite icon;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public virtual void DestroyShroom()
+    {
+        Destroy(gameObject);
+    }
+
+	public virtual void Explode()
+    {
+        // TODO: Shroom animation
+        DestroyShroom();
+    }
 }
