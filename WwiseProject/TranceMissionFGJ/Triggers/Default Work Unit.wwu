@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E674A5C9-685A-424A-997F-C8D97A0CB809}" SchemaVersion="85">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{E674A5C9-685A-424A-997F-C8D97A0CB809}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E674A5C9-685A-424A-997F-C8D97A0CB809}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="Crash" ID="{9663FA2F-F4C9-4A0B-8D59-815D9D1D320C}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Triggers>
 </WwiseDocument>

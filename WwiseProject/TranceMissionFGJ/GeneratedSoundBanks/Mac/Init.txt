@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1281810935	Start			\Default Work Unit\Start	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Start			
+	1281810935	Start	Start			
+	1874288895	Idle	Start			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

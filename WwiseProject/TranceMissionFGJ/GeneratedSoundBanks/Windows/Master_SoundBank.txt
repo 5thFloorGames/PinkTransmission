@@ -3,9 +3,25 @@ Event	ID	Name			Wwise Object Path	Notes
 	1313304943	Marker			\Default Work Unit\Markers\Marker	
 	3076088854	StopPlaceholderLoop			\Default Work Unit\Music\StopPlaceholderLoop	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	1281810935	Start			\Default Work Unit\Start	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Start			
+	1281810935	Start	Start			
+	1874288895	Idle	Start			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	699237660	Idle	Start	\Interactive Music Hierarchy\Default Work Unit\MainSwitch		
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	78830142	Playback_speed			\Default Work Unit\Playback_speed	
 
+Trigger	ID	Name			Wwise Object Path	Notes
+	3048106310	Crash			\Default Work Unit\Crash	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	441186238	PlaceholderLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\PlaceholderLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\PlacwholderLoop\PlaceholderLoop\PlaceholderLoop		1316632
+	236054613	BaseLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\BaseLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\BaseLoop		2633204
+	359132591	Crash	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\Crash_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Crash\Crash		658348
+	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\IdleLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		658348
 

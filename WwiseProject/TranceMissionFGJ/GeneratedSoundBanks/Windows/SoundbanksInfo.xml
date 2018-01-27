@@ -26,9 +26,17 @@
 				<Event Id="3076088854" Name="StopPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\StopPlaceholderLoop" MaxAttenuation="0,000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="441186238" Language="SFX">
-					<ShortName>PlaceholderLoop.wav</ShortName>
-					<Path>SFX\PlaceholderLoop_F17FB28C.wem</Path>
+				<File Id="236054613" Language="SFX">
+					<ShortName>BaseLoop.wav</ShortName>
+					<Path>SFX\BaseLoop_F17FB28C.wem</Path>
+				</File>
+				<File Id="359132591" Language="SFX">
+					<ShortName>Crash.wav</ShortName>
+					<Path>SFX\Crash_F17FB28C.wem</Path>
+				</File>
+				<File Id="589612994" Language="SFX">
+					<ShortName>IdleLoop.wav</ShortName>
+					<Path>SFX\IdleLoop_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

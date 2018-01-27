@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E09E2E03-BF41-4FB6-B97E-4D54BAF48AC6}" SchemaVersion="85">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{E09E2E03-BF41-4FB6-B97E-4D54BAF48AC6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E09E2E03-BF41-4FB6-B97E-4D54BAF48AC6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Music_idle" ID="{64845972-7C47-41C2-A3D3-0A2A441AD4F1}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="PlayPlaceholderLoop" ID="{131612B8-8E64-4A97-9F28-5EE702207918}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ActionFirstMove" ID="{FF67ECF8-8D58-4697-B35E-EDF64083F405}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Playback_speed" ID="{C1B07EFF-F53F-47B9-BD50-F4C28271E3FD}"/>
+							<Value>1</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
