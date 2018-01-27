@@ -90,7 +90,7 @@ public class GenerateBoard : MonoBehaviour {
                 });
             FawnPosition = newPos;
             StartCoroutine(PlayDelayed(0.3f, true));
-        }
+        } 
 	}
     
 	void UpdateTileOnFawn(){

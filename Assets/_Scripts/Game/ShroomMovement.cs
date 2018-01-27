@@ -36,6 +36,9 @@ public class ShroomMovement : MonoBehaviour {
             } else if(Input.GetAxis("SubmitB") > 0)
             {
                 GenerateBoard.Instance.SpawnShroom();
+            } else
+            {
+                ScoreManager.Instance.GenerateFloatText(0, false);
             }
         }
     }
