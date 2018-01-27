@@ -23,19 +23,26 @@ public class MusicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyDown(KeyCode.B)){
+			CloseToBeat();
+		}
 	}
 
 	bool CloseToBeat(){
-		if(Time.time - lastBeat < 0.2 || 0.43 - (Time.time - lastBeat) < 0.2){
+		if(Time.time - lastBeat < 0.15 || 0.43 - (Time.time - lastBeat) < 0.15){
+			print("OnBeat");
+			print((Time.time - lastBeat < 0.2) + ": " + (Time.time - lastBeat));
+			print((0.43 - (Time.time - lastBeat) < 0.2) + ": " + (0.43 - (Time.time - lastBeat)));
 			return true;
+		} else {
+			print("OffBeat!");
 		}
 		return false;
 	}
 
 	void Beat(object in_cookie, AkCallbackType in_type, object in_info){
 		if(Time.time - lastBeat > 0.1){
-			print(Time.time - lastBeat);
+			//print(Time.time - lastBeat);
 			lastBeat = Time.time;
 			OnBeat();
 		}
