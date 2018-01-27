@@ -13,7 +13,27 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="PlacwholderLoop" ID="{CC01FB1A-4D2B-4DAA-846A-815E0CA50ED4}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+											<ObjectRef Name="MainSwitch" ID="{4C7A23FD-EAE5-4118-BCDF-3C4B56F803E8}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4D773E11-75F5-40B4-BCCD-5843D64E9CC5}" ShortID="452222317">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Idle" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{91DB543B-C5B9-42D0-97DF-D1318C65DB69}" ShortID="26514771">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -27,7 +47,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="PlacwholderLoop" ID="{CC01FB1A-4D2B-4DAA-846A-815E0CA50ED4}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+											<ObjectRef Name="MainSwitch" ID="{4C7A23FD-EAE5-4118-BCDF-3C4B56F803E8}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -38,6 +58,44 @@
 				<Folder Name="Markers" ID="{4A54236F-13F2-4A44-8721-D300C6216054}" ShortID="161193389">
 					<ChildrenList>
 						<Event Name="Marker" ID="{5C937BED-2815-4AF5-A454-E467EB3046B8}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Actions" ID="{EA0992E1-B596-4A72-A477-DEE72F43E006}" ShortID="471470671">
+					<ChildrenList>
+						<Event Name="ActionFirstMove" ID="{FF67ECF8-8D58-4697-B35E-EDF64083F405}">
+							<ChildrenList>
+								<Action Name="" ID="{DF340149-C8D5-4C60-86E9-A90418B3A990}" ShortID="1040341801">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5F4D48AE-29C6-498B-8CE9-F666159B3E38}" ShortID="413887445">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{853CE810-EF52-4E7D-85A6-37CA5F16D5F2}" ShortID="892440041">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Crash" ID="{9663FA2F-F4C9-4A0B-8D59-815D9D1D320C}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
