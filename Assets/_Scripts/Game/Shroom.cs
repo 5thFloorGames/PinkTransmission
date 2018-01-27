@@ -20,7 +20,9 @@ public class Shroom : MonoBehaviour {
 
     public void SetPos(int x, int y)
     {
-
+        this.x = x;
+        this.y = y;
+        transform.localPosition = GenerateBoard.Instance.GetPos(x, y);
     }
 
 	public virtual void Explode()
