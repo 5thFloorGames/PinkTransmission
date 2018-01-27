@@ -18,11 +18,27 @@ public class PPController : MonoBehaviour {
     public int hueRange = 15;
     private float hueTarget, hueSpeed;
 
+    // Timer
+    private float previousTime;
+
 	// Use this for initialization
 	void Start () {
         pp = GetComponentInParent<PostProcessingBehaviour>();
+        previousTime = Time.time;
+        MusicManager.OnBeat += CheckTime;
         SetValues();
 	}
+
+    private void CheckTime()
+    {
+        var delta = Time.time - previousTime;
+        var ratio = delta / animationTime;
+        if (ratio >= 0.5f && ratio <= 2.0f)
+        {
+            animationTime = delta;
+        }
+        previousTime = Time.time;
+    }
 
     void OnDestroy()
     {
@@ -80,7 +96,7 @@ public class PPController : MonoBehaviour {
             hueTarget = basicSettings.hueShift + hueRange;
             return;
         }
-        temp.basic.hueShift += hueSpeed * hueRange * Time.fixedDeltaTime / animationTime;
+        temp.basic.hueShift += hueSpeed * hueRange * Time.fixedDeltaTime / animationTime * 2;
         pp.profile.colorGrading.settings = temp;
     }
 }

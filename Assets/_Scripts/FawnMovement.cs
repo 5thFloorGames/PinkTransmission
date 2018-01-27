@@ -16,13 +16,14 @@ public class FawnMovement : MonoBehaviour {
 	}
 
 	void Move(){
-		if(i++ % 2 == 0){
+		if(i++ % 2 == 0)
+        {
 			animator.SetTrigger("Jump");
 			if(Input.GetAxis("HorizontalA") > 0){
 				board.MoveFawn(MoveDirection.Left);
 			} else if (Input.GetAxis("HorizontalA") < 0){
 				board.MoveFawn(MoveDirection.Right);
-			} else if(Input.GetAxis("VerticalA") > 0){
+			} else if (Input.GetAxis("VerticalA") > 0){
 				board.MoveFawn(MoveDirection.Up);
 			} else if (Input.GetAxis("VerticalA") < 0){
 				board.MoveFawn(MoveDirection.Down);
