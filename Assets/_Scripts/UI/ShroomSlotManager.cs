@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShroomSlotManager : MonoBehaviour {
 
+    public static ShroomSlotManager Instance { get; private set; }
+
     [SerializeField]
     private Shroom[] shroomPrefabs;
     private ShroomSlot[] slots;
@@ -17,5 +19,25 @@ public class ShroomSlotManager : MonoBehaviour {
         {
             slots[i].SetShroom(Static.GetRandom(shroomPrefabs));
         }
+    }
+
+    private void Update()
+    {
+        // Test
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Popped: " + PopShroom().name);
+        }
+    }
+
+    public Shroom PopShroom()
+    {
+        var shroom = slots[0].shroom;
+        for(int i = 0; i < slots.Length - 2; i++)
+        {
+            slots[i].SetShroom(slots[i + 1].shroom);
+        }
+        slots[slots.Length - 1].SetShroom(Static.GetRandom(shroomPrefabs));
+        return shroom;
     }
 }

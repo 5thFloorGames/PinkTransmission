@@ -15,6 +15,7 @@ public class ShroomSlot : MonoBehaviour {
 	
 	public void SetShroom(Shroom shroom)
     {
+        Debug.Log("Set shroom...");
         this.shroom = shroom;
         iconImage.sprite = shroom.icon;
     }
