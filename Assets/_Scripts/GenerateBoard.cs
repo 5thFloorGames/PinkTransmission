@@ -13,11 +13,10 @@ public class GenerateBoard : MonoBehaviour {
 	Vector2 FawnPosition;
 	Vector2 ShroomPosition;
 	public GameObject fawn;
-	public GameObject shroom;
-
     // Shroom
     Vector2 shroomPosition;
     public GameObject shroomPlayer;
+	private bool firstMove = false;
     
 	// Use this for initialization
 	void Start () {
@@ -45,6 +44,10 @@ public class GenerateBoard : MonoBehaviour {
 	
 	public void MoveFawn(MoveDirection direction)
     {
+		if(!firstMove){
+			firstMove = true;
+			AkSoundEngine.PostEvent("ActionFirstMove",gameObject);
+		}
         Vector2 newPos = FawnPosition;
         Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down){
@@ -85,6 +88,10 @@ public class GenerateBoard : MonoBehaviour {
     
     public void MoveShroom(MoveDirection direction)
     {
+		if(!firstMove){
+			firstMove = true;
+			AkSoundEngine.PostEvent("ActionFirstMove",gameObject);
+		}
         Vector2 newPos = shroomPosition;
         Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down)

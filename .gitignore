@@ -46,3 +46,4 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
 *.akd
 
 Assets/WwiseSettings.xml
+Assets/Wwise/Documentation/*
