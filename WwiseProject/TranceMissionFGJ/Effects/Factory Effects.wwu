@@ -983,6 +983,7 @@
 									<PropertyList>
 										<Property Name="DecayTime" Type="Real32" Value="4.3"/>
 										<Property Name="Density" Type="Real32" Value="70"/>
+										<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-23"/>
 										<Property Name="ERPattern" Type="int32" Value="16"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
@@ -1751,13 +1752,17 @@
 						<Effect Name="LR_Slap_with_CrossFeed" ID="{30319A92-C5AC-437A-9864-430059762933}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+								<Property Name="EnableFeedback" Type="bool" Value="True"/>
 								<Property Name="FilterFrequency" Type="Real32" Value="261"/>
-								<Property Name="FilterGain" Type="Real32" Value="10.5"/>
+								<Property Name="FilterGain" Type="Real32" Value="7"/>
+								<Property Name="FilterType" Type="int32" Value="1"/>
 								<Property Name="LeftCrossfeed" Type="Real32" Value="-20"/>
-								<Property Name="LeftDelayTime" Type="Real32" Value="0.29"/>
+								<Property Name="LeftDelayTime" Type="Real32" Value="0.43"/>
+								<Property Name="LeftFeedback" Type="Real32" Value="-13.6"/>
 								<Property Name="RightCrossfeed" Type="Real32" Value="-20"/>
-								<Property Name="RightDelayTime" Type="Real32" Value="0.43"/>
-								<Property Name="WetLevel" Type="Real32" Value="-6"/>
+								<Property Name="RightDelayTime" Type="Real32" Value="0.86"/>
+								<Property Name="RightFeedback" Type="Real32" Value="-13.4"/>
+								<Property Name="WetLevel" Type="Real32" Value="-7"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Underwater_Echoes" ID="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
