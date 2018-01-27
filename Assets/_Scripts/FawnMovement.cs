@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour {
+public class FawnMovement : MonoBehaviour {
 
 	int i = 0;
 	GenerateBoard board;
+	Animator animator;
 
 	// Use this for initialization
 	void Start () {
+		animator = GetComponentInChildren<Animator>();
 		board = FindObjectOfType<GenerateBoard>();
 		MusicManager.OnBeat += Move;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
 	void Move(){
-		if(i++ % 2 == 0){
+		if(i++ % 2 == 0)
+        {
+			animator.SetTrigger("Jump");
 			if(Input.GetAxis("HorizontalA") > 0){
 				board.MoveFawn(MoveDirection.Left);
 			} else if (Input.GetAxis("HorizontalA") < 0){

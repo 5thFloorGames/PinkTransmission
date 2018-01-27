@@ -11,7 +11,9 @@ public class GenerateBoard : MonoBehaviour {
 	GameObject tile;
 	TileColor [,] tiles;
 	Vector2 FawnPosition;
+	Vector2 ShroomPosition;
 	public GameObject fawn;
+	public GameObject shroom;
 
     // Shroom
     Vector2 shroomPosition;
@@ -21,6 +23,7 @@ public class GenerateBoard : MonoBehaviour {
 	void Start () {
         Instance = this;
 		FawnPosition = new Vector2(0,0);
+		ShroomPosition = new Vector2(YSize,XSize);
 		tiles = new TileColor[XSize * 2, YSize *2];
 		tile = Resources.Load<GameObject>("Tile");
 		for(int i = 0;i<=XSize;i++){
@@ -31,7 +34,6 @@ public class GenerateBoard : MonoBehaviour {
 			}
 		}
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
-
         shroomPosition = new Vector2(XSize, YSize);
         shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
 	}
