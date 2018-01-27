@@ -22,7 +22,7 @@
 			<Path>Master_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1229115632" Name="PlayPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\PlayPlaceholderLoop"/>
-				<Event Id="3076088854" Name="StopPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\StopPlaceholderLoop" MaxAttenuation="0.000000"/>
+				<Event Id="3076088854" Name="StopPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\StopPlaceholderLoop" MaxAttenuation="0,000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="441186238" Language="SFX">
