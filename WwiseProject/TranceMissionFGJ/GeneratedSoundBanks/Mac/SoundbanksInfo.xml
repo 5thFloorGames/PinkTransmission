@@ -22,7 +22,7 @@
 			<Path>Master_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="854939776" Name="ActionFirstMove" ObjectPath="\Events\Default Work Unit\Actions\ActionFirstMove" MaxAttenuation="0,000000"/>
-				<Event Id="131828339" Name="ActionStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionStinger" MaxAttenuation="0,000000"/>
+				<Event Id="4202577283" Name="ActionShroomStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionShroomStinger" MaxAttenuation="0,000000"/>
 				<Event Id="1313304943" Name="Marker" ObjectPath="\Events\Default Work Unit\Markers\Marker" MaxAttenuation="0,000000"/>
 				<Event Id="1229115632" Name="PlayPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\PlayPlaceholderLoop"/>
 				<Event Id="3076088854" Name="StopPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\StopPlaceholderLoop" MaxAttenuation="0,000000"/>

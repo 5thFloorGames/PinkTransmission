@@ -64,16 +64,6 @@
 					<ChildrenList>
 						<Event Name="ActionFirstMove" ID="{FF67ECF8-8D58-4697-B35E-EDF64083F405}">
 							<ChildrenList>
-								<Action Name="" ID="{DF340149-C8D5-4C60-86E9-A90418B3A990}" ShortID="1040341801">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="23"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{5F4D48AE-29C6-498B-8CE9-F666159B3E38}" ShortID="413887445">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -94,9 +84,19 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{0A4E9AAA-36E2-45C1-A1CB-3689AFFEED6B}" ShortID="618457620">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="ActionStinger" ID="{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}">
+						<Event Name="ActionShroomStinger" ID="{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}">
 							<ChildrenList>
 								<Action Name="" ID="{8560F589-FB51-4E54-A3E9-D07847629D71}" ShortID="802112285">
 									<PropertyList>

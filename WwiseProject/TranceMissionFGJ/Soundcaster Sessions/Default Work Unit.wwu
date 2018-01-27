@@ -14,7 +14,7 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="ActionStinger" ID="{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<ObjectRef Name="ActionShroomStinger" ID="{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
