@@ -14,7 +14,7 @@ public class BeatAnimator : MonoBehaviour {
 
     // Line movement
     public float lineSpeed = 600f;
-    private int counter;
+    private int counter, coeff = 1;
 
     // Anim
     private Animator animator;
@@ -39,17 +39,17 @@ public class BeatAnimator : MonoBehaviour {
         var ratio = delta / animationTime;
         if (ratio >= 0.5f && ratio <= 2.0f)
         {
-            if (counter++ % 2 == 0)
+            if (counter++ % coeff == 0)
             {
                 // Left line
                 var lineL = Instantiate(beatLinePrefab, transform.parent);
-                lineL.transform.localPosition = Vector3.left * lineSpeed * animationTime * 2 
+                lineL.transform.localPosition = Vector3.left * lineSpeed * animationTime * coeff 
                     + transform.localPosition.y * Vector3.up;
                 beatLines.Add(lineL);
 
                 // Right line
                 var lineR = Instantiate(beatLinePrefab, transform.parent);
-                lineR.transform.localPosition = Vector3.right * lineSpeed * animationTime * 2 
+                lineR.transform.localPosition = Vector3.right * lineSpeed * animationTime * coeff
                     + transform.localPosition.y * Vector3.up;
                 beatLines.Add(lineR);
             }

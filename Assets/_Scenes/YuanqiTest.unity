@@ -440,7 +440,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1121354297012452, guid: 6a46714897493db43bfc89d08dc596f9,
     type: 2}
   m_PrefabInternal: {fileID: 1790234497}
---- !u!95 &1222535133
+--- !u!95 &1222535137
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -696,6 +696,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730295679751288, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: lineSpeed
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a46714897493db43bfc89d08dc596f9, type: 2}

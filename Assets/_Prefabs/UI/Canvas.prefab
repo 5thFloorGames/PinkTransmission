@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 222123473681315752}
   - component: {fileID: 114623115441708572}
   - component: {fileID: 114730295679751288}
+  - component: {fileID: 95768691155775536}
   m_Layer: 5
   m_Name: CenterIcon
   m_TagString: Untagged
@@ -201,6 +202,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95768691155775536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121354297012452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 858940770dfa99b4fb9f7d096037b832, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114003737283948678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -483,6 +501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatLinePrefab: {fileID: 1832604474448440, guid: 83486c90bb462084fa1a1b4a14ea3cea,
     type: 2}
+  animationTime: 0.43
+  lineSpeed: 600
 --- !u!114 &114862182703972254
 MonoBehaviour:
   m_ObjectHideFlags: 1
