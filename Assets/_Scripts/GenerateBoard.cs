@@ -85,7 +85,7 @@ public class GenerateBoard : MonoBehaviour {
 
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
-            LeanTween.move( fawn, fawn.transform.position + delta, 0.4f);
+            LeanTween.move( fawn, fawn.transform.position + delta, 0.2f);
             FawnPosition = newPos;
             UpdateTileOnFawn();
         }
