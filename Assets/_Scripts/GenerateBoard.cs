@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GenerateBoard : MonoBehaviour {
 
+    public static GenerateBoard Instance { get; private set; }
+
 	int YSize = 9;
 	int XSize = 9;
 	GameObject tile;
@@ -16,19 +18,25 @@ public class GenerateBoard : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Instance = this;
 		FawnPosition = new Vector2(0,0);
 		tiles = new TileColor[XSize * 2, YSize *2];
 		tile = Resources.Load<GameObject>("Tile");
 		for(int i = 0;i<=XSize;i++){
 			for(int j = 0;j<=YSize;j++){
 				GameObject g = Instantiate(tile,transform);
-				g.transform.localPosition = new Vector3(i - XSize/2f,0,j - YSize/2f);
+				g.transform.localPosition = GetPos(i, j);
 				tiles[i,j] = g.GetComponent<TileColor>();
 			}
 		}
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
 	}
-
+    
+    public Vector3 GetPos(int x, int y)
+    {
+        return new Vector3(x - XSize / 2f, 0, y - YSize / 2f);
+    }
+	
 	public void MoveFawn(MoveDirection direction){
 		if(direction == MoveDirection.Down){
 			if(FawnPosition.x > 0){

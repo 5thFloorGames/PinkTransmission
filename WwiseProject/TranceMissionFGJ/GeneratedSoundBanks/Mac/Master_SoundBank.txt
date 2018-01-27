@@ -23,5 +23,6 @@ Trigger	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	236054613	BaseLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\BaseLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\BaseLoop		2633204
 	359132591	Crash	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Crash_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Crash\Crash		658348
-	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\IdleLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		658348
+	483877852	Melody1Loop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Melody1Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\Melody1Loop		2633204
+	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\IdleLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		987492
 
