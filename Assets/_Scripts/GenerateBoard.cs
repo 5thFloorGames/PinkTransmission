@@ -89,7 +89,7 @@ public class GenerateBoard : MonoBehaviour {
                 LeanTween.move( fawn, fawn.transform.position + delta, 0.2f);
                 });
             FawnPosition = newPos;
-            UpdateTileOnFawn();
+            StartCoroutine(PlayDelayed(0.3f, true));
         }
 	}
     
@@ -151,8 +151,19 @@ public class GenerateBoard : MonoBehaviour {
                 LeanTween.move( shroomPlayer, shroomPlayer.transform.position + delta, 0.2f);
                 });
             shroomPosition = newPos;
-            UpdateTileOnShroom();
+
+            StartCoroutine(PlayDelayed(0.4f, false));
         }
+    }
+
+    private IEnumerator PlayDelayed(float delay, bool isFawn)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (isFawn)
+            UpdateTileOnFawn();
+        else
+            UpdateTileOnShroom();
     }
 
     void UpdateTileOnShroom()
