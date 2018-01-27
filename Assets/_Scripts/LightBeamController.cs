@@ -42,8 +42,8 @@ public class LightBeamController : MonoBehaviour {
 	IEnumerator WaveFromFront() {
 		
 		for (int i = 0; i < 5; i++) {
-			LeanTween.rotateZ(rightLights[i], 90f, 1.0f);
-			LeanTween.rotateZ(leftLights[i], -90f, 1.0f);
+			LeanTween.rotateZ(rightLights[i], 91f, 1.0f);
+			LeanTween.rotateZ(leftLights[i], -91f, 1.0f);
 			yield return new WaitForSeconds(0.5f);
 		}
 		yield return new WaitForSeconds(0.5f);
