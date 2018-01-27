@@ -446,6 +446,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4523393366746904, guid: 2fa27f5fe2bc3074cb8cf917046f868c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fa27f5fe2bc3074cb8cf917046f868c, type: 2}
   m_IsPrefabParent: 0
@@ -1010,6 +1014,7 @@ GameObject:
   - component: {fileID: 1548512644}
   - component: {fileID: 1548512643}
   - component: {fileID: 1548512642}
+  - component: {fileID: 1548512646}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1023,7 +1028,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548512641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1086,6 +1091,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548512646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548512641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8f77c3c419f456594b72c384e3bb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1892425663
 GameObject:
   m_ObjectHideFlags: 0

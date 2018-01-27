@@ -22,9 +22,9 @@ public class TileColor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(tileState == TileState.Animal){
-			GetComponent<SpriteRenderer>().color = Color.red;
+			transform.Find("Sprite").GetComponent<SpriteRenderer>().color = Color.red;
 		} else if(tileState == TileState.Shroom){
-			GetComponent<SpriteRenderer>().color = Color.green;
+			transform.Find("Sprite").GetComponent<SpriteRenderer>().color = Color.green;
 		}
 	}
 }
