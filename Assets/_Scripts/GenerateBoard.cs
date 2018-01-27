@@ -12,6 +12,8 @@ public class GenerateBoard : MonoBehaviour {
 	TileColor [,] tiles;
 	Vector2 FawnPosition;
 	public GameObject fawn;
+    public float fawnDrunkness;
+
     // Shroom
     Vector2 shroomPosition;
     public GameObject shroomPlayer;
@@ -84,6 +86,12 @@ public class GenerateBoard : MonoBehaviour {
 		int x = (int)FawnPosition.x;
 		int y = (int)FawnPosition.y;
 		tiles[x,y].ChangeOwner(TileState.Animal);
+
+        if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y))
+        {
+
+        }
+        
 	}
     
     public void MoveShroom(MoveDirection direction)

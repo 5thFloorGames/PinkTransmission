@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1f393f1386e314991107d8e47da621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTime: 0.214
+  animationTime: 0.43
   temperatureRange: 20
   hueRange: 15
 --- !u!114 &114956379873110360
