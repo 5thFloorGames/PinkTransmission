@@ -12,14 +12,62 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 1
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
-  EventWwu: []
-  AuxBusWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  BankWwu: []
-  RtpcWwu: []
-  TriggerWwu: []
-  AcousticTextureWwu: []
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{64AD0B70-9C84-4EF5-A699-5E42E8B01448}'
+    m_lastTimePsrt1: 1081110561
+    m_lastTimePart2: -1999280782
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{A527C1C8-9233-41D2-A397-43BB514C425F}'
+    m_lastTimePsrt1: 1081175604
+    m_lastTimePart2: -1999280782
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{5911D247-4AF3-44B0-9F7B-59918AA93EE9}'
+    m_lastTimePsrt1: 1081750106
+    m_lastTimePart2: -1999280782
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{7FC1A480-9178-4AC2-89BE-04C16AD70F88}'
+    m_lastTimePsrt1: 1081755105
+    m_lastTimePart2: -1999280782
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{6E5AF21C-0E32-4F68-9A13-1C8E931E7D2A}'
+    m_lastTimePsrt1: 1081730101
+    m_lastTimePart2: -1999280782
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{A735AEA1-AAF1-4735-812D-78E7A7E85465}'
+    m_lastTimePsrt1: 1081130574
+    m_lastTimePart2: -1999280782
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{11B4CEA3-3864-441F-925E-68CA86968E0D}'
+    m_lastTimePsrt1: 1081765128
+    m_lastTimePart2: -1999280782
+    List: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{4618C954-EEE6-45A9-B59F-75E06535E0F2}'
+    m_lastTimePsrt1: 1081775118
+    m_lastTimePart2: -1999280782
+    List: []
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0

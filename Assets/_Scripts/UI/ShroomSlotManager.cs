@@ -13,12 +13,14 @@ public class ShroomSlotManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        Instance = this;
         slots = GetComponentsInChildren<ShroomSlot>();
         
         for(int i = 0; i < slots.Length; i++)
         {
             slots[i].SetShroom(Static.GetRandom(shroomPrefabs));
         }
+        AkSoundEngine.PostEvent("PlayPlaceholderLoop", gameObject);
     }
 
     private void Update()
@@ -26,14 +28,14 @@ public class ShroomSlotManager : MonoBehaviour {
         // Test
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Popped: " + PopShroom().name);
+            PopShroom();
         }
     }
 
     public Shroom PopShroom()
     {
         var shroom = slots[0].shroom;
-        for(int i = 0; i < slots.Length - 2; i++)
+        for(int i = 0; i < slots.Length - 1; i++)
         {
             slots[i].SetShroom(slots[i + 1].shroom);
         }
