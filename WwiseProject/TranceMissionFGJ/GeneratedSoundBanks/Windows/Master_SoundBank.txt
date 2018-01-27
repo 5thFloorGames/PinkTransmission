@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1229115632	PlayPlaceholderLoop			\Default Work Unit\Music\PlayPlaceholderLoop	
+	3076088854	StopPlaceholderLoop			\Default Work Unit\Music\StopPlaceholderLoop	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	78830142	Playback_speed			\Default Work Unit\Playback_speed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	441186238	PlaceholderLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Windows\SFX\PlaceholderLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\PlacwholderLoop\PlaceholderLoop\PlaceholderLoop		1316632
+

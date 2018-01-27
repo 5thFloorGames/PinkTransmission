@@ -5,6 +5,34 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="PlacwholderLoop" ID="{CC01FB1A-4D2B-4DAA-846A-815E0CA50ED4}" ShortID="510531805">
 					<PropertyList>
+						<Property Name="PlaybackSpeed" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{7932F0D3-AA7F-47B5-AEAC-39C13580F27F}" ShortID="338655619">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Playback_speed" ID="{C1B07EFF-F53F-47B9-BD50-F4C28271E3FD}" WorkUnitID="{A6C77BA2-E477-4C88-9DFD-BF6621EDE468}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{6100A45A-1AE7-4104-8A2D-7C433BBAD38E}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0.5</XPos>
+												<YPos>0.5</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1.5</XPos>
+												<YPos>1.5</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="140"/>
 					</PropertyList>
 					<ReferenceList>
