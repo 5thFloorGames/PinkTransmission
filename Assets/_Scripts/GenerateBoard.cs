@@ -13,9 +13,6 @@ public class GenerateBoard : MonoBehaviour {
 	Vector2 FawnPosition;
 	public GameObject fawn;
 
-	public delegate void BeatAction();
-	public static event BeatAction OnBeat;
-
 	// Use this for initialization
 	void Start () {
         Instance = this;
