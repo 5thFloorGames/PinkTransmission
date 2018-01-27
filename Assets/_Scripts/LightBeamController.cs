@@ -44,18 +44,19 @@ public class LightBeamController : MonoBehaviour {
 		Debug.Log(go.name);
 	}
 
+	void TweenZ(GameObject obj, float rotatingTo, float time) {
+		LeanTween.rotateZ(obj, rotatingTo, time);
+		LeanTween.delayedCall(obj, time, ()=>{ 
+		LeanTween.rotateZ(obj, 0f, time);
+		});
+	}
+
 	IEnumerator WaveFromFront() {
 		
 		for (int i = 0; i < 5; i++) {
-			LeanTween.rotateZ(rightLights[i], 91f, 0.9f);
-			LeanTween.delayedCall(rightLights[i], 1.01f, ()=>{ 
-				LeanTween.rotateZ(rightLights[i], 0f, 1.0f);
-				});
-			LeanTween.rotateZ(leftLights[i], -91f, 0.9f);
-			LeanTween.delayedCall(leftLights[i], 1.01f, ()=>{ 
-				LeanTween.rotateZ(leftLights[i], 0f, 1.0f);
-				});
-			yield return new WaitForSeconds(0.3f);
+			TweenZ(rightLights[i], 90f, 1.0f);
+			TweenZ(leftLights[i], -90f, 1.0f);
+			yield return new WaitForSeconds(0.1f);
 		}
 		yield return new WaitForSeconds(1f);
 		lightsMoving = false;

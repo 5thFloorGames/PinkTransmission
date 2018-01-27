@@ -85,7 +85,7 @@ public class GenerateBoard : MonoBehaviour {
 
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
-            fawn.transform.position += delta;
+            LeanTween.move( fawn, fawn.transform.position + delta, 0.4f);
             FawnPosition = newPos;
             UpdateTileOnFawn();
         }
@@ -96,8 +96,7 @@ public class GenerateBoard : MonoBehaviour {
 		int y = (int)FawnPosition.y;
 		tiles[x,y].ChangeOwner(TileState.Animal);
 
-        if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y))
-        {
+        if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y)) {
 
         }
         
