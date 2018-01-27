@@ -6,6 +6,7 @@
 				<SoundBank Name="Master_SoundBank" ID="{5C57D14F-F4F5-4FF1-91DD-FA008A0B84FF}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Music" ID="{F9C9424A-8409-4960-921E-0A75BC7F5F09}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Markers" ID="{4A54236F-13F2-4A44-8721-D300C6216054}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
