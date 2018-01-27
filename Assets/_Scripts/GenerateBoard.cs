@@ -11,12 +11,15 @@ public class GenerateBoard : MonoBehaviour {
 	GameObject tile;
 	TileColor [,] tiles;
 	Vector2 FawnPosition;
+	Vector2 ShroomPosition;
 	public GameObject fawn;
+	public GameObject shroom;
 
 	// Use this for initialization
 	void Start () {
         Instance = this;
 		FawnPosition = new Vector2(0,0);
+		ShroomPosition = new Vector2(YSize,XSize);
 		tiles = new TileColor[XSize * 2, YSize *2];
 		tile = Resources.Load<GameObject>("Tile");
 		for(int i = 0;i<=XSize;i++){
@@ -27,6 +30,7 @@ public class GenerateBoard : MonoBehaviour {
 			}
 		}
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
+		shroom.transform.position = tiles[XSize,YSize].GetComponent<Transform>().position;
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -34,6 +38,30 @@ public class GenerateBoard : MonoBehaviour {
         return new Vector3(x - XSize / 2f, 0, y - YSize / 2f);
     }
 	
+	public void MoveShroom(MoveDirection direction){
+		if(direction == MoveDirection.Down){
+			if(ShroomPosition.y > 0){
+				shroom.transform.position += new Vector3(0,0,-1);
+				ShroomPosition += new Vector2(0,-1);
+			}
+		} else if (direction == MoveDirection.Up){
+			if(ShroomPosition.y < YSize){
+				shroom.transform.position += new Vector3(0,0,1);
+				ShroomPosition += new Vector2(0,1);
+			}
+		} else if(direction == MoveDirection.Right){
+			if(ShroomPosition.x > 0){
+				shroom.transform.position += new Vector3(-1,0,0);
+				ShroomPosition += new Vector2(-1,0);
+			}
+		} else if (direction == MoveDirection.Left){
+			if(ShroomPosition.x < XSize){
+				shroom.transform.position += new Vector3(1,0,0);
+				ShroomPosition += new Vector2(1,0);
+			}
+		}	
+	}
+
 	public void MoveFawn(MoveDirection direction){
 		if(direction == MoveDirection.Down){
 			if(FawnPosition.y > 0){
