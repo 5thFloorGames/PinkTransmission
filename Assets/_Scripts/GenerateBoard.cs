@@ -8,9 +8,12 @@ public class GenerateBoard : MonoBehaviour {
 	int XSize = 9;
 	GameObject tile;
 	TileColor [,] tiles;
+	Vector2 FawnPosition;
+	public GameObject fawn;
 
 	// Use this for initialization
 	void Start () {
+		FawnPosition = new Vector2(0,0);
 		tiles = new TileColor[XSize * 2, YSize *2];
 		tile = Resources.Load<GameObject>("Tile");
 		for(int i = 0;i<=XSize;i++){
@@ -20,10 +23,23 @@ public class GenerateBoard : MonoBehaviour {
 				tiles[i,j] = g.GetComponent<TileColor>();
 			}
 		}
+		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void MoveFawn(MoveDirection direction){
+		if(direction == MoveDirection.Down){
+			transform.position += new Vector3(1,0,0);
+			FawnPosition += new Vector2(0,-1);
+		} else if (direction == MoveDirection.Up){
+			transform.position += new Vector3(-1,0,0);
+			FawnPosition += new Vector2(0,1);
+		} else if(direction == MoveDirection.Right){
+			transform.position += new Vector3(0,0,1);
+			FawnPosition += new Vector2(1,0);
+		} else if (direction == MoveDirection.Left){
+			transform.position += new Vector3(0,0,-1);
+			FawnPosition += new Vector2(-1,0);
+		}
+		print(FawnPosition);
 	}
 }
