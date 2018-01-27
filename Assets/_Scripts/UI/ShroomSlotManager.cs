@@ -24,22 +24,30 @@ public class ShroomSlotManager : MonoBehaviour {
             slots[i].SetShroom(Static.GetRandom(shroomPrefabs));
         }
     }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnShroom(Random.Range(0,GenerateBoard.Instance.XSize), Random.Range(0, GenerateBoard.Instance.YSize));
-        }
-    }
-
-    public void SpawnShroom(Vector3 pos)
+    
+    public void SpawnShroom(Vector2 pos)
     {
         SpawnShroom((int)pos.x, (int)pos.y);
     }
 
     public void SpawnShroom(int x, int y)
     {
+        for (int i = spawnedShrooms.Count - 1; i >= 0; i--)
+        {
+            var ss = spawnedShrooms[i];
+
+            if(!ss)
+            {
+                spawnedShrooms.RemoveAt(i);
+                continue;
+            }
+
+            if (ss.x == x && ss.y == y)
+            {
+                Debug.Log("Shroom exists at location.");
+                return;
+            }
+        }
         var shroom = Instantiate(PopShroom());
         shroom.SetPos(x, y);
         spawnedShrooms.Add(shroom);

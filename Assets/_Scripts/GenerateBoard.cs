@@ -17,6 +17,7 @@ public class GenerateBoard : MonoBehaviour {
     Vector2 ShroomPosition;
     public GameObject shroom;
     
+
 	// Use this for initialization
 	void Start () {
         Instance = this;
@@ -131,5 +132,10 @@ public class GenerateBoard : MonoBehaviour {
         int x = (int)ShroomPosition.x;
         int y = (int)ShroomPosition.y;
         tiles[x, y].ChangeOwner(TileState.Shroom);
+    }
+
+    public void SpawnShroom()
+    {
+        ShroomSlotManager.Instance.SpawnShroom((int)ShroomPosition.x, (int)ShroomPosition.y);
     }
 }

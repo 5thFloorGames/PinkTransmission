@@ -581,8 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fawn: {fileID: 1898416428}
-  shroom: {fileID: 0}
-  shroomPlayer: {fileID: 509110806}
+  shroom: {fileID: 509110806}
 --- !u!1001 &1790234497
 Prefab:
   m_ObjectHideFlags: 0
@@ -722,20 +721,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 95382276821427170, guid: 966df14f6afa34270bb8d222b153e094,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595351446377560, guid: 966df14f6afa34270bb8d222b153e094, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95229273059492820, guid: 966df14f6afa34270bb8d222b153e094,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 611955e3a359a4d4a980a8d99975f6be, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 966df14f6afa34270bb8d222b153e094, type: 2}
   m_IsPrefabParent: 0
