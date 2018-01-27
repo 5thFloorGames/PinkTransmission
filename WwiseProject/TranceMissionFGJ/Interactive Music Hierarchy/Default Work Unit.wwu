@@ -121,7 +121,7 @@
 											<PropertyList>
 												<Property Name="PlaySegmentAt" Type="int16" Value="2"/>
 											</PropertyList>
-											<TriggerRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<TriggerRef Name="ShroomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 											<SegmentRef Name="Stingers1" ID="{105768AB-C878-4F30-ADEB-DC76F085DF35}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
 										</MusicStinger>
 									</StingerList>
@@ -294,7 +294,7 @@
 											<PropertyList>
 												<Property Name="PlaySegmentAt" Type="int16" Value="2"/>
 											</PropertyList>
-											<TriggerRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<TriggerRef Name="ShroomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 											<SegmentRef Name="Stingers1" ID="{105768AB-C878-4F30-ADEB-DC76F085DF35}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
 										</MusicStinger>
 									</StingerList>
@@ -403,14 +403,14 @@
 							<PropertyList>
 								<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
 							</PropertyList>
-							<TriggerRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+							<TriggerRef Name="ShroomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 							<SegmentRef Name="Stingers1" ID="{105768AB-C878-4F30-ADEB-DC76F085DF35}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
 						</MusicStinger>
 						<MusicStinger Name="" ID="{E74E63B3-9739-4DF3-878D-EAAB0C9E9210}">
 							<PropertyList>
 								<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
 							</PropertyList>
-							<TriggerRef Name="RandomStinger2" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+							<TriggerRef Name="BiteStinger" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 							<SegmentRef Name="Stingers2" ID="{E725DC47-A1A8-4FDA-9C41-56D1B9BE7CC7}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
 						</MusicStinger>
 						<MusicStinger Name="" ID="{32C01E51-14B4-43DC-9A93-650A2976A948}">
@@ -514,7 +514,7 @@
 				</MusicSegment>
 				<Folder Name="Stingers" ID="{2DBB8239-BB02-4B7C-A180-A4FEFABAD3B7}" ShortID="1006874498">
 					<ChildrenList>
-						<MusicPlaylistContainer Name="Stingers1" ID="{C5706423-7627-4B59-8154-25E46FC59B55}" ShortID="796230707">
+						<MusicPlaylistContainer Name="StingersShroom" ID="{C5706423-7627-4B59-8154-25E46FC59B55}" ShortID="796230707">
 							<PropertyList>
 								<Property Name="PlaybackSpeed" Type="Real64">
 									<RTPCList>
@@ -772,7 +772,7 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="Stingers2" ID="{1D6A70EB-2BC1-4C68-B7C9-177E3225078A}" ShortID="877975230">
+						<MusicPlaylistContainer Name="StingersBite" ID="{1D6A70EB-2BC1-4C68-B7C9-177E3225078A}" ShortID="877975230">
 							<PropertyList>
 								<Property Name="PlaybackSpeed" Type="Real64">
 									<RTPCList>
@@ -868,21 +868,21 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Stinger2-1" ID="{86FD363A-9D1A-4DDB-8087-274078032823}" ShortID="506518159">
+												<AudioFileSource Name="StingerBite1" ID="{64CCB484-527B-40BE-B8E2-EA0A1EE9D357}" ShortID="455516844">
 													<Language>SFX</Language>
-													<AudioFile>Stinger2-1.wav</AudioFile>
+													<AudioFile>StingerBite1.wav</AudioFile>
 												</AudioFileSource>
-												<AudioFileSource Name="Stinger2-2" ID="{6AF9DCDB-989D-4D22-BFDD-6CC50C822152}" ShortID="182043258">
+												<AudioFileSource Name="StingerBite2" ID="{FEBF152D-1187-4FD3-A231-FF0CD9358BE2}" ShortID="393984883">
 													<Language>SFX</Language>
-													<AudioFile>Stinger2-2.wav</AudioFile>
+													<AudioFile>StingerBite2.wav</AudioFile>
 												</AudioFileSource>
-												<AudioFileSource Name="Stinger2-3" ID="{9102C845-F057-458D-8AD9-E9FF12C87C00}" ShortID="468032381">
+												<AudioFileSource Name="StingerBite3" ID="{16CFCCDD-46F8-42C7-B032-131E003EBEC1}" ShortID="806302841">
 													<Language>SFX</Language>
-													<AudioFile>Stinger2-3.wav</AudioFile>
+													<AudioFile>StingerBite3.wav</AudioFile>
 												</AudioFileSource>
-												<AudioFileSource Name="Stinger2-4" ID="{8C0F832C-9D6E-4ADF-BAF5-332FA456DFBA}" ShortID="497672781">
+												<AudioFileSource Name="StingerBite4" ID="{8CB32B26-D0EA-46E2-BFA9-4F5F91CD19D2}" ShortID="362299644">
 													<Language>SFX</Language>
-													<AudioFile>Stinger2-4.wav</AudioFile>
+													<AudioFile>StingerBite4.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -896,49 +896,49 @@
 											<SequenceList>
 												<MusicTrackSequence Name="" ID="{32DA9086-858A-42BA-B0FA-2C69F3B85EA4}">
 													<ClipList>
-														<MusicClip Name="Stinger2-1" ID="{A7C908E2-7A0A-4C5D-BABC-6B49EA8E41A3}">
+														<MusicClip Name="StingerBite1" ID="{812C5164-780B-4B00-B617-3E0699154DC9}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="3428.5625"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1617.18564967105"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2361.60444078948"/>
 															</PropertyList>
-															<AudioSourceRef Name="Stinger2-1" ID="{86FD363A-9D1A-4DDB-8087-274078032823}"/>
+															<AudioSourceRef Name="StingerBite1" ID="{64CCB484-527B-40BE-B8E2-EA0A1EE9D357}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
 												<MusicTrackSequence Name="" ID="{DCB6DD9A-570E-40A7-9DA1-9376930ECA53}">
 													<ClipList>
-														<MusicClip Name="Stinger2-2" ID="{595C2D67-748E-4B8E-8E5A-4B9FF3A37FCC}">
+														<MusicClip Name="StingerBite2" ID="{24772D14-21DA-4276-B0AD-C1CF50CFA10E}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="3428.5625"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="1822.54255756579"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2438.61328125"/>
 															</PropertyList>
-															<AudioSourceRef Name="Stinger2-2" ID="{6AF9DCDB-989D-4D22-BFDD-6CC50C822152}"/>
+															<AudioSourceRef Name="StingerBite2" ID="{FEBF152D-1187-4FD3-A231-FF0CD9358BE2}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
 												<MusicTrackSequence Name="" ID="{18BEDC3B-CB8E-4FC8-9EAB-9AEE9EF1FF64}">
 													<ClipList>
-														<MusicClip Name="Stinger2-3" ID="{C38545B5-D2B2-4E36-B760-11A7E8D75F42}">
+														<MusicClip Name="StingerBite3" ID="{ED119D88-A329-47C0-BB9E-6146CF28B8E3}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="3428.58333333333"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="2335.93482730263"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2361.60444078947"/>
 															</PropertyList>
-															<AudioSourceRef Name="Stinger2-3" ID="{9102C845-F057-458D-8AD9-E9FF12C87C00}"/>
+															<AudioSourceRef Name="StingerBite3" ID="{16CFCCDD-46F8-42C7-B032-131E003EBEC1}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
 												<MusicTrackSequence Name="" ID="{4C9EE6BE-060A-4204-9328-D1455C49B42E}">
 													<ClipList>
-														<MusicClip Name="Stinger2-4" ID="{94D433D1-9E88-4D14-9295-1425AE21C722}">
+														<MusicClip Name="StingerBite4" ID="{515F26F2-A396-4454-AF9F-FFD45B2ACC86}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="3428.5625"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="2447.16981907895"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2301.70867598684"/>
 															</PropertyList>
-															<AudioSourceRef Name="Stinger2-4" ID="{8C0F832C-9D6E-4ADF-BAF5-332FA456DFBA}"/>
+															<AudioSourceRef Name="StingerBite4" ID="{8CB32B26-D0EA-46E2-BFA9-4F5F91CD19D2}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -1070,7 +1070,7 @@
 									<ChildrenList>
 										<MusicTrack Name="StingerPerc" ID="{4FB2DFF1-ADFB-4BAE-8F89-98EF0F526D61}" ShortID="728811213">
 											<PropertyList>
-												<Property Name="MusicTrackType" Type="int16" Value="2"/>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>5</Value>

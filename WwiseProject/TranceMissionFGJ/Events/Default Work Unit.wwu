@@ -106,13 +106,13 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<ObjectRef Name="ShroomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="ActionStinger2" ID="{5AA99EC0-B5E9-412E-B4F0-DFD072264A92}">
+						<Event Name="ActionBiteStinger" ID="{5AA99EC0-B5E9-412E-B4F0-DFD072264A92}">
 							<ChildrenList>
 								<Action Name="" ID="{B8E622F7-5A06-42F2-8B27-4055143ED610}" ShortID="768215912">
 									<PropertyList>
@@ -121,7 +121,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="RandomStinger2" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+											<ObjectRef Name="BiteStinger" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

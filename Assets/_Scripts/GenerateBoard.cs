@@ -85,7 +85,9 @@ public class GenerateBoard : MonoBehaviour {
 
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
-            fawn.transform.position += delta;
+            LeanTween.delayedCall(fawn, 0.1f, ()=>{ 
+                LeanTween.move( fawn, fawn.transform.position + delta, 0.2f);
+                });
             FawnPosition = newPos;
             UpdateTileOnFawn();
         }
@@ -96,8 +98,7 @@ public class GenerateBoard : MonoBehaviour {
 		int y = (int)FawnPosition.y;
 		tiles[x,y].ChangeOwner(TileState.Animal);
 
-        if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y))
-        {
+        if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y)) {
 
         }
         
@@ -146,7 +147,9 @@ public class GenerateBoard : MonoBehaviour {
 
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
-            shroomPlayer.transform.position += delta;
+            LeanTween.delayedCall(shroomPlayer, 0.2f, ()=>{ 
+                LeanTween.move( shroomPlayer, shroomPlayer.transform.position + delta, 0.2f);
+                });
             shroomPosition = newPos;
             UpdateTileOnShroom();
         }

@@ -21,9 +21,9 @@
 			<ShortName>Master_SoundBank</ShortName>
 			<Path>Master_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1492365381" Name="ActionBiteStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionBiteStinger" MaxAttenuation="0,000000"/>
 				<Event Id="854939776" Name="ActionFirstMove" ObjectPath="\Events\Default Work Unit\Actions\ActionFirstMove" MaxAttenuation="0,000000"/>
 				<Event Id="4202577283" Name="ActionShroomStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionShroomStinger" MaxAttenuation="0,000000"/>
-				<Event Id="3516592955" Name="ActionStinger2" ObjectPath="\Events\Default Work Unit\Actions\ActionStinger2" MaxAttenuation="0,000000"/>
 				<Event Id="1313304943" Name="Marker" ObjectPath="\Events\Default Work Unit\Markers\Marker" MaxAttenuation="0,000000"/>
 				<Event Id="2526194360" Name="PercussionStinger" ObjectPath="\Events\Default Work Unit\Actions\PercussionStinger" MaxAttenuation="0,000000"/>
 				<Event Id="1229115632" Name="PlayPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\PlayPlaceholderLoop"/>
@@ -38,10 +38,6 @@
 					<ShortName>StingerPerc3.wav</ShortName>
 					<Path>SFX\StingerPerc3_F17FB28C.wem</Path>
 				</File>
-				<File Id="182043258" Language="SFX">
-					<ShortName>Stinger2-2.wav</ShortName>
-					<Path>SFX\Stinger2-2_F17FB28C.wem</Path>
-				</File>
 				<File Id="249197451" Language="SFX">
 					<ShortName>StingerPerc4.wav</ShortName>
 					<Path>SFX\StingerPerc4_F17FB28C.wem</Path>
@@ -54,21 +50,21 @@
 					<ShortName>Crash.wav</ShortName>
 					<Path>SFX\Crash_F17FB28C.wem</Path>
 				</File>
-				<File Id="468032381" Language="SFX">
-					<ShortName>Stinger2-3.wav</ShortName>
-					<Path>SFX\Stinger2-3_F17FB28C.wem</Path>
+				<File Id="362299644" Language="SFX">
+					<ShortName>StingerBite4.wav</ShortName>
+					<Path>SFX\StingerBite4_F17FB28C.wem</Path>
 				</File>
-				<File Id="497672781" Language="SFX">
-					<ShortName>Stinger2-4.wav</ShortName>
-					<Path>SFX\Stinger2-4_F17FB28C.wem</Path>
+				<File Id="393984883" Language="SFX">
+					<ShortName>StingerBite2.wav</ShortName>
+					<Path>SFX\StingerBite2_F17FB28C.wem</Path>
+				</File>
+				<File Id="455516844" Language="SFX">
+					<ShortName>StingerBite1.wav</ShortName>
+					<Path>SFX\StingerBite1_F17FB28C.wem</Path>
 				</File>
 				<File Id="506096902" Language="SFX">
 					<ShortName>Stinger1.wav</ShortName>
 					<Path>SFX\Stinger1_F17FB28C.wem</Path>
-				</File>
-				<File Id="506518159" Language="SFX">
-					<ShortName>Stinger2-1.wav</ShortName>
-					<Path>SFX\Stinger2-1_F17FB28C.wem</Path>
 				</File>
 				<File Id="513632677" Language="SFX">
 					<ShortName>StingerPerc5.wav</ShortName>
@@ -85,6 +81,10 @@
 				<File Id="744438766" Language="SFX">
 					<ShortName>StingerPerc2.wav</ShortName>
 					<Path>SFX\StingerPerc2_F17FB28C.wem</Path>
+				</File>
+				<File Id="806302841" Language="SFX">
+					<ShortName>StingerBite3.wav</ShortName>
+					<Path>SFX\StingerBite3_F17FB28C.wem</Path>
 				</File>
 				<File Id="887608893" Language="SFX">
 					<ShortName>StingerPerc7.wav</ShortName>
