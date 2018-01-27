@@ -5,6 +5,8 @@ using UnityEngine.PostProcessing;
 
 public class PPController : MonoBehaviour {
 
+    public static PPController Instance { get; private set; }
+
     private PostProcessingBehaviour pp;
     private ColorGradingModel.BasicSettings basicSettings;
 
@@ -29,6 +31,13 @@ public class PPController : MonoBehaviour {
         SetValues();
 	}
 
+    private void ResetPP()
+    {
+        var temp = pp.profile.colorGrading.settings;
+        temp.basic = basicSettings;
+        pp.profile.colorGrading.settings = temp;
+    }
+
     private void CheckTime()
     {
         var delta = Time.time - previousTime;
@@ -42,9 +51,7 @@ public class PPController : MonoBehaviour {
 
     void OnDestroy()
     {
-        var temp = pp.profile.colorGrading.settings;
-        temp.basic = basicSettings;
-        pp.profile.colorGrading.settings = temp;
+        ResetPP();
     }
 
     private void SetValues()

@@ -53,6 +53,28 @@ public class ShroomSlotManager : MonoBehaviour {
         spawnedShrooms.Add(shroom);
     }
 
+    public bool CheckShroomDestroy(int x, int y)
+    {
+        for (int i = spawnedShrooms.Count - 1; i >= 0; i--)
+        {
+            var ss = spawnedShrooms[i];
+
+            if (!ss)
+            {
+                spawnedShrooms.RemoveAt(i);
+                continue;
+            }
+
+            if (ss.x == x && ss.y == y)
+            {
+                Destroy(ss.gameObject);
+                spawnedShrooms.RemoveAt(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
     /// <summary>
     /// Takes and returns the first shroom from the 'tetris' slot
     /// </summary>

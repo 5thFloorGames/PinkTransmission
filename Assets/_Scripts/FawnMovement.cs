@@ -14,7 +14,7 @@ public class FawnMovement : MonoBehaviour {
 		board = FindObjectOfType<GenerateBoard>();
 		MusicManager.OnBeat += Move;
 	}
-
+    
 	void Move(){
 		if(i++ % 1 == 0)
         {
