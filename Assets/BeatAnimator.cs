@@ -16,12 +16,16 @@ public class BeatAnimator : MonoBehaviour {
     public float lineSpeed = 600f;
     private int counter;
 
+    // Anim
+    private Animator animator;
+
     // Use this for initialization
     void Start ()
     {
         beatLines = new List<GameObject>();
         MusicManager.OnBeat += CheckTime;
         previousTime = Time.time;
+        animator = GetComponent<Animator>();
     }
 
     void OnDestroy()
@@ -71,6 +75,7 @@ public class BeatAnimator : MonoBehaviour {
                 beatLines.RemoveAt(i);
                 Destroy(lineL.gameObject);
                 beatLines.RemoveAt(i - 1);
+                animator.SetTrigger("Bump");
             }
         }
     }
