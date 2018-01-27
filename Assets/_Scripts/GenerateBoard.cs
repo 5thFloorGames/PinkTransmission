@@ -6,8 +6,8 @@ public class GenerateBoard : MonoBehaviour {
 
     public static GenerateBoard Instance { get; private set; }
 
-	int YSize = 9;
-	int XSize = 9;
+	public readonly int YSize = 9;
+	public readonly int XSize = 9;
 	GameObject tile;
 	TileColor [,] tiles;
 	Vector2 FawnPosition;

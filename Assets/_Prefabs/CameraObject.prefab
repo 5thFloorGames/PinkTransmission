@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114956379873110360}
   - component: {fileID: 114349022652934318}
   - component: {fileID: 114129642723639884}
+  - component: {fileID: 114869553801083378}
   - component: {fileID: 114309028895877020}
   m_Layer: 0
   m_Name: Main Camera
@@ -154,6 +155,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
+--- !u!114 &114869553801083378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812717981257706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1f393f1386e314991107d8e47da621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.214
+  temperatureRange: 20
+  hueRange: 15
 --- !u!114 &114956379873110360
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,9 +9,13 @@ public enum ShroomType
 
 public class Shroom : MonoBehaviour {
 
-    public ShroomType type;
     public Sprite icon;
     public int x, y;
+    
+    public virtual ShroomType GetShroomType()
+    {
+        return ShroomType.Normal;
+    }
 
     public virtual void DestroyShroom()
     {
