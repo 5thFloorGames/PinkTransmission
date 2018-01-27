@@ -36,22 +36,32 @@ public class GenerateBoard : MonoBehaviour {
 	
 	public void MoveFawn(MoveDirection direction){
 		if(direction == MoveDirection.Down){
-			transform.position += new Vector3(1,0,0);
-			FawnPosition += new Vector2(0,-1);
+			if(FawnPosition.y > 0){
+				fawn.transform.position += new Vector3(0,0,-1);
+				FawnPosition += new Vector2(0,-1);
+			}
 		} else if (direction == MoveDirection.Up){
-			transform.position += new Vector3(-1,0,0);
-			FawnPosition += new Vector2(0,1);
+			if(FawnPosition.y < YSize){
+				fawn.transform.position += new Vector3(0,0,1);
+				FawnPosition += new Vector2(0,1);
+			}
 		} else if(direction == MoveDirection.Right){
-			transform.position += new Vector3(0,0,1);
-			FawnPosition += new Vector2(1,0);
+			if(FawnPosition.x > 0){
+				fawn.transform.position += new Vector3(-1,0,0);
+				FawnPosition += new Vector2(-1,0);
+			}
 		} else if (direction == MoveDirection.Left){
-			transform.position += new Vector3(0,0,-1);
-			FawnPosition += new Vector2(-1,0);
+			if(FawnPosition.x < XSize){
+				fawn.transform.position += new Vector3(1,0,0);
+				FawnPosition += new Vector2(1,0);
+			}
 		}
-		print(FawnPosition);
+		UpdateTileOnFawn();
 	}
 
 	void UpdateTileOnFawn(){
-		//tiles(FawnPosition.x,FawnPosition.y).;
+		int x = (int)FawnPosition.x;
+		int y = (int)FawnPosition.y;
+		tiles[x,y].ChangeOwner(TileState.Animal);
 	}
 }

@@ -8,15 +8,7 @@ public class TileColor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(Random.Range(0f,1f) < 0.5f){
-			tileState = TileState.Animal;
-		} else {
-			if(Random.Range(0f,1f) < 0.5f){	
-				tileState = TileState.Shroom;
-			} else {
-				tileState = TileState.Neutral;
-			}
-		}
+		tileState = TileState.Neutral;
 	}
 	
 	// Update is called once per frame
@@ -26,5 +18,9 @@ public class TileColor : MonoBehaviour {
 		} else if(tileState == TileState.Shroom){
 			transform.Find("Sprite").GetComponent<SpriteRenderer>().color = Color.green;
 		}
+	}
+
+	public void ChangeOwner(TileState state){
+		tileState = state;
 	}
 }
