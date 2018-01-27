@@ -34,6 +34,10 @@
 					<ShortName>Crash.wav</ShortName>
 					<Path>SFX\Crash_F17FB28C.wem</Path>
 				</File>
+				<File Id="483877852" Language="SFX">
+					<ShortName>Melody1Loop.wav</ShortName>
+					<Path>SFX\Melody1Loop_F17FB28C.wem</Path>
+				</File>
 				<File Id="589612994" Language="SFX">
 					<ShortName>IdleLoop.wav</ShortName>
 					<Path>SFX\IdleLoop_F17FB28C.wem</Path>
