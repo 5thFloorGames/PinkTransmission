@@ -39,27 +39,26 @@ public class GenerateBoard : MonoBehaviour {
 	
 	public void MoveFawn(MoveDirection direction){
 		if(direction == MoveDirection.Down){
-			if(FawnPosition.x > 0){
-				fawn.transform.position += new Vector3(1,0,0);
-				FawnPosition += new Vector2(-1,0);
-			}
-		} else if (direction == MoveDirection.Up){
-			if(FawnPosition.x < XSize){
-				fawn.transform.position += new Vector3(-1,0,0);
-				FawnPosition += new Vector2(1,0);
-			}
-		} else if(direction == MoveDirection.Right){
-			if(FawnPosition.y < YSize){
-				fawn.transform.position += new Vector3(0,0,1);
-				FawnPosition += new Vector2(0,-1);
-			}
-		} else if (direction == MoveDirection.Left){
 			if(FawnPosition.y > 0){
 				fawn.transform.position += new Vector3(0,0,-1);
+				FawnPosition += new Vector2(0,-1);
+			}
+		} else if (direction == MoveDirection.Up){
+			if(FawnPosition.y < YSize){
+				fawn.transform.position += new Vector3(0,0,1);
 				FawnPosition += new Vector2(0,1);
 			}
+		} else if(direction == MoveDirection.Right){
+			if(FawnPosition.x > 0){
+				fawn.transform.position += new Vector3(-1,0,0);
+				FawnPosition += new Vector2(-1,0);
+			}
+		} else if (direction == MoveDirection.Left){
+			if(FawnPosition.x < XSize){
+				fawn.transform.position += new Vector3(1,0,0);
+				FawnPosition += new Vector2(1,0);
+			}
 		}
-		print(FawnPosition);
 		UpdateTileOnFawn();
 	}
 
