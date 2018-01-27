@@ -5,6 +5,8 @@ using UnityEngine.PostProcessing;
 
 public class PPController : MonoBehaviour {
 
+    public static PPController Instance { get; private set; }
+
     private PostProcessingBehaviour pp;
     private ColorGradingModel.BasicSettings basicSettings;
 

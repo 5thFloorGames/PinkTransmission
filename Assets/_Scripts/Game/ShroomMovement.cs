@@ -5,16 +5,19 @@ using UnityEngine;
 public class ShroomMovement : MonoBehaviour {
 
     int i = 0;
+    Animator animator;
     // Use this for initialization
     void Start()
     {
         MusicManager.OnBeat += Move;
+        animator = GetComponentInChildren<Animator>();
     }
     
     private void Move()
     {
         if (i++ % 2 == 0)
         {
+            animator.SetTrigger("Jump");
             if (Input.GetAxis("HorizontalB") > 0)
             {
                 GenerateBoard.Instance.MoveShroom(MoveDirection.Left);
