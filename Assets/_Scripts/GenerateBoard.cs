@@ -42,4 +42,8 @@ public class GenerateBoard : MonoBehaviour {
 		}
 		print(FawnPosition);
 	}
+
+	void UpdateTileOnFawn(){
+		//tiles(FawnPosition.x,FawnPosition.y).;
+	}
 }
