@@ -30,6 +30,9 @@ public class ShroomMovement : MonoBehaviour {
             else if (Input.GetAxis("VerticalB") < 0)
             {
                 GenerateBoard.Instance.MoveShroom(MoveDirection.Down);
+            } else if(Input.GetAxis("SubmitB") > 0)
+            {
+
             }
         }
     }

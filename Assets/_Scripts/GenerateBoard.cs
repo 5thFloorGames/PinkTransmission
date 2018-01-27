@@ -11,13 +11,11 @@ public class GenerateBoard : MonoBehaviour {
 	GameObject tile;
 	TileColor [,] tiles;
 	Vector2 FawnPosition;
-	Vector2 ShroomPosition;
 	public GameObject fawn;
-	public GameObject shroom;
 
     // Shroom
-    Vector2 shroomPosition;
-    public GameObject shroomPlayer;
+    Vector2 ShroomPosition;
+    public GameObject shroom;
     
 	// Use this for initialization
 	void Start () {
@@ -34,8 +32,8 @@ public class GenerateBoard : MonoBehaviour {
 			}
 		}
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
-        shroomPosition = new Vector2(XSize, YSize);
-        shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
+        ShroomPosition = new Vector2(XSize, YSize);
+        shroom.transform.position = tiles[XSize, YSize].transform.position;
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -69,7 +67,7 @@ public class GenerateBoard : MonoBehaviour {
 			}
         }
 
-        if (newPos != shroomPosition && newPos != FawnPosition)
+        if (newPos != ShroomPosition && newPos != FawnPosition)
         {
             fawn.transform.position += delta;
             FawnPosition = newPos;
@@ -85,7 +83,7 @@ public class GenerateBoard : MonoBehaviour {
     
     public void MoveShroom(MoveDirection direction)
     {
-        Vector2 newPos = shroomPosition;
+        Vector2 newPos = ShroomPosition;
         Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down)
         {
@@ -120,18 +118,18 @@ public class GenerateBoard : MonoBehaviour {
             }
         }
 
-        if (newPos != shroomPosition && newPos != FawnPosition)
+        if (newPos != ShroomPosition && newPos != FawnPosition)
         {
-            shroomPlayer.transform.position += delta;
-            shroomPosition = newPos;
+            shroom.transform.position += delta;
+            ShroomPosition = newPos;
             UpdateTileOnShroom();
         }
     }
 
     void UpdateTileOnShroom()
     {
-        int x = (int)shroomPosition.x;
-        int y = (int)shroomPosition.y;
+        int x = (int)ShroomPosition.x;
+        int y = (int)ShroomPosition.y;
         tiles[x, y].ChangeOwner(TileState.Shroom);
     }
 }
