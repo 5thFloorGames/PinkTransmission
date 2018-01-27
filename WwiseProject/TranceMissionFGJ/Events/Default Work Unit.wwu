@@ -35,6 +35,11 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Markers" ID="{4A54236F-13F2-4A44-8721-D300C6216054}" ShortID="161193389">
+					<ChildrenList>
+						<Event Name="Marker" ID="{5C937BED-2815-4AF5-A454-E467EB3046B8}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

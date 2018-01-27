@@ -26,7 +26,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="HCx2KwqGd0av30sC/aPXXA4rC+f30QhPoR5o7M75eWw="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="T9FXXPX08U+R3foAiguE/w=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="9ZafxkhIU0Ot5F3hAU7OoAH/////////HU49j7sgNkOonBC5385CYAH/////////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="HU49j7sgNkOonBC5385CYAH/////////9ZafxkhIU0Ot5F3hAU7OoAH/////////"/>
 				<Property Name="Interactive Music\x64_{A86F684A-8917-4184-858C-5F63B3AACD8B} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAgGxAAAAAAAAA8D8AAAAAAOiPQAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{E026A7AB-DEA9-468D-ABD7-0B0B631B970C} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAgGxAAAAAAAAA8D8AAAAAADCHQAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
@@ -37,6 +37,7 @@
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8321C468-4179-418D-8421-904839656769}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{CC01FB1A-4D2B-4DAA-846A-815E0CA50ED4}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{DC2D3B64-FE3C-4137-94E8-7DCDB110CB86}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{F1965804-138C-4E94-8557-574DEEBCEC24}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{F32CD8A9-DF4F-43B2-B911-D8A2972AAE82}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
