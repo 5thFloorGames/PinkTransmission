@@ -42,13 +42,15 @@ public class BeatAnimator : MonoBehaviour {
             if (counter++ % 2 == 0)
             {
                 // Left line
-                var lineL = Instantiate(beatLinePrefab, transform);
-                lineL.transform.localPosition = Vector3.left * lineSpeed * animationTime * 2;
+                var lineL = Instantiate(beatLinePrefab, transform.parent);
+                lineL.transform.localPosition = Vector3.left * lineSpeed * animationTime * 2 
+                    + transform.localPosition.y * Vector3.up;
                 beatLines.Add(lineL);
 
                 // Right line
-                var lineR = Instantiate(beatLinePrefab, transform);
-                lineR.transform.localPosition = Vector3.right * lineSpeed * animationTime * 2;
+                var lineR = Instantiate(beatLinePrefab, transform.parent);
+                lineR.transform.localPosition = Vector3.right * lineSpeed * animationTime * 2 
+                    + transform.localPosition.y * Vector3.up;
                 beatLines.Add(lineR);
             }
         }
@@ -69,7 +71,7 @@ public class BeatAnimator : MonoBehaviour {
             var lineL = beatLines[i - 1];
             lineL.transform.localPosition += Vector3.right * delta;
 
-            if(lineL.transform.localPosition.x >= 0)
+            if(lineL.transform.localPosition.x >= transform.localPosition.x)
             {
                 Destroy(lineR.gameObject);
                 beatLines.RemoveAt(i);
