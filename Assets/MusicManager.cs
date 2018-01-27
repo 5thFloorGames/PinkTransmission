@@ -26,6 +26,13 @@ public class MusicManager : MonoBehaviour {
 		
 	}
 
+	bool CloseToBeat(){
+		if(Time.time - lastBeat < 0.2 || 0.43 - (Time.time - lastBeat) < 0.2){
+			return true;
+		}
+		return false;
+	}
+
 	void Beat(object in_cookie, AkCallbackType in_type, object in_info){
 		if(Time.time - lastBeat > 0.1){
 			print(Time.time - lastBeat);
