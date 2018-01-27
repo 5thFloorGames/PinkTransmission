@@ -52,6 +52,7 @@ public class PPController : MonoBehaviour {
     void OnDestroy()
     {
         ResetPP();
+        MusicManager.OnBeat -= CheckTime;
     }
 
     private void SetValues()
