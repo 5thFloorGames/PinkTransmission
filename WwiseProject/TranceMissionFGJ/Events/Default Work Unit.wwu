@@ -110,6 +110,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{CDF13472-28B0-4CF0-A861-6676A5A16031}" ShortID="316062745">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Plant" ID="{D0A23EBF-8639-44C9-8EAE-F16E385FF2BC}" WorkUnitID="{0615F821-0AC7-4137-8C0F-FDA1B480C40E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="ActionBiteStinger" ID="{5AA99EC0-B5E9-412E-B4F0-DFD072264A92}">
@@ -122,6 +132,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="BiteStinger" ID="{E01A2817-6DB6-43B2-A20C-985E17D7B7D6}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{85BC3D30-B22D-4B2F-AAD1-7401A4FBC4B7}" ShortID="260920032">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bite" ID="{957B4EDF-F873-430F-A84A-22D172495E71}" WorkUnitID="{0615F821-0AC7-4137-8C0F-FDA1B480C40E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
