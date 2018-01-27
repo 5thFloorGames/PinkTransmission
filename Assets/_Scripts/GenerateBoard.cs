@@ -16,7 +16,7 @@ public class GenerateBoard : MonoBehaviour {
 		for(int i = 0;i<=XSize;i++){
 			for(int j = 0;j<=YSize;j++){
 				GameObject g = Instantiate(tile,transform);
-				g.transform.position = new Vector3(i - 5,j - 5,0);
+				g.transform.position = new Vector3(i - 5,0,j - 5);
 				tiles[i,j] = g.GetComponent<TileColor>();
 			}
 		}
