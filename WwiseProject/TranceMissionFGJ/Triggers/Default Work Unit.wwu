@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{E674A5C9-685A-424A-997F-C8D97A0CB809}" PersistMode="Standalone">
 			<ChildrenList>
 				<Trigger Name="Crash" ID="{9663FA2F-F4C9-4A0B-8D59-815D9D1D320C}"/>
+				<Trigger Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Triggers>

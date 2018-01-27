@@ -12,17 +12,17 @@ public class GenerateBoard : MonoBehaviour {
 	TileColor [,] tiles;
 	Vector2 FawnPosition;
 	public GameObject fawn;
-
     // Shroom
-    Vector2 ShroomPosition;
-    public GameObject shroom;
+    Vector2 shroomPosition;
+    public GameObject shroomPlayer;
+	private bool firstMove = false;
     
 
 	// Use this for initialization
 	void Start () {
         Instance = this;
 		FawnPosition = new Vector2(0,0);
-		ShroomPosition = new Vector2(YSize,XSize);
+		shroomPosition = new Vector2(YSize,XSize);
 		tiles = new TileColor[XSize * 2, YSize *2];
 		tile = Resources.Load<GameObject>("Tile");
 		for(int i = 0;i<=XSize;i++){
@@ -33,8 +33,8 @@ public class GenerateBoard : MonoBehaviour {
 			}
 		}
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
-        ShroomPosition = new Vector2(XSize, YSize);
-        shroom.transform.position = tiles[XSize, YSize].transform.position;
+        shroomPosition = new Vector2(XSize, YSize);
+        shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -44,6 +44,10 @@ public class GenerateBoard : MonoBehaviour {
 	
 	public void MoveFawn(MoveDirection direction)
     {
+		if(!firstMove){
+			firstMove = true;
+			AkSoundEngine.PostEvent("ActionFirstMove",gameObject);
+		}
         Vector2 newPos = FawnPosition;
         Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down){
@@ -68,7 +72,7 @@ public class GenerateBoard : MonoBehaviour {
 			}
         }
 
-        if (newPos != ShroomPosition && newPos != FawnPosition)
+        if (newPos != shroomPosition && newPos != FawnPosition)
         {
             fawn.transform.position += delta;
             FawnPosition = newPos;
@@ -84,7 +88,11 @@ public class GenerateBoard : MonoBehaviour {
     
     public void MoveShroom(MoveDirection direction)
     {
-        Vector2 newPos = ShroomPosition;
+        Vector2 newPos = shroomPosition;
+		if(!firstMove){
+			firstMove = true;
+			AkSoundEngine.PostEvent("ActionFirstMove",gameObject);
+		}
         Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down)
         {
@@ -119,23 +127,23 @@ public class GenerateBoard : MonoBehaviour {
             }
         }
 
-        if (newPos != ShroomPosition && newPos != FawnPosition)
+        if (newPos != shroomPosition && newPos != FawnPosition)
         {
-            shroom.transform.position += delta;
-            ShroomPosition = newPos;
+            shroomPlayer.transform.position += delta;
+            shroomPosition = newPos;
             UpdateTileOnShroom();
         }
     }
 
     void UpdateTileOnShroom()
     {
-        int x = (int)ShroomPosition.x;
-        int y = (int)ShroomPosition.y;
+        int x = (int)shroomPosition.x;
+        int y = (int)shroomPosition.y;
         tiles[x, y].ChangeOwner(TileState.Shroom);
     }
 
     public void SpawnShroom()
     {
-        ShroomSlotManager.Instance.SpawnShroom((int)ShroomPosition.x, (int)ShroomPosition.y);
+        ShroomSlotManager.Instance.SpawnShroom((int)shroomPosition.x, (int)shroomPosition.y);
     }
 }

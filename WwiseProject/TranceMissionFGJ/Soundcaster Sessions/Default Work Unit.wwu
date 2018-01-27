@@ -13,6 +13,10 @@
 							<ObjectRef Name="ActionFirstMove" ID="{FF67ECF8-8D58-4697-B35E-EDF64083F405}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="ActionStinger" ID="{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -21,7 +25,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}"/>
+						<CurrentStateRef Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Idle" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>

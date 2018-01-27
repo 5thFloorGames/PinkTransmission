@@ -6,6 +6,8 @@ public class MusicManager : MonoBehaviour {
 
 	public delegate void BeatAction();
 	public static event BeatAction OnBeat;
+	private float lastBeat = 0;
+
 	// Use this for initialization
 	void Start () {
 		AkSoundEngine.PostEvent("PlayPlaceholderLoop", gameObject, 0x0100, Beat, null);		
@@ -17,6 +19,9 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	void Beat(object in_cookie, AkCallbackType in_type, object in_info){
-		OnBeat();
+		if(Time.time - lastBeat > 0.1){
+			lastBeat = Time.time;
+			OnBeat();
+		}
 	}
 }

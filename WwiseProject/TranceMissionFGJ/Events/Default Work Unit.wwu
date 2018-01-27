@@ -96,6 +96,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ActionStinger" ID="{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}">
+							<ChildrenList>
+								<Action Name="" ID="{8560F589-FB51-4E54-A3E9-D07847629D71}" ShortID="802112285">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RandomStinger" ID="{F40DB72F-7284-47D0-8714-E715F988B0EE}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

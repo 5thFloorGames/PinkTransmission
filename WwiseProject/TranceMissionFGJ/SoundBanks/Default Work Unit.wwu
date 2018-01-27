@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Music" ID="{F9C9424A-8409-4960-921E-0A75BC7F5F09}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Markers" ID="{4A54236F-13F2-4A44-8721-D300C6216054}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Actions" ID="{EA0992E1-B596-4A72-A477-DEE72F43E006}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
