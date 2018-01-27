@@ -16,7 +16,7 @@ public class FawnMovement : MonoBehaviour {
 	}
     
 	void Move(){
-		if(i++ % 2 == 0)
+		if(i++ % 1 == 0)
         {
 			animator.SetTrigger("Jump");
 			if(Input.GetAxis("HorizontalA") > 0){
