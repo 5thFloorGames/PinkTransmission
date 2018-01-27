@@ -36,7 +36,7 @@
 				</File>
 				<File Id="10769914" Language="SFX">
 					<ShortName>Splat3.wav</ShortName>
-					<Path>SFX\Splat3_150E92E7.wem</Path>
+					<Path>SFX\Splat3_01C072E3.wem</Path>
 				</File>
 				<File Id="15291811" Language="SFX">
 					<ShortName>StingerPerc3.wav</ShortName>
@@ -48,7 +48,7 @@
 				</File>
 				<File Id="281406132" Language="SFX">
 					<ShortName>Splat_base.wav</ShortName>
-					<Path>SFX\Splat_base_1596CA4A.wem</Path>
+					<Path>SFX\Splat_base_2CA90D9E.wem</Path>
 				</File>
 				<File Id="284848740" Language="SFX">
 					<ShortName>StingerPerc6.wav</ShortName>
@@ -84,7 +84,7 @@
 				</File>
 				<File Id="549514554" Language="SFX">
 					<ShortName>Splat1.wav</ShortName>
-					<Path>SFX\Splat1_1CF23E6D.wem</Path>
+					<Path>SFX\Splat1_794C6408.wem</Path>
 				</File>
 				<File Id="589612994" Language="SFX">
 					<ShortName>IdleLoop.wav</ShortName>
@@ -100,7 +100,7 @@
 				</File>
 				<File Id="806245137" Language="SFX">
 					<ShortName>Splat2.wav</ShortName>
-					<Path>SFX\Splat2_A25DFC0E.wem</Path>
+					<Path>SFX\Splat2_C55CDA9D.wem</Path>
 				</File>
 				<File Id="806302841" Language="SFX">
 					<ShortName>StingerBite3.wav</ShortName>
