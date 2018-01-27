@@ -219,6 +219,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &279997233
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322592281670518, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9c62900932ac171479c34b3fac669f37, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &509110806 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1547483142754862, guid: 9c62900932ac171479c34b3fac669f37,
+    type: 2}
+  m_PrefabInternal: {fileID: 279997233}
 --- !u!1 &693576699
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fawn: {fileID: 1898416428}
+  shroomPlayer: {fileID: 509110806}
 --- !u!1001 &1790234497
 Prefab:
   m_ObjectHideFlags: 0

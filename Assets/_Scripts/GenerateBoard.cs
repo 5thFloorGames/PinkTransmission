@@ -13,6 +13,10 @@ public class GenerateBoard : MonoBehaviour {
 	Vector2 FawnPosition;
 	public GameObject fawn;
 
+    // Shroom
+    Vector2 shroomPosition;
+    public GameObject shroomPlayer;
+    
 	// Use this for initialization
 	void Start () {
         Instance = this;
@@ -27,6 +31,9 @@ public class GenerateBoard : MonoBehaviour {
 			}
 		}
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
+
+        shroomPosition = new Vector2(XSize, YSize);
+        shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -34,34 +41,95 @@ public class GenerateBoard : MonoBehaviour {
         return new Vector3(x - XSize / 2f, 0, y - YSize / 2f);
     }
 	
-	public void MoveFawn(MoveDirection direction){
-		if(direction == MoveDirection.Down){
-			if(FawnPosition.y > 0){
-				fawn.transform.position += new Vector3(0,0,-1);
-				FawnPosition += new Vector2(0,-1);
+	public void MoveFawn(MoveDirection direction)
+    {
+        Vector2 newPos = FawnPosition;
+        Vector3 delta = Vector3.zero;
+        if (direction == MoveDirection.Down){
+			if(newPos.y > 0){
+				delta = new Vector3(0,0,-1);
+                newPos += new Vector2(0,-1);
 			}
 		} else if (direction == MoveDirection.Up){
-			if(FawnPosition.y < YSize){
-				fawn.transform.position += new Vector3(0,0,1);
-				FawnPosition += new Vector2(0,1);
+			if(newPos.y < YSize){
+                delta = new Vector3(0,0,1);
+                newPos += new Vector2(0,1);
 			}
 		} else if(direction == MoveDirection.Right){
-			if(FawnPosition.x > 0){
-				fawn.transform.position += new Vector3(-1,0,0);
-				FawnPosition += new Vector2(-1,0);
+			if(newPos.x > 0){
+                delta = new Vector3(-1,0,0);
+                newPos += new Vector2(-1,0);
 			}
 		} else if (direction == MoveDirection.Left){
-			if(FawnPosition.x < XSize){
-				fawn.transform.position += new Vector3(1,0,0);
-				FawnPosition += new Vector2(1,0);
+			if(newPos.x < XSize){
+                delta = new Vector3(1,0,0);
+                newPos += new Vector2(1,0);
 			}
-		}
-		UpdateTileOnFawn();
-	}
+        }
 
+        if (newPos != shroomPosition && newPos != FawnPosition)
+        {
+            fawn.transform.position += delta;
+            FawnPosition = newPos;
+            UpdateTileOnFawn();
+        }
+	}
+    
 	void UpdateTileOnFawn(){
 		int x = (int)FawnPosition.x;
 		int y = (int)FawnPosition.y;
 		tiles[x,y].ChangeOwner(TileState.Animal);
 	}
+    
+    public void MoveShroom(MoveDirection direction)
+    {
+        Vector2 newPos = shroomPosition;
+        Vector3 delta = Vector3.zero;
+        if (direction == MoveDirection.Down)
+        {
+            if (newPos.y > 0)
+            {
+                delta = new Vector3(0, 0, -1);
+                newPos += new Vector2(0, -1);
+            }
+        }
+        else if (direction == MoveDirection.Up)
+        {
+            if (newPos.y < YSize)
+            {
+                delta = new Vector3(0, 0, 1);
+                newPos += new Vector2(0, 1);
+            }
+        }
+        else if (direction == MoveDirection.Right)
+        {
+            if (newPos.x > 0)
+            {
+                delta = new Vector3(-1, 0, 0);
+                newPos += new Vector2(-1, 0);
+            }
+        }
+        else if (direction == MoveDirection.Left)
+        {
+            if (newPos.x < XSize)
+            {
+                delta = new Vector3(1, 0, 0);
+                newPos += new Vector2(1, 0);
+            }
+        }
+
+        if (newPos != shroomPosition && newPos != FawnPosition)
+        {
+            shroomPlayer.transform.position += delta;
+            shroomPosition = newPos;
+            UpdateTileOnShroom();
+        }
+    }
+
+    void UpdateTileOnShroom()
+    {
+        int x = (int)shroomPosition.x;
+        int y = (int)shroomPosition.y;
+        tiles[x, y].ChangeOwner(TileState.Shroom);
+    }
 }

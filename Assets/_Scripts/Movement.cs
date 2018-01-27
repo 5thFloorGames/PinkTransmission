@@ -19,13 +19,13 @@ public class Movement : MonoBehaviour {
 
 	void Move(){
 		if(i++ % 2 == 0){
-			if(Input.GetAxis("Horizontal") > 0){
+			if(Input.GetAxis("HorizontalA") > 0){
 				board.MoveFawn(MoveDirection.Left);
-			} else if (Input.GetAxis("Horizontal") < 0){
+			} else if (Input.GetAxis("HorizontalA") < 0){
 				board.MoveFawn(MoveDirection.Right);
-			} else if(Input.GetAxis("Vertical") > 0){
+			} else if (Input.GetAxis("VerticalA") > 0){
 				board.MoveFawn(MoveDirection.Up);
-			} else if (Input.GetAxis("Vertical") < 0){
+			} else if (Input.GetAxis("VerticalA") < 0){
 				board.MoveFawn(MoveDirection.Down);
 			}
 		}
