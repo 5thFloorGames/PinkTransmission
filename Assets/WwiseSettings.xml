@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WwiseSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WwiseProjectPath />
+  <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+  <CreateWwiseGlobal>false</CreateWwiseGlobal>
+  <CreateWwiseListener>false</CreateWwiseListener>
+  <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
+  <CreatedPicker>false</CreatedPicker>
+</WwiseSettings>
