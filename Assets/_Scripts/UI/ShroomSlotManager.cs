@@ -20,7 +20,6 @@ public class ShroomSlotManager : MonoBehaviour {
         {
             slots[i].SetShroom(Static.GetRandom(shroomPrefabs));
         }
-        AkSoundEngine.PostEvent(1229115632, gameObject);
     }
 
     private void Update()
