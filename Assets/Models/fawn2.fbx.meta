@@ -6,12 +6,63 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: BackLeg1L
+    100006: BackLeg1R
+    100008: BackLeg2L
+    100010: BackLeg2L_end
+    100012: BackLeg2R
+    100014: BackLeg2R_end
+    100016: Body
+    100018: Ear_L
+    100020: Ear_L_end
+    100022: Ear_R
+    100024: Ear_R_end
+    100026: Fawn
+    100028: FrongLeg1R
+    100030: FrontLeg1L
+    100032: FrontLeg2L
+    100034: FrontLeg2L_end
+    100036: FrontLeg2R
+    100038: FrontLeg2R_end
+    100040: Head
+    100042: Neck
+    100044: Tail
+    100046: Tail_end
     400000: //RootNode
+    400002: Armature
+    400004: BackLeg1L
+    400006: BackLeg1R
+    400008: BackLeg2L
+    400010: BackLeg2L_end
+    400012: BackLeg2R
+    400014: BackLeg2R_end
+    400016: Body
+    400018: Ear_L
+    400020: Ear_L_end
+    400022: Ear_R
+    400024: Ear_R_end
+    400026: Fawn
+    400028: FrongLeg1R
+    400030: FrontLeg1L
+    400032: FrontLeg2L
+    400034: FrontLeg2L_end
+    400036: FrontLeg2R
+    400038: FrontLeg2R_end
+    400040: Head
+    400042: Neck
+    400044: Tail
+    400046: Tail_end
     2100000: Mat_1
     2100002: Mat_2
     2300000: //RootNode
+    2300002: Fawn
     3300000: //RootNode
+    3300002: Fawn
     4300000: Fawn
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: Fawn
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -31,7 +82,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -80,13 +131,13 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Body
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
