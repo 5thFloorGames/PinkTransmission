@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222706399231738150}
   - component: {fileID: 114593389664254782}
   m_Layer: 5
-  m_Name: BeatLine
+  m_Name: BeatLineFawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.76551723, a: 1}
+  m_Color: {r: 0.9705882, g: 0.4067906, b: 0.90837604, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
