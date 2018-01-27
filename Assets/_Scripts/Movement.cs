@@ -10,23 +10,23 @@ public class Movement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		board = FindObjectOfType<GenerateBoard>();
-		AkSoundEngine.PostEvent("PlayPlaceholderLoop", gameObject, 0x0100, Move, null);		
+		MusicManager.OnBeat += Move;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	}
 
-	void Move(object in_cookie, AkCallbackType in_type, object in_info){
+	void Move(){
 		if(i++ % 2 == 0){
 			if(Input.GetAxis("Horizontal") > 0){
-				board.MoveFawn(MoveDirection.Up);
-			} else if (Input.GetAxis("Horizontal") < 0){
-				board.MoveFawn(MoveDirection.Down);
-			} else if(Input.GetAxis("Vertical") > 0){
 				board.MoveFawn(MoveDirection.Left);
-			} else if (Input.GetAxis("Vertical") < 0){
+			} else if (Input.GetAxis("Horizontal") < 0){
 				board.MoveFawn(MoveDirection.Right);
+			} else if(Input.GetAxis("Vertical") > 0){
+				board.MoveFawn(MoveDirection.Up);
+			} else if (Input.GetAxis("Vertical") < 0){
+				board.MoveFawn(MoveDirection.Down);
 			}
 		}
 	}
