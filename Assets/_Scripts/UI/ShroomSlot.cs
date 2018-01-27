@@ -7,15 +7,12 @@ public class ShroomSlot : MonoBehaviour {
 
     public Shroom shroom;
     private Image iconImage;
-
-	// Use this for initialization
-	void Start () {
-        iconImage = transform.Find("Image").GetComponent<Image>();
-	}
-	
+    
 	public void SetShroom(Shroom shroom)
     {
-        Debug.Log("Set shroom...");
+        if(!iconImage)
+            iconImage = transform.Find("Image").GetComponent<Image>();
+
         this.shroom = shroom;
         iconImage.sprite = shroom.icon;
     }
