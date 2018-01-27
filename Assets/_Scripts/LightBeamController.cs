@@ -32,11 +32,22 @@ public class LightBeamController : MonoBehaviour {
 		}
 	}
 
-	IEnumerator WaveFromFront() {
-		yield return new WaitForSeconds(0.1f);
+	void ReturnToDefault() {
 		for (int i = 0; i < 5; i++) {
-			LeanTween.rotateX(rightLights[i], 90f, 1.0f);
+			rightLights[i].transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+			leftLights[i].transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
 		}
+	}
+
+	IEnumerator WaveFromFront() {
+		
+		for (int i = 0; i < 5; i++) {
+			LeanTween.rotateZ(rightLights[i], 90f, 1.0f);
+			LeanTween.rotateZ(leftLights[i], -90f, 1.0f);
+			yield return new WaitForSeconds(0.5f);
+		}
+		yield return new WaitForSeconds(0.5f);
+		ReturnToDefault();
 	}
 
 }
