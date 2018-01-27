@@ -28,6 +28,7 @@ public class LightBeamController : MonoBehaviour {
 		if (!lightsMoving) {
 			if (Input.GetKeyDown(KeyCode.P)) {
 				StartCoroutine(WaveFromFront());
+				lightsMoving = true;
 			}
 		}
 	}
@@ -39,15 +40,26 @@ public class LightBeamController : MonoBehaviour {
 		}
 	}
 
+	void Hello(GameObject go) {
+		Debug.Log(go.name);
+	}
+
 	IEnumerator WaveFromFront() {
 		
 		for (int i = 0; i < 5; i++) {
-			LeanTween.rotateZ(rightLights[i], 91f, 1.0f);
-			LeanTween.rotateZ(leftLights[i], -91f, 1.0f);
-			yield return new WaitForSeconds(0.5f);
+			LeanTween.rotateZ(rightLights[i], 91f, 0.9f);
+			LeanTween.delayedCall(rightLights[i], 1.01f, ()=>{ 
+				LeanTween.rotateZ(rightLights[i], 0f, 1.0f);
+				});
+			LeanTween.rotateZ(leftLights[i], -91f, 0.9f);
+			LeanTween.delayedCall(leftLights[i], 1.01f, ()=>{ 
+				LeanTween.rotateZ(leftLights[i], 0f, 1.0f);
+				});
+			yield return new WaitForSeconds(0.3f);
 		}
-		yield return new WaitForSeconds(0.5f);
-		ReturnToDefault();
+		yield return new WaitForSeconds(1f);
+		lightsMoving = false;
+		//ReturnToDefault();
 	}
 
 }
