@@ -36,6 +36,10 @@ public class MusicManager : MonoBehaviour {
 		return false;
 	}
 
+	public float TimeToNextBeat(){
+		return 0.43f - (Time.time - lastBeat);
+	}
+
 	void Beat(object in_cookie, AkCallbackType in_type, object in_info){
 		if(Time.time - lastBeat > 0.1){
 			//print(Time.time - lastBeat);
