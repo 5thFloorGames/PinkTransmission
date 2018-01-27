@@ -8,9 +8,15 @@ public class PPController : MonoBehaviour {
     private PostProcessingBehaviour pp;
     private ColorGradingModel.BasicSettings basicSettings;
 
+    public float animationTime = 1.0f;
+
+    // Temperature
     public int temperatureRange = 20;
-    public float temperatureChangeTime = 1.0f;
-    private float targetTemperature, temperatureSpeed;
+    private float temperatureTarget, temperatureSpeed;
+
+    // 
+    public int hueRange = 15;
+    private float hueTarget, hueSpeed;
 
 	// Use this for initialization
 	void Start () {
@@ -28,31 +34,53 @@ public class PPController : MonoBehaviour {
     private void SetValues()
     {
         basicSettings = pp.profile.colorGrading.settings.basic;
-        targetTemperature = basicSettings.temperature;
+        temperatureTarget = basicSettings.temperature;
         temperatureSpeed = 1;
+        hueTarget = basicSettings.hueShift;
+        hueSpeed = 1;
     }
 	
 	// Update is called once per frame
 	void FixedUpdate ()
     {
         UpdateColorGrading();
+        UpdateHue();
 	}
 
     private void UpdateColorGrading()
     {
         var temp = pp.profile.colorGrading.settings;
-        if (temp.basic.temperature >= targetTemperature && temperatureSpeed > 0)
+        if (temp.basic.temperature >= temperatureTarget && temperatureSpeed > 0)
         {
             temperatureSpeed = -1;
-            targetTemperature = basicSettings.temperature - temperatureRange;
+            temperatureTarget = basicSettings.temperature - temperatureRange;
             return;
-        } else if (temp.basic.temperature <= targetTemperature && temperatureSpeed < 0)
+        } else if (temp.basic.temperature <= temperatureTarget && temperatureSpeed < 0)
         {
             temperatureSpeed = 1;
-            targetTemperature = basicSettings.temperature + temperatureRange;
+            temperatureTarget = basicSettings.temperature + temperatureRange;
             return;
         }
-        temp.basic.temperature += temperatureSpeed * temperatureRange * Time.fixedDeltaTime / temperatureChangeTime;
+        temp.basic.temperature += temperatureSpeed * temperatureRange * Time.fixedDeltaTime / animationTime;
+        pp.profile.colorGrading.settings = temp;
+    }
+
+    private void UpdateHue()
+    {
+        var temp = pp.profile.colorGrading.settings;
+        if (temp.basic.hueShift >= hueTarget && hueSpeed > 0)
+        {
+            hueSpeed = -1;
+            hueTarget = basicSettings.hueShift - hueRange;
+            return;
+        }
+        else if (temp.basic.hueShift <= hueTarget && hueSpeed < 0)
+        {
+            hueSpeed = 1;
+            hueTarget = basicSettings.hueShift + hueRange;
+            return;
+        }
+        temp.basic.hueShift += hueSpeed * hueRange * Time.fixedDeltaTime / animationTime;
         pp.profile.colorGrading.settings = temp;
     }
 }
