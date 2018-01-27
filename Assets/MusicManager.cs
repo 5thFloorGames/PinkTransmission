@@ -16,10 +16,6 @@ public class MusicManager : MonoBehaviour {
 	public void FirstMove(){
 		AkSoundEngine.PostEvent("ActionFirstMove", gameObject);		
 	}
-
-	public void ShroomStinger(){
-		AkSoundEngine.PostEvent("ActionShroomStinger", gameObject);
-	}
 	
 	// Update is called once per frame
 	void Update () {

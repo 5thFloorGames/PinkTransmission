@@ -39,4 +39,8 @@ public class ShroomMovement : MonoBehaviour {
             }
         }
     }
+
+    public void ShroomStinger(){
+		AkSoundEngine.PostEvent("ActionShroomStinger", gameObject);
+	}
 }
