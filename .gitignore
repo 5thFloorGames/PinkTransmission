@@ -38,6 +38,7 @@ sysinfo.txt
 
 #WWise
 WwiseUnityIntegration*
+/Assets/Wwise/Deployment/Plugins/
 
 .DS_Store
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
