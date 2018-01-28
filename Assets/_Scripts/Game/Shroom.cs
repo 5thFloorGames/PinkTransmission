@@ -15,6 +15,10 @@ public class Shroom : MonoBehaviour {
     private int turnsPassed;
     private TextMesh turnText;
 
+    // Animation
+    private float beatTime = 0.43f;
+    private float previousTime;
+
     private void Start()
     {
         ScoreManager.Instance.shroomBeatAnimator.OnBeat += CheckTurn;
@@ -70,30 +74,39 @@ public class Shroom : MonoBehaviour {
 
     public virtual void TriggerExplosion()
     {
+        /*
         var r = GetComponentInChildren<Renderer>();
         if (r)
             r.enabled = false;
 
+        turnText.gameObject.SetActive(false);
+        */
+        previousTime = Time.time;
         Tick();
         ScoreManager.Instance.fawnBeatAnimator.OnBeat += Tick;
     }
     
     protected virtual void Tick()
     {
-        turnsPassed++;
-
-        int scoreDelta = 0;
-        scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x + turnsPassed, y, TileState.Shroom);
-        scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x - turnsPassed, y, TileState.Shroom);
-        scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x, y + turnsPassed, TileState.Shroom);
-        scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x, y - turnsPassed, TileState.Shroom);
-        ScoreManager.Instance.GenerateFloatText(scoreDelta, false);
-
-        if(turnsPassed >= explosionRadius)
+        var delta = Time.time - previousTime;
+        var ratio = delta / beatTime;
+        if (ratio >= 0.5f && ratio <= 2.0f)
         {
+            turnsPassed++;
 
-            ScoreManager.Instance.fawnBeatAnimator.OnBeat -= Tick;
-            Destroy(gameObject);
+            int scoreDelta = 0;
+            scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x + turnsPassed, y, TileState.Shroom);
+            scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x - turnsPassed, y, TileState.Shroom);
+            scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x, y + turnsPassed, TileState.Shroom);
+            scoreDelta += GenerateBoard.Instance.ChangeTileOwner(x, y - turnsPassed, TileState.Shroom);
+            ScoreManager.Instance.GenerateFloatText(scoreDelta, false);
+
+            if (turnsPassed >= explosionRadius)
+            {
+                ScoreManager.Instance.fawnBeatAnimator.OnBeat -= Tick;
+                Destroy(gameObject);
+            }
         }
+        previousTime = Time.time;
     }
 }
