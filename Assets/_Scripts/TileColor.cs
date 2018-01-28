@@ -16,7 +16,6 @@ public class TileColor : MonoBehaviour {
 		tiles.Add(TileState.Neutral,neutral);
 		tiles.Add(TileState.Animal,animal);
 		tiles.Add(TileState.Shroom,shroom);
-		tileState = TileState.Neutral;
 		EnableState();
 	}
 	
@@ -25,16 +24,30 @@ public class TileColor : MonoBehaviour {
 	}
 
 	void EnableState(){
-		tiles[tileState].SetActive(true);
+		if(tiles != null){
+			tiles[tileState].SetActive(true);
+		}
 	}
 
 	void DisableState(){
-		tiles[tileState].SetActive(false);
+		if(tiles != null){
+			tiles[tileState].SetActive(false);
+		}
 	}
 
 	public void ChangeOwner(TileState state){
-		DisableState();
+		if(state != tileState){
+			DisableState();
+			tileState = state;
+			EnableState();
+		}
+	}
+
+	public Vector3 TilePosition(){
+		return transform.position;
+	}
+
+	public void setState(TileState state){
 		tileState = state;
-		EnableState();
 	}
 }

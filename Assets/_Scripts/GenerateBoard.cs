@@ -37,6 +37,8 @@ public class GenerateBoard : MonoBehaviour {
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
         shroomPosition = new Vector2(XSize, YSize);
         shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
+		tiles[0,0].setState(TileState.Animal);
+		tiles[XSize,YSize].setState(TileState.Shroom);
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -86,7 +88,7 @@ public class GenerateBoard : MonoBehaviour {
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
             LeanTween.delayedCall(fawn, 0.1f, ()=>{ 
-                LeanTween.move( fawn, fawn.transform.position + delta, 0.2f);
+                LeanTween.move( fawn, tiles[(int)newPos.x,(int)newPos.y].TilePosition(), 0.2f);
                 });
             FawnPosition = newPos;
             StartCoroutine(PlayDelayed(0.3f, true));
@@ -148,7 +150,7 @@ public class GenerateBoard : MonoBehaviour {
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
             LeanTween.delayedCall(shroomPlayer, 0.2f, ()=>{ 
-                LeanTween.move( shroomPlayer, shroomPlayer.transform.position + delta, 0.2f);
+                LeanTween.move( shroomPlayer, tiles[(int)newPos.x,(int)newPos.y].TilePosition(), 0.2f);
                 });
             shroomPosition = newPos;
 

@@ -8,6 +8,8 @@ public class MusicManager : MonoBehaviour {
 	public static event BeatAction OnBeat;
 	private float lastBeat = 0;
 
+	private int beatCounter = 0;
+
 	// Use this for initialization
 	void Start () {
 		AkSoundEngine.PostEvent("PlayPlaceholderLoop", gameObject, 0x0100, Beat, null);		
@@ -15,13 +17,6 @@ public class MusicManager : MonoBehaviour {
 
 	public void FirstMove(){
 		AkSoundEngine.PostEvent("ActionFirstMove", gameObject);		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.B)){
-			CloseToBeat();
-		}
 	}
 
 	public bool CloseToBeat(){
@@ -36,6 +31,16 @@ public class MusicManager : MonoBehaviour {
 		return false;
 	}
 
+	public bool CloseToHalfBar(){
+		if(beatCounter % 2 == 1 && Time.time - lastBeat < 0.2){
+			return true;
+		}
+		if(beatCounter % 2 == 0 && 0.43 - (Time.time - lastBeat) < 0.2){
+			return true;
+		}
+		return false;
+	}
+
 	public float TimeToNextBeat(){
 		return 0.43f - (Time.time - lastBeat);
 	}
@@ -44,6 +49,7 @@ public class MusicManager : MonoBehaviour {
 		if(Time.time - lastBeat > 0.1){
 			//print(Time.time - lastBeat);
 			lastBeat = Time.time;
+			beatCounter++;
 			OnBeat();
 		}
 	}
