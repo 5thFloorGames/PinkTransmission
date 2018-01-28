@@ -23,7 +23,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Idle" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+											<ObjectRef Name="PreStart" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -33,7 +33,17 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
+											<ObjectRef Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1A14C499-126E-45D0-BD59-9DBED65A200A}" ShortID="235136677">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -92,6 +102,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E42AA816-F12E-4CE2-AF06-4B66E902D7BF}" ShortID="882048217">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -157,6 +177,76 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="PercStinger" ID="{F2A352BC-4032-4B77-982E-DAB2E2B4EC3C}" WorkUnitID="{E674A5C9-685A-424A-997F-C8D97A0CB809}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PauseAll" ID="{0FE0F408-CE06-4E62-A015-6B4A2D62ED62}">
+							<ChildrenList>
+								<Action Name="" ID="{DE00A7A4-840A-4F41-9184-E2136ABBC3A8}" ShortID="413592613">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="8"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ResumeAll" ID="{58C18481-E69D-46EE-BC8E-B94447CAE9D2}">
+							<ChildrenList>
+								<Action Name="" ID="{2C88D4A8-A7DC-464F-8C1F-FBD3CE466744}" ShortID="151870931">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="10"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopAll" ID="{9940D40D-BF57-4ACD-B1F6-7BFA868F717C}">
+							<ChildrenList>
+								<Action Name="" ID="{81C5F07E-9F70-44B9-9881-B8FBA283BF7C}" ShortID="1019650575">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{DB2B1979-1EC0-4F22-A016-9F8ED977ED8C}" ShortID="362420926">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C1693FD8-7F4F-41D2-A75F-32A8FDE2D67C}" ShortID="102892527">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PreStart" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DE9AEF88-7802-4672-97AA-F390F27D2F02}" ShortID="776806049">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}" WorkUnitID="{B2756169-AB49-415B-B5CE-FAD6EB028ABC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{008116A1-E674-4E5A-9C25-AD2B71B7C6D9}" ShortID="573925872">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Playback_speed" ID="{C1B07EFF-F53F-47B9-BD50-F4C28271E3FD}" WorkUnitID="{A6C77BA2-E477-4C88-9DFD-BF6621EDE468}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

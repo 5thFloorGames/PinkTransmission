@@ -18,28 +18,25 @@ public class FawnMovement : MonoBehaviour {
 		MusicManager.OnBeat += Jump;
 	}
 
+    private void CheckDirection(MoveDirection d){
+        if(music.CloseToBeat()){
+            GenerateBoard.Instance.MoveFawn(d);
+            StartCoroutine(ResetMove());
+        } else {
+            ScoreManager.Instance.GenerateFloatText(0, true);
+        }
+    }
+
 	void Update(){
 		if(!jumpedAlready){
 			if(Input.GetKeyDown(KeyCode.W)){
-				if(music.CloseToBeat()){
-					board.MoveFawn(MoveDirection.Up);
-					StartCoroutine(ResetMove());
-				}
+				CheckDirection(MoveDirection.Up);
 			} else if(Input.GetKeyDown(KeyCode.S)){
-				if(music.CloseToBeat()){
-					board.MoveFawn(MoveDirection.Down);
-					StartCoroutine(ResetMove());
-				}
+				CheckDirection(MoveDirection.Down);
 			} else if(Input.GetKeyDown(KeyCode.A)){
-				if(music.CloseToBeat()){
-					board.MoveFawn(MoveDirection.Right);
-					StartCoroutine(ResetMove());
-				}
+				CheckDirection(MoveDirection.Right);
 			} else if(Input.GetKeyDown(KeyCode.D)){
-				if(music.CloseToBeat()){
-					board.MoveFawn(MoveDirection.Left);
-					StartCoroutine(ResetMove());
-				}
+				CheckDirection(MoveDirection.Left);
 			}
 		}
 	}

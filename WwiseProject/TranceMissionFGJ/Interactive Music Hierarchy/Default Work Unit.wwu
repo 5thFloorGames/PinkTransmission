@@ -73,20 +73,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="BaseLoop2" ID="{1DFED4D4-9EC9-4B4B-9062-F9806C638081}" ShortID="750629813">
+										<MusicTrack Name="BaseLoop-neutral" ID="{A28F252C-D251-4A93-8C0F-0B78B032AE87}" ShortID="983138818">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="BaseLoop2" ID="{0F65137F-9BF0-4F06-9AC8-05D40364B56F}" ShortID="908220631">
+												<AudioFileSource Name="BaseLoop-neutral" ID="{B717CB4B-D86C-46EF-8A78-4C175BBA275E}" ShortID="693534822">
 													<Language>SFX</Language>
-													<AudioFile>BaseLoop2.wav</AudioFile>
+													<AudioFile>BaseLoop-neutral.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{EB050C40-3E73-42D6-894D-64891D32587C}">
+												<MusicTransition Name="Root" ID="{FF90A129-459C-4D73-B854-6E56FB3A0881}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -94,21 +94,274 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{1A245F15-4B75-47E3-A15D-D01FE81CDB9E}">
+												<MusicTrackSequence Name="" ID="{A965C1EC-F719-4F8A-9B50-758FC90C45DD}">
 													<ClipList>
-														<MusicClip Name="BaseLoop2" ID="{647D9986-9F1A-4BB4-949F-7E1BBAFECB3D}">
+														<MusicClip Name="BaseLoop-neutral" ID="{62BA50EE-5AEB-4F52-9CED-5F3765C84282}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="15428.5625"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="15482.125"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="BaseLoop2" ID="{0F65137F-9BF0-4F06-9AC8-05D40364B56F}"/>
+															<AudioSourceRef Name="BaseLoop-neutral" ID="{B717CB4B-D86C-46EF-8A78-4C175BBA275E}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="EffectDoubleJump" ID="{2B3E193C-B267-4575-9638-299F142B53A2}" ShortID="382333917">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0CDB2994-C84D-4224-9209-9C7B4A09D60E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EffectDoubleJump" ID="{AE77F7E5-E3E5-4177-86BA-BC0E883D8DE8}" ShortID="431524407">
+													<Language>SFX</Language>
+													<AudioFile>EffectDoubleJump.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Effect" ID="{E39616B8-E3B7-4700-829E-4EC62430AC24}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
+														<State Name="" ID="{983FA1DB-5597-4D15-8C9A-6509C033C458}" ShortID="441098894">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}"/>
+														<State Name="" ID="{E06A8A61-32F1-4B4A-9F3A-BABA987FAF77}" ShortID="140396840">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
+														<State Name="" ID="{89B84BA4-CD60-48C5-81AF-BF14AC0FF402}" ShortID="597712424">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="DoubleJump" ID="{5DFAE64D-00E7-4EB1-873C-5C361DF01601}"/>
+														<State Name="" ID="{24E7EFD3-8546-4AF3-B886-113767AB2951}" ShortID="20573282"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{9D0645B3-CCE0-4814-8B9B-20C80B8CE48E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{FC6A057A-D71E-4FBE-9324-685807612DE8}">
+													<ClipList>
+														<MusicClip Name="EffectDoubleJump" ID="{25A343D3-6E45-44B0-8B32-692F9B7B4503}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="15482.125"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="EffectDoubleJump" ID="{AE77F7E5-E3E5-4177-86BA-BC0E883D8DE8}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Effect1-neutral" ID="{36211A20-92FA-48A5-B1D4-D08D5A3A4602}" ShortID="265466013">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0CDB2994-C84D-4224-9209-9C7B4A09D60E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Effect1-neutral" ID="{49612D6C-982A-42B5-B566-60FCCEB5A660}" ShortID="356459471">
+													<Language>SFX</Language>
+													<AudioFile>Effect1-neutral.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="239279612"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Effect" ID="{E39616B8-E3B7-4700-829E-4EC62430AC24}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
+														<State Name="" ID="{6328BE3E-9742-4EF3-A786-BACA05BBA2B6}" ShortID="505909500"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}"/>
+														<State Name="" ID="{42B8325D-9635-4AD6-AE92-EA465CE5A975}" ShortID="541801054">
+															<PropertyList>
+																<Property Name="Highpass" Type="int16" Value="30"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
+														<State Name="" ID="{F82E45F5-4021-4C70-A0DB-20CA5B8DD4B8}" ShortID="986604416">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="DoubleJump" ID="{5DFAE64D-00E7-4EB1-873C-5C361DF01601}"/>
+														<State Name="" ID="{2ED771CC-CC04-427D-B75E-A29584E642B4}" ShortID="353477773">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C620A8F2-4C80-44A2-AB5E-6C0FEEFAA038}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{FB902BD6-79F1-44BC-91E4-5FDB18FA5329}">
+													<ClipList>
+														<MusicClip Name="Effect1-neutral" ID="{DF8A1B2F-30B3-4F9D-8156-D8DFB171053F}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="15482.125"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Effect1-neutral" ID="{49612D6C-982A-42B5-B566-60FCCEB5A660}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="EffectMixedControls" ID="{39F1AED5-DB58-4072-B14C-5D65F9E40CCE}" ShortID="902059629">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0CDB2994-C84D-4224-9209-9C7B4A09D60E}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="EffectMixedControls" ID="{2A74336C-94DC-49C6-8908-92FF0EBE73DC}" ShortID="435869721">
+													<Language>SFX</Language>
+													<AudioFile>EffectMixedControls.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="Effect" ID="{E39616B8-E3B7-4700-829E-4EC62430AC24}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
+														<State Name="" ID="{914D5C42-AB7A-4B16-A5DE-56B46AEA898E}" ShortID="1007687186">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}"/>
+														<State Name="" ID="{A54C0108-5C93-442E-8CE8-89D7040C6390}" ShortID="937043423">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
+														<State Name="" ID="{2BB2B7A7-9E92-472D-9518-286E6A59168A}" ShortID="897683359"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="DoubleJump" ID="{5DFAE64D-00E7-4EB1-873C-5C361DF01601}"/>
+														<State Name="" ID="{48F4DAD2-E048-47C4-9D49-C9B8F4C712A1}" ShortID="435002078">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{D144830E-F1DB-4BAB-96A3-0B6993E29EBD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{52A35FC3-423B-4799-9912-BB6D6E651343}">
+													<ClipList>
+														<MusicClip Name="EffectMixedControls" ID="{ACF1B9F9-C7F6-4A2E-937D-638E0CBB3CDB}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="15482.125"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="EffectMixedControls" ID="{2A74336C-94DC-49C6-8908-92FF0EBE73DC}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
 											</SequenceList>
 										</MusicTrack>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo MusicSyncType="2">
+												<StateGroupRef Name="Effect" ID="{E39616B8-E3B7-4700-829E-4EC62430AC24}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
+												<State Name="" ID="{7FE69AD6-7CFB-4604-BD9A-171C588D37BF}" ShortID="442205765"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}"/>
+												<State Name="" ID="{93F2004C-7AD5-4070-90FC-AEF611DD33E6}" ShortID="934605185"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
+												<State Name="" ID="{AECA6700-C4B8-4F71-9707-C51CE45446EA}" ShortID="246019222"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="DoubleJump" ID="{5DFAE64D-00E7-4EB1-873C-5C361DF01601}"/>
+												<State Name="" ID="{A4B889CC-2833-4192-BCD5-1C80B5E2B51E}" ShortID="739873010"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 									<StingerList>
 										<MusicStinger Name="" ID="{FFFDCADE-E6D4-4FD1-9D2E-59F9948B59B3}">
 											<PropertyList>
@@ -351,7 +604,7 @@
 								<State Name="" ID="{2DB19F46-8BFB-44B9-91A2-944525824686}" ShortID="907452138"/>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
+								<StateRef Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
 								<State Name="" ID="{58110191-8A83-4881-85B0-088050215A0D}" ShortID="699237660">
 									<PropertyList>
 										<Property Name="Highpass" Type="int16" Value="30"/>
@@ -427,7 +680,7 @@
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Idle" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>
+								<PathElementRef Name="PreStart" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Idle" ID="{FD5B8052-603D-4A7B-AD6D-B25017DA7D56}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}" Platform="Linked"/>
@@ -448,7 +701,7 @@
 						<Property Name="Tempo" Type="Real64" Value="140"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -544,6 +797,7 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Tempo" Type="Real64" Value="140"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -802,6 +1056,7 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Tempo" Type="Real64" Value="400"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1016,6 +1271,7 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="Tempo" Type="Real64" Value="140"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
