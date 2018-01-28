@@ -17,7 +17,12 @@ public class ShroomMovement : MonoBehaviour {
         MusicManager.OnBeat += Move;
         animator = GetComponentInChildren<Animator>();
     }
-    
+
+    void OnDestroy()
+    {
+        MusicManager.OnBeat -= Move;
+    }
+
     private void CheckDirection(MoveDirection d){
         if(music.CloseToHalfBar()){
             GenerateBoard.Instance.MoveShroom(d);

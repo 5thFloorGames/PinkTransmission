@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/YuanqiTest.unity
-    guid: 7fb03165563a530419bfe63f6e51fd64
+    path: Assets/_Scenes/Final/Game.unity
+    guid: 6eb0356c1c6d1d54ab2b7a92741ae6a1
   - enabled: 1
-    path: Assets/_Scenes/Dummy.unity
+    path: Assets/_Scenes/Final/Dummy.unity
     guid: 3df3422e0132de545abc36c34044c392
