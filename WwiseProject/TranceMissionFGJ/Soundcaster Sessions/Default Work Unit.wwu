@@ -50,7 +50,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}"/>
-						<CurrentStateRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
+						<CurrentStateRef Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="End" ID="{82E01519-4052-471C-880F-8809B72837B1}"/>
