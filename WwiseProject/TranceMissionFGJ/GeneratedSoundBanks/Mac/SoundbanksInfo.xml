@@ -70,6 +70,10 @@
 					<ShortName>StingerBite4.wav</ShortName>
 					<Path>SFX\StingerBite4_4FEDAFB7.wem</Path>
 				</File>
+				<File Id="388991997" Language="SFX">
+					<ShortName>Stinger5.wav</ShortName>
+					<Path>SFX\Stinger5_4FEDAFB7.wem</Path>
+				</File>
 				<File Id="393984883" Language="SFX">
 					<ShortName>StingerBite2.wav</ShortName>
 					<Path>SFX\StingerBite2_4FEDAFB7.wem</Path>
@@ -141,6 +145,10 @@
 				<File Id="875566490" Language="SFX">
 					<ShortName>ShroomPuff3.wav</ShortName>
 					<Path>SFX\ShroomPuff3_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="875831591" Language="SFX">
+					<ShortName>Stinger4.wav</ShortName>
+					<Path>SFX\Stinger4_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="887608893" Language="SFX">
 					<ShortName>StingerPerc7.wav</ShortName>

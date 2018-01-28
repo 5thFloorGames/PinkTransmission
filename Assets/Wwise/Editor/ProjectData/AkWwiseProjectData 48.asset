@@ -12,14 +12,260 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 48
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
-  EventWwu: []
-  AuxBusWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  BankWwu: []
-  RtpcWwu: []
-  TriggerWwu: []
-  AcousticTextureWwu: []
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}'
+    m_lastTimePsrt1: -1663095884
+    m_lastTimePart2: -1999280681
+    List:
+    - Name: ActionBiteStinger
+      Path: Default Work Unit\Actions\ActionBiteStinger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Actions
+        ObjectType: 4
+      - ElementName: ActionBiteStinger
+        ObjectType: 3
+      ID: 1492365381
+      Guid: c09ea95ae9b52e41b4f0dfd072264a92
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: ActionFirstMove
+      Path: Default Work Unit\Actions\ActionFirstMove
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Actions
+        ObjectType: 4
+      - ElementName: ActionFirstMove
+        ObjectType: 3
+      ID: 854939776
+      Guid: f8ec67ff588d9746b35eedf64083f405
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: ActionShroomStinger
+      Path: Default Work Unit\Actions\ActionShroomStinger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Actions
+        ObjectType: 4
+      - ElementName: ActionShroomStinger
+        ObjectType: 3
+      ID: -92390013
+      Guid: 61b582318d3e9d4ab9189bd1c74dfb4b
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Marker
+      Path: Default Work Unit\Markers\Marker
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Markers
+        ObjectType: 4
+      - ElementName: Marker
+        ObjectType: 3
+      ID: 1313304943
+      Guid: ed7b935c1528f54aa454e467eb3046b8
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: PercussionStinger
+      Path: Default Work Unit\Actions\PercussionStinger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Actions
+        ObjectType: 4
+      - ElementName: PercussionStinger
+        ObjectType: 3
+      ID: -1768772936
+      Guid: fda3d4ed84110049b27ad281cd1e89a5
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: PlayPlaceholderLoop
+      Path: Default Work Unit\Music\PlayPlaceholderLoop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: PlayPlaceholderLoop
+        ObjectType: 3
+      ID: 1229115632
+      Guid: b8121613648e974a9f285ee702207918
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: StopPlaceholderLoop
+      Path: Default Work Unit\Music\StopPlaceholderLoop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: StopPlaceholderLoop
+        ObjectType: 3
+      ID: -1218878442
+      Guid: a044314b93c7bf47a9ae44ee2f993ef6
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{C750C293-BF5F-4D25-8BEF-AD426F29570E}'
+    m_lastTimePsrt1: 1650893591
+    m_lastTimePart2: -1999280694
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{B2756169-AB49-415B-B5CE-FAD6EB028ABC}'
+    m_lastTimePsrt1: 1525957266
+    m_lastTimePart2: -1999280715
+    List:
+    - Name: Start
+      Path: Default Work Unit\Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start
+        ObjectType: 9
+      ID: 1281810935
+      Guid: 75ea88fd4618414194e94f0147b9de49
+      values:
+      - Idle
+      - None
+      - Start
+      ValueIcons:
+      - ElementName: Idle
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Start
+        ObjectType: 8
+      valueIDs: ff60b76fdb3ba32cf7e1664c
+      ValueGuids:
+      - bytes: 7a075cb54899e946a8241b01c2d1fef4
+      - bytes: db706dfe2819024789253f98caea1076
+      - bytes: e44d0935493bed40b86401548aa28d4a
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{181486C1-4F4B-4297-AE55-D26E38CF5C72}'
+    m_lastTimePsrt1: 225825335
+    m_lastTimePart2: -1999280742
+    List:
+    - Name: Start
+      Path: Default Work Unit\Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start
+        ObjectType: 11
+      ID: 1281810935
+      Guid: c6102c1790eee04586baaeb0e057f82c
+      values:
+      - Idle
+      - Start
+      ValueIcons:
+      - ElementName: Idle
+        ObjectType: 10
+      - ElementName: Start
+        ObjectType: 10
+      valueIDs: ff60b76ff7e1664c
+      ValueGuids:
+      - bytes: b271401174ea234996d2cf01a5e93bbb
+      - bytes: abed1f3e07c6294c8f5eabb850bc91f3
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{10DE0F88-E717-4478-8208-E43A6CF1BAB4}'
+    m_lastTimePsrt1: 1088574125
+    m_lastTimePart2: -1999280714
+    List:
+    - Name: Master_SoundBank
+      Path: Default Work Unit\Master_SoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master_SoundBank
+        ObjectType: 7
+      ID: -1825462427
+      Guid: 4fd1575cf5f4f14f91ddfa008a0b84ff
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{A6C77BA2-E477-4C88-9DFD-BF6621EDE468}'
+    m_lastTimePsrt1: -1810850279
+    m_lastTimePart2: -1999280757
+    List:
+    - Name: Playback_speed
+      Path: Default Work Unit\Playback_speed
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Playback_speed
+        ObjectType: 13
+      ID: 78830142
+      Guid: ff7eb0c13ff5b947bd50f4c28271e3fd
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{E674A5C9-685A-424A-997F-C8D97A0CB809}'
+    m_lastTimePsrt1: -832970858
+    m_lastTimePart2: -1999280692
+    List:
+    - Name: BiteStinger
+      Path: Default Work Unit\BiteStinger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BiteStinger
+        ObjectType: 14
+      ID: 1102535995
+      Guid: 17281ae0b66db243a20c985e17d7b7d6
+    - Name: Crash
+      Path: Default Work Unit\Crash
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crash
+        ObjectType: 14
+      ID: -1246860986
+      Guid: 2ffa6396c9f40b4a8d59815d9d1d320c
+    - Name: PercStinger
+      Path: Default Work Unit\PercStinger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PercStinger
+        ObjectType: 14
+      ID: -869427507
+      Guid: bc52a3f23240774b982edab2e2b4ec3c
+    - Name: ShroomStinger
+      Path: Default Work Unit\ShroomStinger
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ShroomStinger
+        ObjectType: 14
+      ID: 1108117973
+      Guid: 2fb70df48472d0478714e715f988b0ee
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{9654712C-6F2B-44BE-8CB0-C950363E9A14}'
+    m_lastTimePsrt1: 838531034
+    m_lastTimePart2: -1999280789
+    List: []
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
