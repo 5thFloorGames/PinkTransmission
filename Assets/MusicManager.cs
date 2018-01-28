@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
 
+    public static MusicManager Instance { get; private set; }
+
 	public delegate void BeatAction();
 	public static event BeatAction OnBeat;
 	private float lastBeat = 0;
 
 	private int beatCounter = 0;
+
+	void Awake()
+	{
+		Instance = this;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +36,10 @@ public class MusicManager : MonoBehaviour {
 			//print("OffBeat!");
 		}
 		return false;
+	}
+
+	public int TimeToBarAfterNext(){
+		return ((beatCounter % 4) - 4) + 8;
 	}
 
 	public bool CloseToHalfBar(){
