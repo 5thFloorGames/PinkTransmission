@@ -208,7 +208,7 @@ public class GenerateBoard : MonoBehaviour {
         int y = (int)shroomPosition.y;
 
         var previousState = tiles[x, y].tileState;
-        var scoreChange = previousState == TileState.Shroom ? 2 : 4;
+        var scoreChange = previousState == TileState.Shroom ? 1 : 3;
         ScoreManager.Instance.GenerateFloatText(scoreChange, false);
 
         tiles[x, y].ChangeOwner(TileState.Shroom);
@@ -228,9 +228,9 @@ public class GenerateBoard : MonoBehaviour {
             if (prev != tileState)
             {
                 tiles[x, y].ChangeOwner(tileState);
-                return 3;
+                return 2;
             }
-            return 2;
+            return 1;
         }
         return 0;
     }
