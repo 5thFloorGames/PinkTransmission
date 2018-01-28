@@ -46,6 +46,7 @@ public class FawnMovement : MonoBehaviour {
 
 	void ShuffleMoves(){
 		Static.Shuffle(moves);
+		shuffled.Clear();
 		shuffled.Add(MoveDirection.Up, moves[0]);
 		shuffled.Add(MoveDirection.Down, moves[1]);
 		shuffled.Add(MoveDirection.Left, moves[2]);

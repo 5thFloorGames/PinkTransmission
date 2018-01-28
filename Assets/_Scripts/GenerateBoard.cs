@@ -122,8 +122,11 @@ public class GenerateBoard : MonoBehaviour {
         var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
         if (shroomType != ShroomType.None) {
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
-			//fawn.SendMessage("Confuse");
-			fawn.SendMessage("Double");
+			if(shroomType == ShroomType.Normal){
+				fawn.SendMessage("Confuse");
+			} else if(shroomType == ShroomType.Jump){
+				fawn.SendMessage("Double");
+			}
         }
         
 	}
