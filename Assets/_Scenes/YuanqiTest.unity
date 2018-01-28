@@ -779,6 +779,39 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114558430211432424, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2af421354e14996438c4fe645f06a945,
+        type: 3}
+    - target: {fileID: 114558430211432424, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114045177273977406, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2af421354e14996438c4fe645f06a945,
+        type: 3}
+    - target: {fileID: 114045177273977406, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003737283948678, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2af421354e14996438c4fe645f06a945,
+        type: 3}
+    - target: {fileID: 114003737283948678, guid: 6a46714897493db43bfc89d08dc596f9,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a46714897493db43bfc89d08dc596f9, type: 2}
   m_IsPrefabParent: 0
