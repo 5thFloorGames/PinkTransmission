@@ -18,6 +18,10 @@ public class GenerateBoard : MonoBehaviour {
     Vector2 shroomPosition;
     public GameObject shroomPlayer;
 	private bool firstMove = false;
+
+
+    LightBeamController lbc;
+    int colorCounter = 0;
     
 
 	// Use this for initialization
@@ -39,6 +43,7 @@ public class GenerateBoard : MonoBehaviour {
         shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
 		tiles[0,0].setState(TileState.Animal);
 		tiles[XSize,YSize].setState(TileState.Shroom);
+        lbc = GameObject.Find("Environment").transform.Find("Lights").gameObject.GetComponent<LightBeamController>();
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -89,6 +94,14 @@ public class GenerateBoard : MonoBehaviour {
         {
             LeanTween.delayedCall(fawn, 0.1f, ()=>{ 
                 LeanTween.move( fawn, tiles[(int)newPos.x,(int)newPos.y].TilePosition(), 0.2f);
+                if (colorCounter == 0) {
+                    colorCounter++;
+                    lbc.ChangeColorTo(1);
+                } else if (colorCounter == 1) {
+                    colorCounter--;
+                    lbc.ChangeColorTo(0);
+                }
+                
                 });
             FawnPosition = newPos;
             StartCoroutine(PlayDelayed(0.3f, true));
@@ -151,6 +164,7 @@ public class GenerateBoard : MonoBehaviour {
         {
             LeanTween.delayedCall(shroomPlayer, 0.2f, ()=>{ 
                 LeanTween.move( shroomPlayer, tiles[(int)newPos.x,(int)newPos.y].TilePosition(), 0.2f);
+                lbc.ChangeColorTo(2);
                 });
             shroomPosition = newPos;
 
