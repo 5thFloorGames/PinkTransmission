@@ -11,7 +11,7 @@ public class Shroom : MonoBehaviour {
 
     public Sprite icon;
     public int x, y;
-    public int explosionTurns = 4, explosionRadius = 5;
+    private int explosionTurns, explosionRadius = 4;
     private int turnsPassed;
     private TextMesh turnText;
 
@@ -23,13 +23,19 @@ public class Shroom : MonoBehaviour {
     {
         ScoreManager.Instance.shroomBeatAnimator.OnBeat += CheckTurn;
         turnText = GetComponentInChildren<TextMesh>();
+        explosionTurns = MusicManager.Instance.TimeToBarAfterNext();
         turnText.text = explosionTurns.ToString();
+        
     }
 
     private void CheckTurn()
     {
         explosionTurns--;
         turnText.text = explosionTurns.ToString();
+
+        if(explosionTurns == 1){
+            AkSoundEngine.PostEvent("PercussionStinger",gameObject);
+        }
 
         if(explosionTurns <= 0)
         {
