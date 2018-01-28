@@ -14,6 +14,10 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="PauseAll" ID="{0FE0F408-CE06-4E62-A015-6B4A2D62ED62}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="ActionFirstMove" ID="{FF67ECF8-8D58-4697-B35E-EDF64083F405}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -22,8 +26,16 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="ResumeAll" ID="{58C18481-E69D-46EE-BC8E-B94447CAE9D2}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PercussionStinger" ID="{EDD4A3FD-1184-4900-B27A-D281CD1E89A5}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
 							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="StopAll" ID="{9940D40D-BF57-4ACD-B1F6-7BFA868F717C}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="3" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -37,7 +49,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}"/>
-						<CurrentSwitchRef Name="Neutral" ID="{171BAE98-6283-4749-866B-6797EA3ADEFA}"/>
+						<CurrentSwitchRef Name="DoubleJump" ID="{EB0C970B-0D22-4F0C-9386-079E0DC6D9B8}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

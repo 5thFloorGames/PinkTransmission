@@ -25,8 +25,11 @@
 				<Event Id="854939776" Name="ActionFirstMove" ObjectPath="\Events\Default Work Unit\Actions\ActionFirstMove" MaxAttenuation="0,000000"/>
 				<Event Id="4202577283" Name="ActionShroomStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionShroomStinger"/>
 				<Event Id="1313304943" Name="Marker" ObjectPath="\Events\Default Work Unit\Markers\Marker" MaxAttenuation="0,000000"/>
+				<Event Id="4091047182" Name="PauseAll" ObjectPath="\Events\Default Work Unit\Actions\PauseAll" MaxAttenuation="0,000000"/>
 				<Event Id="2526194360" Name="PercussionStinger" ObjectPath="\Events\Default Work Unit\Actions\PercussionStinger" MaxAttenuation="0,000000"/>
 				<Event Id="1229115632" Name="PlayPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\PlayPlaceholderLoop"/>
+				<Event Id="3240900869" Name="ResumeAll" ObjectPath="\Events\Default Work Unit\Actions\ResumeAll" MaxAttenuation="0,000000"/>
+				<Event Id="3086540886" Name="StopAll" ObjectPath="\Events\Default Work Unit\Actions\StopAll" MaxAttenuation="0,000000"/>
 				<Event Id="3076088854" Name="StopPlaceholderLoop" ObjectPath="\Events\Default Work Unit\Music\StopPlaceholderLoop" MaxAttenuation="0,000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>

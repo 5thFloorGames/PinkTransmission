@@ -351,7 +351,7 @@
 								<State Name="" ID="{2DB19F46-8BFB-44B9-91A2-944525824686}" ShortID="907452138"/>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
+								<StateRef Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
 								<State Name="" ID="{58110191-8A83-4881-85B0-088050215A0D}" ShortID="699237660">
 									<PropertyList>
 										<Property Name="Highpass" Type="int16" Value="30"/>
@@ -427,7 +427,7 @@
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Idle" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>
+								<PathElementRef Name="PreStart" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Idle" ID="{FD5B8052-603D-4A7B-AD6D-B25017DA7D56}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}" Platform="Linked"/>
@@ -1550,20 +1550,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="EffectDoubleJump" ID="{A163F98C-68BD-4262-8BD4-C289D8062DFA}" ShortID="308663521">
+										<MusicTrack Name="EffectDoubleJump" ID="{2B3E193C-B267-4575-9638-299F142B53A2}" ShortID="382333917">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="EffectDoubleJump" ID="{31D01EFB-D1F9-4C95-8A81-C2A967E655FC}" ShortID="407915209">
+												<AudioFileSource Name="EffectDoubleJump" ID="{AE77F7E5-E3E5-4177-86BA-BC0E883D8DE8}" ShortID="431524407">
 													<Language>SFX</Language>
 													<AudioFile>EffectDoubleJump.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{409D6352-D260-4E72-A960-3483352D98CC}">
+												<MusicTransition Name="Root" ID="{9D0645B3-CCE0-4814-8B9B-20C80B8CE48E}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -1571,15 +1571,15 @@
 												</MusicTransition>
 											</TransitionList>
 											<SequenceList>
-												<MusicTrackSequence Name="" ID="{84909F02-6BE7-4E00-BC5C-FADC13E2BE8B}">
+												<MusicTrackSequence Name="" ID="{FC6A057A-D71E-4FBE-9324-685807612DE8}">
 													<ClipList>
-														<MusicClip Name="EffectDoubleJump" ID="{4937BFB2-A590-49B0-ABA4-CB86824B163B}">
+														<MusicClip Name="EffectDoubleJump" ID="{25A343D3-6E45-44B0-8B32-692F9B7B4503}">
 															<PropertyList>
 																<Property Name="EndTrimOffset" Type="Real64" Value="15482.125"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="EffectDoubleJump" ID="{31D01EFB-D1F9-4C95-8A81-C2A967E655FC}"/>
+															<AudioSourceRef Name="EffectDoubleJump" ID="{AE77F7E5-E3E5-4177-86BA-BC0E883D8DE8}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -1743,7 +1743,7 @@
 								<State Name="" ID="{2E02FDD7-F019-49B8-B331-0506AFAD0EC3}" ShortID="40456807"/>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
+								<StateRef Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
 								<State Name="" ID="{95A06892-C1A2-47D8-92EA-16FB340B2E87}" ShortID="792444638">
 									<PropertyList>
 										<Property Name="Highpass" Type="int16" Value="30"/>

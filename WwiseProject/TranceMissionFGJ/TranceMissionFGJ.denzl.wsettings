@@ -3,12 +3,15 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{DE7F07CD-EA12-4444-93F9-8AD8624E2669}">
 			<PropertyList>
+				<Property Name="Event Action List\{0FE0F408-CE06-4E62-A015-6B4A2D62ED62}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{131612B8-8E64-4A97-9F28-5EE702207918}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{3182B561-3E8D-4A9D-B918-9BD1C74DFB4B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4B3144A0-C793-47BF-A9AE-44EE2F993EF6}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{58C18481-E69D-46EE-BC8E-B94447CAE9D2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5AA99EC0-B5E9-412E-B4F0-DFD072264A92}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{5C937BED-2815-4AF5-A454-E467EB3046B8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{644F33D1-0014-4E5F-A6B0-503E0838C1EC}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9940D40D-BF57-4ACD-B1F6-7BFA868F717C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{CE19FB68-E7B9-4184-A9EE-CF2194CD79B6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D4656E43-EC28-4320-9225-9A0302B87FFE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{EDD4A3FD-1184-4900-B27A-D281CD1E89A5}\x64_Expand States" Type="string" Value=""/>
@@ -82,6 +85,7 @@
 				<Property Name="Music Transition List\{5FF1E215-37C2-48EA-92EA-143704215F77}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8321C468-4179-418D-8421-904839656769}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8BAD2C7B-EC3C-470C-95BD-1F28FFFC3281}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{A163F98C-68BD-4262-8BD4-C289D8062DFA}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{ABC80370-69D4-48F1-B7C3-755F74373ED7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{B79F697E-ABAC-44B8-9625-BD1E60360693}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{C51B7249-7071-42AE-B3D6-5681D3AB93FB}\x64_Expand States" Type="string" Value=""/>

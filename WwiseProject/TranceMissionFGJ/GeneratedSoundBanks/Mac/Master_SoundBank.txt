@@ -5,6 +5,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	1492365381	ActionBiteStinger			\Default Work Unit\Actions\ActionBiteStinger	
 	2526194360	PercussionStinger			\Default Work Unit\Actions\PercussionStinger	
 	3076088854	StopPlaceholderLoop			\Default Work Unit\Music\StopPlaceholderLoop	
+	3086540886	StopAll			\Default Work Unit\Actions\StopAll	
+	3240900869	ResumeAll			\Default Work Unit\Actions\ResumeAll	
+	4091047182	PauseAll			\Default Work Unit\Actions\PauseAll	
 	4202577283	ActionShroomStinger			\Default Work Unit\Actions\ActionShroomStinger	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -13,11 +16,11 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	748895195	None	Start			
 	1281810935	Start	Start			
-	1874288895	Idle	Start			
+	2340226076	PreStart	Start			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	699237660	Idle	Start	\Interactive Music Hierarchy\Default Work Unit\MainSwitch		
-	792444638	Idle	Start	\Interactive Music Hierarchy\Default Work Unit\Effects		
+	699237660	PreStart	Start	\Interactive Music Hierarchy\Default Work Unit\MainSwitch		
+	792444638	PreStart	Start	\Interactive Music Hierarchy\Default Work Unit\Effects		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	78830142	Playback_speed			\Default Work Unit\Playback_speed	
