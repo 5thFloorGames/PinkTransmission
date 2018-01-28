@@ -20,6 +20,7 @@ public class ScoreManager : MonoBehaviour {
     public GameObject fawnWinScreen, shroomWinScreen;
     private float delay;
     public static bool end;
+    private bool preend;
 
     private void Start()
     {
@@ -40,25 +41,28 @@ public class ScoreManager : MonoBehaviour {
                 shroomWinScreen.SetActive(false);
                 delay = 0;
                 end = false;
+                preend = false;
                 SceneManager.LoadSceneAsync("Dummy");
                 return;
             }
+            return;
         }
 
-        if(shroomTextScore < shroomScore)
+        if(!preend && shroomTextScore < shroomScore)
         {
             shroomTextScore++;
             shroomTargetTransform.GetComponent<Text>().text = shroomTextScore.ToString("000");
 
             if(!end && shroomTextScore >= maxScore)
             {
+                preend = true;
                 MusicManager.Instance.EndGameMusic();
                 shroomWinScreen.SetActive(true);
                 StartCoroutine(SetEnd(1.0f));
             }
         }
 
-        if(fawnTextScore < fawnScore)
+        if(!preend && fawnTextScore < fawnScore)
         {
             fawnTextScore++;
             fawnTargetTransform.GetComponent<Text>().text = fawnTextScore.ToString("000");
@@ -66,6 +70,7 @@ public class ScoreManager : MonoBehaviour {
 
             if (!end && fawnTextScore >= maxScore)
             {
+                preend = true;
                 MusicManager.Instance.EndGameMusic();
                 fawnWinScreen.SetActive(true);
                 StartCoroutine(SetEnd(1.0f));
