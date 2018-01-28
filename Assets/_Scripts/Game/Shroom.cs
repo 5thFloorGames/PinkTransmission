@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ShroomType
 {
-    Normal, Trap, None
+    Normal, Jump, Trap, None
 }
 
 public class Shroom : MonoBehaviour {
@@ -18,6 +18,9 @@ public class Shroom : MonoBehaviour {
     // Animation
     private float beatTime = 0.43f;
     private float previousTime;
+
+    // Type
+    public ShroomType shroomType;
 
     private void Start()
     {
@@ -57,7 +60,7 @@ public class Shroom : MonoBehaviour {
 
     public virtual ShroomType GetShroomType()
     {
-        return ShroomType.Normal;
+        return shroomType;
     }
 
     public virtual void DestroyShroom()
