@@ -12,6 +12,7 @@ public class FawnMovement : MonoBehaviour {
 	private MoveDirection[] moves;
 	private Dictionary<MoveDirection, MoveDirection> shuffled;
 	private bool shuffleOn = false;
+	private int confuseCountdown = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -68,7 +69,20 @@ public class FawnMovement : MonoBehaviour {
 		jumpedAlready = false;
 	}
 
+	public void Confuse(){
+		shuffleOn = true;
+		ShuffleMoves();
+		confuseCountdown = 8;
+		music.EffectSwitch("MixedControls");
+	}
+
 	void Jump(){
+		if(confuseCountdown > 0){
+			confuseCountdown--;
+		} else {
+			shuffleOn = false;
+			music.EffectSwitch("Neutral");
+		}
 		animator.SetTrigger("Jump");
 	}
     

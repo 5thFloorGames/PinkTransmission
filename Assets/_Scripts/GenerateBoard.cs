@@ -115,6 +115,7 @@ public class GenerateBoard : MonoBehaviour {
 
         if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y)) {
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
+			fawn.SendMessage("Confuse");
         }
         
 	}
