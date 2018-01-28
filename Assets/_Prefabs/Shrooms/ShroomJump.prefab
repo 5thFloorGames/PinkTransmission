@@ -212,5 +212,4 @@ MonoBehaviour:
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   x: 0
   y: 0
-  explosionTurns: 4
-  explosionRadius: 4
+  shroomType: 1

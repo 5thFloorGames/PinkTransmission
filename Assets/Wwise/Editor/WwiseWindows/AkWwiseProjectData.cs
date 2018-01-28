@@ -427,9 +427,10 @@ public class AkWwiseProjectData : ScriptableObject
 
 			basePath = in_AkInit.basePath;
 			language = in_AkInit.language;
-			defaultPoolSize = in_AkInit.defaultPoolSize;
-			lowerPoolSize = in_AkInit.lowerPoolSize;
-			streamingPoolSize = in_AkInit.streamingPoolSize;
+            // defaultPoolSize = in_AkInit.defaultPoolSize;
+            defaultPoolSize = lowerPoolSize = 32768;
+            // lowerPoolSize = in_AkInit.lowerPoolSize;
+            streamingPoolSize = in_AkInit.streamingPoolSize;
 			preparePoolSize = in_AkInit.preparePoolSize;
 			memoryCutoffThreshold = in_AkInit.memoryCutoffThreshold;
 			callbackManagerBufferSize = in_AkInit.callbackManagerBufferSize;
@@ -444,8 +445,8 @@ public class AkWwiseProjectData : ScriptableObject
 
 			in_AkInit.basePath = basePath;
 			in_AkInit.language = language;
-			in_AkInit.defaultPoolSize = defaultPoolSize;
-			in_AkInit.lowerPoolSize = lowerPoolSize;
+            in_AkInit.defaultPoolSize = 32768;
+			in_AkInit.lowerPoolSize = 32768;
 			in_AkInit.streamingPoolSize = streamingPoolSize;
 			in_AkInit.preparePoolSize = preparePoolSize;
 			in_AkInit.memoryCutoffThreshold = memoryCutoffThreshold;
