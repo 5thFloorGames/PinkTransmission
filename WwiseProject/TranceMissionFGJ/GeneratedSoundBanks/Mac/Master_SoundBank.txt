@@ -17,6 +17,7 @@ State	ID	Name	State Group			Notes
 
 Custom State	ID	Name	State Group	Owner		Notes
 	699237660	Idle	Start	\Interactive Music Hierarchy\Default Work Unit\MainSwitch		
+	792444638	Idle	Start	\Interactive Music Hierarchy\Default Work Unit\Effects		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	78830142	Playback_speed			\Default Work Unit\Playback_speed	
@@ -31,28 +32,31 @@ Effect plug-ins	ID	Name	Type				Notes
 	1232017842	LR_Slap_with_CrossFeed	Wwise Stereo Delay			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	4336932	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		658352
-	10769914	Splat3	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat3_01C072E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splashes\Splat3		77396
-	15291811	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		493780
-	249197451	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		576064
-	281406132	Splat_base	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat_base_2CA90D9E.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splat_base		32908
-	284848740	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc6_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		493776
-	359132591	Crash	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Crash_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Crash\Crash		658348
-	362299644	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		658348
-	393984883	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		658348
-	455516844	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		658348
-	506096902	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		740636
-	513632677	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc5_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		576064
-	532581590	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		658348
-	549514554	Splat1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat1_794C6408.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splashes\Splat1		94684
-	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\IdleLoop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		822920
-	742496467	Bite2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Bite2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bite\Bite\Bite2		92336
-	744438766	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		493780
-	806245137	Splat2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat2_C55CDA9D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splashes\Splat2		123788
-	806302841	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		658352
-	887608893	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc7_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		493780
-	908220631	BaseLoop2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\BaseLoop2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\BaseLoop2		2962348
-	1045556741	Bite1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Bite1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bite\Bite\Bite1		97024
-	1066624553	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		493776
-	1073477756	Bite3	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Bite3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bite\Bite\Bite3		95464
+	4336932	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger3_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		185176
+	10769914	Splat3	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat3_7353BA38.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splashes\Splat3		21880
+	15291811	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc3_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		138952
+	239279612	Effect1-neutral	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Effect1-neutral_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Effects\Neutral\Effect1-neutral\Effect1-neutral		836128
+	249197451	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc4_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		162064
+	281406132	Splat_base	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat_base_16909A5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splat_base		9352
+	284848740	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc6_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		138952
+	359132591	Crash	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Crash_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Crash\Crash		185176
+	362299644	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite4_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		185176
+	393984883	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite2_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		185176
+	431524407	EffectDoubleJump	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\EffectDoubleJump_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Effects\DoubleJump\EffectDoubleJump\EffectDoubleJump		836128
+	435869721	EffectMixedControls	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\EffectMixedControls_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Effects\MixedControls\EffectMixedControls\EffectMixedControls		836128
+	455516844	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite1_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		185176
+	506096902	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger1_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		208360
+	513632677	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc5_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		162064
+	532581590	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger2_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		185176
+	549514554	Splat1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat1_73A3C7E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splashes\Splat1		26704
+	589612994	IdleLoop	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\IdleLoop_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Idle\IdleLoop\IdleLoop		231472
+	693534822	BaseLoop-neutral	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\BaseLoop-neutral_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\BaseLoop-neutral		836128
+	742496467	Bite2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Bite2_18D9CDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bite\Bite\Bite2		26056
+	744438766	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc2_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		138952
+	806245137	Splat2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Splat2_5B4955DA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Plant\Splashes\Splat2		34912
+	806302841	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite3_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		185176
+	887608893	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc7_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		138952
+	1045556741	Bite1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Bite1_18D9CDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bite\Bite\Bite1		27352
+	1066624553	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc1_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		138952
+	1073477756	Bite3	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Bite3_18D9CDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bite\Bite\Bite3		26920
 

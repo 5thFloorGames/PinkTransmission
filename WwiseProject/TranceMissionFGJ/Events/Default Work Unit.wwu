@@ -37,6 +37,26 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{10DC904C-1ACF-41E5-9E63-E5E8F564F6C8}" ShortID="926997274">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Effects" ID="{27905417-1D59-43C2-AA2C-20D5825B1F88}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1A14C499-126E-45D0-BD59-9DBED65A200A}" ShortID="235136677">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Idle" ID="{FD1BB7E8-285F-43C4-B410-7C872DAD0FC9}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="StopPlaceholderLoop" ID="{4B3144A0-C793-47BF-A9AE-44EE2F993EF6}">
@@ -92,6 +112,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E42AA816-F12E-4CE2-AF06-4B66E902D7BF}" ShortID="882048217">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Neutral" ID="{171BAE98-6283-4749-866B-6797EA3ADEFA}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

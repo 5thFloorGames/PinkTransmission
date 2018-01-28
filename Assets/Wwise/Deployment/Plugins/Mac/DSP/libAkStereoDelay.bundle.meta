@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 838aacbfae9838a458dcd8eff8458416
-timeCreated: 1517051004
+timeCreated: 1517094263
 licenseType: Free
 PluginImporter:
   externalObjects: {}
@@ -28,9 +28,11 @@ PluginImporter:
   - first:
       Editor: Editor
     second:
-      enabled: 0
+      enabled: 1
       settings:
+        CPU: AnyCPU
         DefaultValueInitialized: true
+        OS: OSX
   - first:
       Standalone: OSXUniversal
     second:

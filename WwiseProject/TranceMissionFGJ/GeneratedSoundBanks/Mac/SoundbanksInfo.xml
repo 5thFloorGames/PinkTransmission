@@ -32,99 +32,111 @@
 			<IncludedMemoryFiles>
 				<File Id="4336932" Language="SFX">
 					<ShortName>Stinger3.wav</ShortName>
-					<Path>SFX\Stinger3_F17FB28C.wem</Path>
+					<Path>SFX\Stinger3_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="10769914" Language="SFX">
 					<ShortName>Splat3.wav</ShortName>
-					<Path>SFX\Splat3_01C072E3.wem</Path>
+					<Path>SFX\Splat3_7353BA38.wem</Path>
 				</File>
 				<File Id="15291811" Language="SFX">
 					<ShortName>StingerPerc3.wav</ShortName>
-					<Path>SFX\StingerPerc3_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc3_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="239279612" Language="SFX">
+					<ShortName>Effect1-neutral.wav</ShortName>
+					<Path>SFX\Effect1-neutral_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="249197451" Language="SFX">
 					<ShortName>StingerPerc4.wav</ShortName>
-					<Path>SFX\StingerPerc4_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc4_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="281406132" Language="SFX">
 					<ShortName>Splat_base.wav</ShortName>
-					<Path>SFX\Splat_base_2CA90D9E.wem</Path>
+					<Path>SFX\Splat_base_16909A5D.wem</Path>
 				</File>
 				<File Id="284848740" Language="SFX">
 					<ShortName>StingerPerc6.wav</ShortName>
-					<Path>SFX\StingerPerc6_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc6_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="359132591" Language="SFX">
 					<ShortName>Crash.wav</ShortName>
-					<Path>SFX\Crash_F17FB28C.wem</Path>
+					<Path>SFX\Crash_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="362299644" Language="SFX">
 					<ShortName>StingerBite4.wav</ShortName>
-					<Path>SFX\StingerBite4_F17FB28C.wem</Path>
+					<Path>SFX\StingerBite4_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="393984883" Language="SFX">
 					<ShortName>StingerBite2.wav</ShortName>
-					<Path>SFX\StingerBite2_F17FB28C.wem</Path>
+					<Path>SFX\StingerBite2_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="431524407" Language="SFX">
+					<ShortName>EffectDoubleJump.wav</ShortName>
+					<Path>SFX\EffectDoubleJump_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="435869721" Language="SFX">
+					<ShortName>EffectMixedControls.wav</ShortName>
+					<Path>SFX\EffectMixedControls_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="455516844" Language="SFX">
 					<ShortName>StingerBite1.wav</ShortName>
-					<Path>SFX\StingerBite1_F17FB28C.wem</Path>
+					<Path>SFX\StingerBite1_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="506096902" Language="SFX">
 					<ShortName>Stinger1.wav</ShortName>
-					<Path>SFX\Stinger1_F17FB28C.wem</Path>
+					<Path>SFX\Stinger1_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="513632677" Language="SFX">
 					<ShortName>StingerPerc5.wav</ShortName>
-					<Path>SFX\StingerPerc5_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc5_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="532581590" Language="SFX">
 					<ShortName>Stinger2.wav</ShortName>
-					<Path>SFX\Stinger2_F17FB28C.wem</Path>
+					<Path>SFX\Stinger2_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="549514554" Language="SFX">
 					<ShortName>Splat1.wav</ShortName>
-					<Path>SFX\Splat1_794C6408.wem</Path>
+					<Path>SFX\Splat1_73A3C7E3.wem</Path>
 				</File>
 				<File Id="589612994" Language="SFX">
 					<ShortName>IdleLoop.wav</ShortName>
-					<Path>SFX\IdleLoop_F17FB28C.wem</Path>
+					<Path>SFX\IdleLoop_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="693534822" Language="SFX">
+					<ShortName>BaseLoop-neutral.wav</ShortName>
+					<Path>SFX\BaseLoop-neutral_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="742496467" Language="SFX">
 					<ShortName>Bite2.wav</ShortName>
-					<Path>SFX\Bite2_1C9C67B2.wem</Path>
+					<Path>SFX\Bite2_18D9CDB9.wem</Path>
 				</File>
 				<File Id="744438766" Language="SFX">
 					<ShortName>StingerPerc2.wav</ShortName>
-					<Path>SFX\StingerPerc2_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc2_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="806245137" Language="SFX">
 					<ShortName>Splat2.wav</ShortName>
-					<Path>SFX\Splat2_C55CDA9D.wem</Path>
+					<Path>SFX\Splat2_5B4955DA.wem</Path>
 				</File>
 				<File Id="806302841" Language="SFX">
 					<ShortName>StingerBite3.wav</ShortName>
-					<Path>SFX\StingerBite3_F17FB28C.wem</Path>
+					<Path>SFX\StingerBite3_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="887608893" Language="SFX">
 					<ShortName>StingerPerc7.wav</ShortName>
-					<Path>SFX\StingerPerc7_F17FB28C.wem</Path>
-				</File>
-				<File Id="908220631" Language="SFX">
-					<ShortName>BaseLoop2.wav</ShortName>
-					<Path>SFX\BaseLoop2_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc7_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="1045556741" Language="SFX">
 					<ShortName>Bite1.wav</ShortName>
-					<Path>SFX\Bite1_1C9C67B2.wem</Path>
+					<Path>SFX\Bite1_18D9CDB9.wem</Path>
 				</File>
 				<File Id="1066624553" Language="SFX">
 					<ShortName>StingerPerc1.wav</ShortName>
-					<Path>SFX\StingerPerc1_F17FB28C.wem</Path>
+					<Path>SFX\StingerPerc1_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="1073477756" Language="SFX">
 					<ShortName>Bite3.wav</ShortName>
-					<Path>SFX\Bite3_1C9C67B2.wem</Path>
+					<Path>SFX\Bite3_18D9CDB9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
