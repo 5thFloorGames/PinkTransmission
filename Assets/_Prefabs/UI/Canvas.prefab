@@ -109,6 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224699049210200988}
+  - component: {fileID: 114727697000176332}
   m_Layer: 5
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -143,6 +144,7 @@ GameObject:
   - component: {fileID: 224070755379082668}
   - component: {fileID: 222784890064713822}
   - component: {fileID: 114856145125802474}
+  - component: {fileID: 114948135968748720}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -211,6 +213,7 @@ GameObject:
   - component: {fileID: 224537344875411914}
   - component: {fileID: 222374630020516016}
   - component: {fileID: 114751759821847900}
+  - component: {fileID: 114536867684206552}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -515,6 +518,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114536867684206552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892242156907598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114550319967307468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,6 +618,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114727697000176332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1347428790727730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93eb65189f7f2845b25697e209d27df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fawnTargetTransform: {fileID: 224070755379082668}
+  shroomTargetTransform: {fileID: 224537344875411914}
+  delta: {x: 0, y: 25, z: 0}
+  missTextPrefab: {fileID: 114181834501761780, guid: 91ecc0829cae3e64b8a5aac9886a20f6,
+    type: 2}
+  scoreTextPrefab: {fileID: 114876190268330664, guid: 4157f7f783ecfc2479a722bfbfb758f1,
+    type: 2}
 --- !u!114 &114730295679751288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -737,6 +772,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114948135968748720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549852768659328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!222 &222022711365799942
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -811,7 +860,7 @@ Canvas:
   m_GameObject: {fileID: 1065453652736902}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

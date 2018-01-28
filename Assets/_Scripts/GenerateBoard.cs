@@ -37,6 +37,8 @@ public class GenerateBoard : MonoBehaviour {
 		fawn.transform.position = tiles[0,0].GetComponent<Transform>().position;
         shroomPosition = new Vector2(XSize, YSize);
         shroomPlayer.transform.position = tiles[XSize, YSize].transform.position;
+		tiles[0,0].setState(TileState.Animal);
+		tiles[XSize,YSize].setState(TileState.Shroom);
 	}
     
     public Vector3 GetPos(int x, int y)
@@ -86,11 +88,11 @@ public class GenerateBoard : MonoBehaviour {
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
             LeanTween.delayedCall(fawn, 0.1f, ()=>{ 
-                LeanTween.move( fawn, fawn.transform.position + delta, 0.2f);
+                LeanTween.move( fawn, tiles[(int)newPos.x,(int)newPos.y].TilePosition(), 0.2f);
                 });
             FawnPosition = newPos;
             StartCoroutine(PlayDelayed(0.3f, true));
-        }
+        } 
 	}
     
 	void UpdateTileOnFawn(){
@@ -148,7 +150,7 @@ public class GenerateBoard : MonoBehaviour {
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
             LeanTween.delayedCall(shroomPlayer, 0.2f, ()=>{ 
-                LeanTween.move( shroomPlayer, shroomPlayer.transform.position + delta, 0.2f);
+                LeanTween.move( shroomPlayer, tiles[(int)newPos.x,(int)newPos.y].TilePosition(), 0.2f);
                 });
             shroomPosition = newPos;
 
@@ -176,5 +178,15 @@ public class GenerateBoard : MonoBehaviour {
     public void SpawnShroom()
     {
         ShroomSlotManager.Instance.SpawnShroom((int)shroomPosition.x, (int)shroomPosition.y);
+    }
+
+    public int ChangeTileOwner(int x, int y, TileState tileState)
+    {
+        if (x >= 0 && x <= XSize && y >= 0 && y <= YSize)
+        {
+            tiles[x, y].ChangeOwner(tileState);
+            return 1;
+        }
+        return 0;
     }
 }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198640579309736304}
   - component: {fileID: 199655293411340616}
   m_Layer: 0
-  m_Name: ConfusionShroomParticles
+  m_Name: ConfusionParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
