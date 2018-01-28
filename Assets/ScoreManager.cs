@@ -22,12 +22,48 @@ public class ScoreManager : MonoBehaviour {
         shroomBeatAnimator = shroomTargetTransform.GetComponentInParent<BeatAnimator>();
     }
 
+    private bool fawnTriggered, shroomTriggered;
+    private int fawnScore, shroomScore;
     public void GenerateFloatText(int score, bool isFawn)
     {
-        var text = Instantiate(score == 0 ? missTextPrefab : scoreTextPrefab, transform);
-        if (score > 0)
-            text.text = "+" + score.ToString("00");
-        text.transform.position = isFawn ? fawnTargetTransform.position : shroomTargetTransform.position;
+        if(isFawn)
+        {
+            if (!fawnTriggered)
+                StartCoroutine(GenerateFawnScore());
+            fawnTriggered = true;
+            fawnScore += score;
+        } else
+        {
+            if (!shroomTriggered)
+                StartCoroutine(GenerateShroomScore());
+            shroomTriggered = true;
+            shroomScore += score;
+        }
+    }   
+
+    private IEnumerator GenerateFawnScore()
+    {
+        yield return new WaitForEndOfFrame();
+
+        var text = Instantiate(fawnScore == 0 ? missTextPrefab : scoreTextPrefab, transform);
+        if (fawnScore > 0)
+            text.text = "+" + fawnScore.ToString("00");
+        text.transform.position = fawnTargetTransform.position;
         text.transform.localPosition += delta;
+        fawnScore = 0;
+        fawnTriggered = false;
+    }
+
+    private IEnumerator GenerateShroomScore()
+    {
+        yield return new WaitForEndOfFrame();
+
+        var text = Instantiate(shroomScore == 0 ? missTextPrefab : scoreTextPrefab, transform);
+        if (shroomScore > 0)
+            text.text = "+" + shroomScore.ToString("00");
+        text.transform.position = shroomTargetTransform.position;
+        text.transform.localPosition += delta;
+        shroomScore = 0;
+        shroomTriggered = false;
     }
 }

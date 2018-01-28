@@ -35,8 +35,8 @@ public class ShroomMovement : MonoBehaviour {
                 GenerateBoard.Instance.MoveShroom(MoveDirection.Down);
             } else if(Input.GetAxis("SubmitB") > 0)
             {
-                ShroomStinger();
-                GenerateBoard.Instance.SpawnShroom();
+                if(GenerateBoard.Instance.SpawnShroom())
+                    ShroomStinger();
             } else
             {
                 ScoreManager.Instance.GenerateFloatText(0, false);

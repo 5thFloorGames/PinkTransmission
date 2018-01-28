@@ -25,12 +25,12 @@ public class ShroomSlotManager : MonoBehaviour {
         }
     }
     
-    public void SpawnShroom(Vector2 pos)
+    public bool SpawnShroom(Vector2 pos)
     {
-        SpawnShroom((int)pos.x, (int)pos.y);
+        return SpawnShroom((int)pos.x, (int)pos.y);
     }
 
-    public void SpawnShroom(int x, int y)
+    public bool SpawnShroom(int x, int y)
     {
         for (int i = spawnedShrooms.Count - 1; i >= 0; i--)
         {
@@ -45,12 +45,13 @@ public class ShroomSlotManager : MonoBehaviour {
             if (ss.x == x && ss.y == y)
             {
                 Debug.Log("Shroom exists at location.");
-                return;
+                return false;
             }
         }
         var shroom = Instantiate(PopShroom());
         shroom.SetPos(x, y);
         spawnedShrooms.Add(shroom);
+        return true;
     }
 
     public bool CheckShroomDestroy(int x, int y)
