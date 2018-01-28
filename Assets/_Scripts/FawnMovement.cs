@@ -76,7 +76,7 @@ public class FawnMovement : MonoBehaviour {
 	public void Double(){
 		shuffleOn = false;
 		doubleMove = true;
-		confuseCountdown = 8;
+		confuseCountdown = 16;
 		music.EffectSwitch("DoubleJump");		
 	}
 
@@ -84,7 +84,7 @@ public class FawnMovement : MonoBehaviour {
 		shuffleOn = true;
 		doubleMove = false;
 		ShuffleMoves();
-		confuseCountdown = 8;
+		confuseCountdown = 16;
 		music.EffectSwitch("MixedControls");
 	}
 
