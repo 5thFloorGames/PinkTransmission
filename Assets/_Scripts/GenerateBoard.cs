@@ -113,7 +113,8 @@ public class GenerateBoard : MonoBehaviour {
 		int y = (int)FawnPosition.y;
 		tiles[x,y].ChangeOwner(TileState.Animal);
 
-        if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y)) {
+        var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
+        if (shroomType != ShroomType.None) {
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
         }
         

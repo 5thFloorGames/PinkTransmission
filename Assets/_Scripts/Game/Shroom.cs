@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ShroomType
 {
-    Normal, Trap
+    Normal, Trap, None
 }
 
 public class Shroom : MonoBehaviour {

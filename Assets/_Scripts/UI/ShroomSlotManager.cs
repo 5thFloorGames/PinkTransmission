@@ -54,7 +54,7 @@ public class ShroomSlotManager : MonoBehaviour {
         return true;
     }
 
-    public bool CheckShroomDestroy(int x, int y)
+    public ShroomType CheckShroomDestroy(int x, int y)
     {
         for (int i = spawnedShrooms.Count - 1; i >= 0; i--)
         {
@@ -68,12 +68,13 @@ public class ShroomSlotManager : MonoBehaviour {
 
             if (ss.x == x && ss.y == y)
             {
+                var type = ss.GetShroomType();
                 Destroy(ss.gameObject);
                 spawnedShrooms.RemoveAt(i);
-                return true;
+                return type;
             }
         }
-        return false;
+        return ShroomType.None;
     }
 
     /// <summary>
