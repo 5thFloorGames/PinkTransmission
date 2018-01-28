@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
@@ -39,6 +40,7 @@ public class ScoreManager : MonoBehaviour {
                 shroomWinScreen.SetActive(false);
                 delay = 0;
                 end = false;
+                return;
             }
         }
 
@@ -47,10 +49,11 @@ public class ScoreManager : MonoBehaviour {
             shroomTextScore++;
             shroomTargetTransform.GetComponent<Text>().text = shroomTextScore.ToString("000");
 
-            if(shroomTextScore >= maxScore)
+            if(!end && shroomTextScore >= maxScore)
             {
+                MusicManager.Instance.EndGameMusic();
                 shroomWinScreen.SetActive(true);
-                end = true;
+                StartCoroutine(SetEnd(1.0f));
             }
         }
 
@@ -60,12 +63,20 @@ public class ScoreManager : MonoBehaviour {
             fawnTargetTransform.GetComponent<Text>().text = fawnTextScore.ToString("000");
 
 
-            if (fawnTextScore >= maxScore)
+            if (!end && fawnTextScore >= maxScore)
             {
+                MusicManager.Instance.EndGameMusic();
                 fawnWinScreen.SetActive(true);
-                end = true;
+                StartCoroutine(SetEnd(1.0f));
             }
         }
+    }
+
+    private IEnumerator SetEnd(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        end = true;
     }
 
     private bool fawnTriggered, shroomTriggered;

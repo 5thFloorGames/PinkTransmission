@@ -156,7 +156,11 @@
 													</CustomState>
 													<CustomState>
 														<StateRef Name="DoubleJump" ID="{5DFAE64D-00E7-4EB1-873C-5C361DF01601}"/>
-														<State Name="" ID="{24E7EFD3-8546-4AF3-B886-113767AB2951}" ShortID="20573282"/>
+														<State Name="" ID="{24E7EFD3-8546-4AF3-B886-113767AB2951}" ShortID="20573282">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-3"/>
+															</PropertyList>
+														</State>
 													</CustomState>
 												</CustomStateList>
 											</StateInfo>
@@ -998,6 +1002,14 @@
 													<Language>SFX</Language>
 													<AudioFile>Stinger3.wav</AudioFile>
 												</AudioFileSource>
+												<AudioFileSource Name="Stinger4" ID="{7875BF12-47E3-46E8-9123-2BEBB4728671}" ShortID="875831591">
+													<Language>SFX</Language>
+													<AudioFile>Stinger4.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Stinger5" ID="{767F0A10-1A66-40D1-818E-39F5C55B79F7}" ShortID="388991997">
+													<Language>SFX</Language>
+													<AudioFile>Stinger5.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
 												<MusicTransition Name="Root" ID="{C2923335-4B34-4BE3-B29A-9E5D5B423526}">
@@ -1100,6 +1112,30 @@
 																<Property Name="FadeOutDuration" Type="Real64" Value="1390.97382127193"/>
 															</PropertyList>
 															<AudioSourceRef Name="Stinger3" ID="{47D4803E-D46F-4D8E-AD83-B20A36AA7275}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{659CC1CB-DF11-449B-BC53-ECECD1B7498B}">
+													<ClipList>
+														<MusicClip Name="Stinger4" ID="{7E6A5800-DA2E-4C9B-9B07-451938246DCA}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="2571.41666666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="1157.89172149123"/>
+															</PropertyList>
+															<AudioSourceRef Name="Stinger4" ID="{7875BF12-47E3-46E8-9123-2BEBB4728671}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{5AAF7140-73EF-4251-B73B-9D00C2E746F4}">
+													<ClipList>
+														<MusicClip Name="Stinger5" ID="{330BD238-33F6-4C4D-9285-F3BECB95787D}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="3857.14583333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="2240.59566885965"/>
+															</PropertyList>
+															<AudioSourceRef Name="Stinger5" ID="{767F0A10-1A66-40D1-818E-39F5C55B79F7}"/>
 														</MusicClip>
 													</ClipList>
 												</MusicTrackSequence>
@@ -1209,9 +1245,6 @@
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-2</Value>
-											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{B4DD281F-6591-44A8-9FFA-C131F31FB3FA}">
