@@ -12,10 +12,14 @@ public class ScoreManager : MonoBehaviour {
 
     // Text
     public Text missTextPrefab, scoreTextPrefab;
-    
+    public BeatAnimator fawnBeatAnimator, shroomBeatAnimator;
+
+
     private void Start()
     {
         Instance = this;
+        fawnBeatAnimator = fawnTargetTransform.GetComponentInParent<BeatAnimator>();
+        shroomBeatAnimator = shroomTargetTransform.GetComponentInParent<BeatAnimator>();
     }
 
     public void GenerateFloatText(int score, bool isFawn)

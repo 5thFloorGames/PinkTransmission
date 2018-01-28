@@ -178,4 +178,14 @@ public class GenerateBoard : MonoBehaviour {
 		FindObjectOfType<MusicManager>().ShroomStinger();
         ShroomSlotManager.Instance.SpawnShroom((int)shroomPosition.x, (int)shroomPosition.y);
     }
+
+    public int ChangeTileOwner(int x, int y, TileState tileState)
+    {
+        if (x >= 0 && x <= XSize && y >= 0 && y <= YSize)
+        {
+            tiles[x, y].ChangeOwner(tileState);
+            return 1;
+        }
+        return 0;
+    }
 }

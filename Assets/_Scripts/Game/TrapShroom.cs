@@ -8,10 +8,4 @@ public class TrapShroom : Shroom
     {
         return ShroomType.Trap;
     }
-
-    public override void Explode()
-    {
-        // TODO: Trap stuff
-        base.Explode();
-    }
 }
