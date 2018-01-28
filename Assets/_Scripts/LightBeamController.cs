@@ -67,7 +67,7 @@ public class LightBeamController : MonoBehaviour {
 		}
 	}
 
-	void SlowLights() {
+	public void SlowLights() {
 		if (lightsMoving) {
 			return;
 		}
@@ -75,7 +75,7 @@ public class LightBeamController : MonoBehaviour {
 		StartCoroutine(WaveFromFront(1f, 1f, 0.3f, 1.0f));
 	}
 
-	void VerySlowLights() {
+	public void VerySlowLights() {
 		if (lightsMoving) {
 			return;
 		}
@@ -83,7 +83,15 @@ public class LightBeamController : MonoBehaviour {
 		StartCoroutine(WaveFromFront(5f, 2f, 1f, 7.0f));
 	}
 
-	void SharpFlash() {
+	public void Flash() {
+		if (lightsFlashing) {
+			return;
+		}
+		lightsFlashing = true;
+		StartCoroutine(FlashTheLights(0.05f, 10));
+	}
+
+	public void SharpFlash() {
 		if (lightsFlashing) {
 			return;
 		}
@@ -91,7 +99,7 @@ public class LightBeamController : MonoBehaviour {
 		StartCoroutine(FlashTheLights(0.01f, 20));
 	}
 
-	void ChangeColorTo(int j) {
+	public void ChangeColorTo(int j) {
 		if (j > colors.Length) {
 			j = 0;
 		}
@@ -102,14 +110,6 @@ public class LightBeamController : MonoBehaviour {
 		}
 
 		currentColorNumber = j;
-	}
-
-	void Flash() {
-		if (lightsFlashing) {
-			return;
-		}
-		lightsFlashing = true;
-		StartCoroutine(FlashTheLights(0.05f, 10));
 	}
 
 	void TweenZ(GameObject obj, float rotatingTo, float time, float back) {
