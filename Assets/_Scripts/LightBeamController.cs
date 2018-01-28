@@ -25,6 +25,8 @@ public class LightBeamController : MonoBehaviour {
 			leftLights.Add(obj.gameObject);
 		}
 
+		StartCoroutine(InfiniteEvents());
+
 		ChangeColorTo(0);
 		lightsMoving = false;
 		lightsFlashing = false;
@@ -152,5 +154,19 @@ public class LightBeamController : MonoBehaviour {
 
 		lightsFlashing = false;
 	}
+
+	IEnumerator InfiniteEvents() {
+     while (true) {
+		 int randomLights = Random.Range(0,3);
+		 if (randomLights == 0) {
+			 SlowLights();
+		 } else if (randomLights == 1) {
+			 VerySlowLights();
+         } else {
+
+		 }
+         yield return new WaitForSeconds(2.0f);
+     }
+ }
 
 }
