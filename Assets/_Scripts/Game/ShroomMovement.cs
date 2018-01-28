@@ -37,6 +37,9 @@ public class ShroomMovement : MonoBehaviour {
             {
                 ShroomStinger();
                 GenerateBoard.Instance.SpawnShroom();
+            } else
+            {
+                ScoreManager.Instance.GenerateFloatText(0, false);
             }
         }
     }

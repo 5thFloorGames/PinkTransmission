@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeatAnimator : MonoBehaviour {
 
@@ -20,6 +21,9 @@ public class BeatAnimator : MonoBehaviour {
     // Anim
     private Animator animator;
 
+    public delegate void BeatAction();
+    public event BeatAction OnBeat;
+
     // Use this for initialization
     void Start ()
     {
@@ -28,7 +32,7 @@ public class BeatAnimator : MonoBehaviour {
         previousTime = Time.time;
         animator = GetComponent<Animator>();
     }
-
+    
     void OnDestroy()
     {
         MusicManager.OnBeat -= CheckTime;
@@ -79,7 +83,11 @@ public class BeatAnimator : MonoBehaviour {
                 Destroy(lineL.gameObject);
                 beatLines.RemoveAt(i - 1);
                 animator.SetTrigger("Bump");
+
+                if(OnBeat != null)
+                    OnBeat();
             }
         }
     }
+
 }
