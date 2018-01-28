@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	529726532	End			\Default Work Unit\Actions\End	
 	854939776	ActionFirstMove			\Default Work Unit\Actions\ActionFirstMove	
 	1229115632	PlayPlaceholderLoop			\Default Work Unit\Music\PlayPlaceholderLoop	
 	1313304943	Marker			\Default Work Unit\Markers\Marker	
@@ -62,6 +63,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	431524407	EffectDoubleJump	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\EffectDoubleJump_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\EffectDoubleJump		836128
 	435869721	EffectMixedControls	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\EffectMixedControls_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\Base\BaseLoop\EffectMixedControls		836128
 	455516844	Stinger2	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerBite1_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersBite\Stingers2\Stinger2		185176
+	495719197	Ending	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Ending_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\MainSwitch\End\Ending\Ending		231472
 	506096902	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger1_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		208360
 	513632677	StingerPerc	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\StingerPerc5_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersPerc\StingersPerc\StingerPerc		162064
 	532581590	Stinger1	F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\.cache\Mac\SFX\Stinger2_4FEDAFB7.wem		\Interactive Music Hierarchy\Default Work Unit\Stingers\StingersShroom\Stingers1\Stinger1		185176
