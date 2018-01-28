@@ -68,11 +68,13 @@ public class Shroom : MonoBehaviour {
 
     public virtual void TriggerExplosion()
     {
+        /*
         var r = GetComponentInChildren<Renderer>();
         if (r)
             r.enabled = false;
 
         turnText.gameObject.SetActive(false);
+        */
         previousTime = Time.time;
         Tick();
         ScoreManager.Instance.fawnBeatAnimator.OnBeat += Tick;
