@@ -9,6 +9,9 @@ public class FawnMovement : MonoBehaviour {
 	Animator animator;
 	MusicManager music;
 	bool jumpedAlready = false;
+	private MoveDirection[] moves;
+	private Dictionary<MoveDirection, MoveDirection> shuffled;
+	private bool shuffleOn = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,16 +19,34 @@ public class FawnMovement : MonoBehaviour {
 		board = FindObjectOfType<GenerateBoard>();
 		music = FindObjectOfType<MusicManager>();
 		MusicManager.OnBeat += Jump;
+		moves = new MoveDirection[4];
+		moves[0] = (MoveDirection.Up);
+		moves[1] = (MoveDirection.Down);
+		moves[2] = (MoveDirection.Left);
+		moves[3] = (MoveDirection.Right);
+		shuffled = new Dictionary<MoveDirection, MoveDirection>();
 	}
 
     private void CheckDirection(MoveDirection d){
         if(music.CloseToBeat()){
-            GenerateBoard.Instance.MoveFawn(d);
+			if(!shuffleOn){
+	            GenerateBoard.Instance.MoveFawn(d);
+			} else {
+				GenerateBoard.Instance.MoveFawn(shuffled[d]);
+			}
             StartCoroutine(ResetMove());
         } else {
             ScoreManager.Instance.GenerateFloatText(0, true);
         }
     }
+
+	void ShuffleMoves(){
+		Static.Shuffle(moves);
+		shuffled.Add(MoveDirection.Up, moves[0]);
+		shuffled.Add(MoveDirection.Down, moves[1]);
+		shuffled.Add(MoveDirection.Left, moves[2]);
+		shuffled.Add(MoveDirection.Right, moves[3]);
+	}
 
 	void Update(){
 		if(!jumpedAlready){
