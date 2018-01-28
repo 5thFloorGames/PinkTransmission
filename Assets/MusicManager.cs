@@ -65,6 +65,16 @@ public class MusicManager : MonoBehaviour {
 		}
 	}
 
+	public void EndGameMusic(){
+		AkSoundEngine.PostEvent("End",gameObject);
+		StartCoroutine(StopAllMusic());
+	}
+
+	IEnumerator StopAllMusic(){
+		yield return new WaitForSeconds(7);
+		AkSoundEngine.PostEvent("StopAll",gameObject);
+	}
+
 	public void EffectSwitch(string effectName){
 		AkSoundEngine.SetState("Effect", effectName);
 	}
