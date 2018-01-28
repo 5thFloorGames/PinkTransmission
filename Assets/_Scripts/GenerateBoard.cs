@@ -99,7 +99,7 @@ public class GenerateBoard : MonoBehaviour {
 		tiles[x,y].ChangeOwner(TileState.Animal);
 
         if(ShroomSlotManager.Instance.CheckShroomDestroy(x, y)) {
-			AkSoundEngine.PostEvent("ActionBiteStinger",gameObject);
+			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
         }
         
 	}
@@ -175,7 +175,6 @@ public class GenerateBoard : MonoBehaviour {
 
     public void SpawnShroom()
     {
-		FindObjectOfType<MusicManager>().ShroomStinger();
         ShroomSlotManager.Instance.SpawnShroom((int)shroomPosition.x, (int)shroomPosition.y);
     }
 

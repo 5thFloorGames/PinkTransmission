@@ -16,10 +16,6 @@ public class MusicManager : MonoBehaviour {
 	public void FirstMove(){
 		AkSoundEngine.PostEvent("ActionFirstMove", gameObject);		
 	}
-
-	public void ShroomStinger(){
-		AkSoundEngine.PostEvent("ActionShroomStinger", gameObject);
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,6 +34,10 @@ public class MusicManager : MonoBehaviour {
 			//print("OffBeat!");
 		}
 		return false;
+	}
+
+	public float TimeToNextBeat(){
+		return 0.43f - (Time.time - lastBeat);
 	}
 
 	void Beat(object in_cookie, AkCallbackType in_type, object in_info){

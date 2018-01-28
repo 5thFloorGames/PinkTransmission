@@ -35,6 +35,7 @@ public class ShroomMovement : MonoBehaviour {
                 GenerateBoard.Instance.MoveShroom(MoveDirection.Down);
             } else if(Input.GetAxis("SubmitB") > 0)
             {
+                ShroomStinger();
                 GenerateBoard.Instance.SpawnShroom();
             } else
             {
@@ -42,4 +43,8 @@ public class ShroomMovement : MonoBehaviour {
             }
         }
     }
+
+    public void ShroomStinger(){
+		AkSoundEngine.PostEvent("ActionShroomStinger", gameObject);
+	}
 }
