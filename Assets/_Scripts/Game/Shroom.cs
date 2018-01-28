@@ -92,6 +92,9 @@ public class Shroom : MonoBehaviour {
         var ratio = delta / beatTime;
         if (ratio >= 0.5f && ratio <= 2.0f)
         {
+            if (turnsPassed == 0)
+                turnText.gameObject.SetActive(false);
+
             turnsPassed++;
 
             int scoreDelta = 0;
