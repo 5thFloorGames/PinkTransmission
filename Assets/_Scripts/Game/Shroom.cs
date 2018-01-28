@@ -19,7 +19,7 @@ public class Shroom : MonoBehaviour {
     {
         ScoreManager.Instance.shroomBeatAnimator.OnBeat += CheckTurn;
         turnText = GetComponentInChildren<TextMesh>();
-        explosionTurns = MusicManager.Instance.TimeToBarAfterNext();
+        explosionTurns = FindObjectOfType<MusicManager>().TimeToBarAfterNext();
         turnText.text = explosionTurns.ToString();
         
     }
