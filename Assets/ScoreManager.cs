@@ -40,6 +40,7 @@ public class ScoreManager : MonoBehaviour {
                 shroomWinScreen.SetActive(false);
                 delay = 0;
                 end = false;
+                SceneManager.LoadScene("Dummy");
                 return;
             }
         }
