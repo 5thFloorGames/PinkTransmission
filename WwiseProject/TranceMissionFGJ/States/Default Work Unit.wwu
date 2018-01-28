@@ -21,6 +21,15 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="Effect" ID="{E39616B8-E3B7-4700-829E-4EC62430AC24}">
+					<ChildrenList>
+						<State Name="None" ID="{6F1B8797-5FD1-477D-95E3-16DDD3E1F761}"/>
+						<State Name="DoubleJump" ID="{5DFAE64D-00E7-4EB1-873C-5C361DF01601}"/>
+						<State Name="Idle" ID="{CF08567C-DC47-418F-AB41-173F25E6A4F5}"/>
+						<State Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
+						<State Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

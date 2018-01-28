@@ -46,10 +46,10 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}"/>
+						<CurrentStateRef Name="MixedControls" ID="{2F694489-3638-45CE-8041-19E221FA4FF0}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}"/>
-						<CurrentSwitchRef Name="Neutral" ID="{171BAE98-6283-4749-866B-6797EA3ADEFA}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
