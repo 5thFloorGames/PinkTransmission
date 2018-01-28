@@ -42,6 +42,7 @@ public class Shroom : MonoBehaviour {
 
         if(explosionTurns <= 0)
         {
+            Instantiate(Resources.Load("ShroomExplosion", typeof(GameObject)), transform.position, Quaternion.identity);
             OnTurnsPassed();
             ScoreManager.Instance.shroomBeatAnimator.OnBeat -= CheckTurn;
         }
