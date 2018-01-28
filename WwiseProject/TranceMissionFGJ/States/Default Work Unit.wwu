@@ -9,12 +9,12 @@
 					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{FE6D70DB-1928-4702-8925-3F98CAEA1076}"/>
-						<State Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
+						<State Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
 						<State Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
-							<StartState Name="Idle" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
+							<StartState Name="PreStart" ID="{B55C077A-9948-46E9-A824-1B01C2D1FEF4}"/>
 							<EndState Name="Start" ID="{35094DE4-3B49-40ED-B864-01548AA28D4A}"/>
 							<Time>0.43</Time>
 							<IsShared>false</IsShared>

@@ -5,8 +5,16 @@
 			<ChildrenList>
 				<SwitchGroup Name="Start" ID="{172C10C6-EE90-45E0-86BA-AEB0E057F82C}">
 					<ChildrenList>
-						<Switch Name="Idle" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>
+						<Switch Name="PreStart" ID="{114071B2-EA74-4923-96D2-CF01A5E93BBB}"/>
 						<Switch Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Effect" ID="{26281A98-44BA-4B8F-A722-9BA4F28AE58F}">
+					<ChildrenList>
+						<Switch Name="Neutral" ID="{171BAE98-6283-4749-866B-6797EA3ADEFA}"/>
+						<Switch Name="DoubleJump" ID="{EB0C970B-0D22-4F0C-9386-079E0DC6D9B8}"/>
+						<Switch Name="MixedControls" ID="{295F131D-BBAD-4A03-BA73-287405842EE2}"/>
+						<Switch Name="Idle" ID="{FD1BB7E8-285F-43C4-B410-7C872DAD0FC9}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>
