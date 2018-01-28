@@ -16,6 +16,9 @@ public class ScoreManager : MonoBehaviour {
 
     // Score
     public int maxScore = 200;
+    public GameObject fawnWinScreen, shroomWinScreen;
+    private float delay;
+    public static bool end;
 
     private void Start()
     {
@@ -26,6 +29,19 @@ public class ScoreManager : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if(end)
+        {
+            delay += Time.fixedDeltaTime;
+
+            if(delay >= 1.0f && Input.anyKeyDown)
+            {
+                fawnWinScreen.SetActive(false);
+                shroomWinScreen.SetActive(false);
+                delay = 0;
+                end = false;
+            }
+        }
+
         if(shroomTextScore < shroomScore)
         {
             shroomTextScore++;
@@ -33,7 +49,8 @@ public class ScoreManager : MonoBehaviour {
 
             if(shroomTextScore >= maxScore)
             {
-
+                shroomWinScreen.SetActive(true);
+                end = true;
             }
         }
 
@@ -43,9 +60,10 @@ public class ScoreManager : MonoBehaviour {
             fawnTargetTransform.GetComponent<Text>().text = fawnTextScore.ToString("000");
 
 
-            if (shroomTextScore >= maxScore)
+            if (fawnTextScore >= maxScore)
             {
-
+                fawnWinScreen.SetActive(true);
+                end = true;
             }
         }
     }
