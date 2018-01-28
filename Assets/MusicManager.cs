@@ -14,7 +14,7 @@ public class MusicManager : MonoBehaviour {
 
 	void Awake()
 	{
-		//Instance = this;
+		Instance = this;
 	}
 
 	// Use this for initialization

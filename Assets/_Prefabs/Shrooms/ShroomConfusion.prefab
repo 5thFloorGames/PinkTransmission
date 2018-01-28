@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8895173415020ee4dac2427c1ca3fa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: ec7af29132cae5440b97fd16bba0aa7e, type: 3}
+  icon: {fileID: 21300000, guid: 18958b3b0eac041cdaf518ebe083c578, type: 3}
   x: 0
   y: 0
   shroomType: 0
