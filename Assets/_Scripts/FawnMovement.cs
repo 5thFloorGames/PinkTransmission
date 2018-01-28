@@ -14,6 +14,8 @@ public class FawnMovement : MonoBehaviour {
 	private bool shuffleOn = false;
 	private bool doubleMove = false;
 	private int confuseCountdown = 0;
+	public GameObject confuseParticles;
+	public GameObject doubleParticles;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,11 @@ public class FawnMovement : MonoBehaviour {
 		moves[2] = (MoveDirection.Left);
 		moves[3] = (MoveDirection.Right);
 		shuffled = new Dictionary<MoveDirection, MoveDirection>();
+	}
+
+	void OnDestroy()
+	{
+		MusicManager.OnBeat -= Jump;
 	}
 
     private void CheckDirection(MoveDirection d){
@@ -74,6 +81,8 @@ public class FawnMovement : MonoBehaviour {
 	}
 
 	public void Double(){
+		doubleParticles.SetActive(true);
+		confuseParticles.SetActive(false);
 		shuffleOn = false;
 		doubleMove = true;
 		confuseCountdown = 16;
@@ -81,6 +90,8 @@ public class FawnMovement : MonoBehaviour {
 	}
 
 	public void Confuse(){
+		doubleParticles.SetActive(false);
+		confuseParticles.SetActive(true);
 		shuffleOn = true;
 		doubleMove = false;
 		ShuffleMoves();
@@ -94,6 +105,8 @@ public class FawnMovement : MonoBehaviour {
 		} else if ((doubleMove || shuffleOn) && confuseCountdown == 0) {
 			doubleMove = false;
 			shuffleOn = false;
+			doubleParticles.SetActive(false);
+			confuseParticles.SetActive(false);		
 			music.EffectSwitch("Neutral");
 			FindObjectOfType<LightBeamController>().Flash();
 		}
