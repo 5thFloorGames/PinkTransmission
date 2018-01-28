@@ -111,6 +111,11 @@ public class GenerateBoard : MonoBehaviour {
 	void UpdateTileOnFawn(){
 		int x = (int)FawnPosition.x;
 		int y = (int)FawnPosition.y;
+
+        var previousState = tiles[x, y].tileState;
+        var scoreChange = previousState == TileState.Animal ? 1 : 2;
+        ScoreManager.Instance.GenerateFloatText(scoreChange, true);
+
 		tiles[x,y].ChangeOwner(TileState.Animal);
 
         var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
@@ -187,6 +192,11 @@ public class GenerateBoard : MonoBehaviour {
     {
         int x = (int)shroomPosition.x;
         int y = (int)shroomPosition.y;
+
+        var previousState = tiles[x, y].tileState;
+        var scoreChange = previousState == TileState.Shroom ? 1 : 2;
+        ScoreManager.Instance.GenerateFloatText(scoreChange, false);
+
         tiles[x, y].ChangeOwner(TileState.Shroom);
     }
 
