@@ -91,7 +91,7 @@ public class FawnMovement : MonoBehaviour {
 	void Jump(){
 		if(confuseCountdown > 0){
 			confuseCountdown--;
-		} else {
+		} else if ((doubleMove || shuffleOn) && confuseCountdown == 0) {
 			doubleMove = false;
 			shuffleOn = false;
 			music.EffectSwitch("Neutral");
