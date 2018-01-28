@@ -51,8 +51,11 @@ public class GenerateBoard : MonoBehaviour {
         return new Vector3(x - XSize / 2f, 0, y - YSize / 2f);
     }
 	
-	public void MoveFawn(MoveDirection direction)
+	public void MoveFawn(MoveDirection direction, int factor)
     {
+        if (ScoreManager.end)
+            return;
+
 		if(direction == MoveDirection.Right){
 			fawn.transform.rotation = Quaternion.Euler(0,0,0);
 		} else if(direction == MoveDirection.Left){
@@ -67,28 +70,25 @@ public class GenerateBoard : MonoBehaviour {
 			FindObjectOfType<MusicManager>().FirstMove();
 		}
         Vector2 newPos = FawnPosition;
-        Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down){
 			if(newPos.y > 0){
-				delta = new Vector3(0,0,-1);
-                newPos += new Vector2(0,-1);
+                newPos += new Vector2(0,-1 * factor);
 			}
 		} else if (direction == MoveDirection.Up){
 			if(newPos.y < YSize){
-                delta = new Vector3(0,0,1);
-                newPos += new Vector2(0,1);
+                newPos += new Vector2(0,1 * factor);
 			}
 		} else if(direction == MoveDirection.Right){
 			if(newPos.x > 0){
-                delta = new Vector3(-1,0,0);
-                newPos += new Vector2(-1,0);
+                newPos += new Vector2(-1 * factor,0);
 			}
 		} else if (direction == MoveDirection.Left){
 			if(newPos.x < XSize){
-                delta = new Vector3(1,0,0);
-                newPos += new Vector2(1,0);
+                newPos += new Vector2(1 * factor,0);
 			}
         }
+
+		newPos = ClampPosition(newPos);
 
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
@@ -107,6 +107,10 @@ public class GenerateBoard : MonoBehaviour {
             StartCoroutine(PlayDelayed(0.3f, true));
         } 
 	}
+
+	Vector2 ClampPosition(Vector2 pos){
+		return new Vector2(Mathf.Clamp(pos.x,0,XSize), Mathf.Clamp(pos.y,0,YSize));
+	}
     
 	void UpdateTileOnFawn(){
 		int x = (int)FawnPosition.x;
@@ -120,13 +124,23 @@ public class GenerateBoard : MonoBehaviour {
 
         var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
         if (shroomType != ShroomType.None) {
+            ScoreManager.Instance.GenerateFloatText(3, true);
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
+			lbc.SharpFlash();
+			if(shroomType == ShroomType.Normal){
+				fawn.SendMessage("Confuse");
+			} else if(shroomType == ShroomType.Jump){
+				fawn.SendMessage("Double");
+			}
         }
         
 	}
     
     public void MoveShroom(MoveDirection direction)
     {
+        if (ScoreManager.end)
+            return;
+
         Vector2 newPos = shroomPosition;
 		if(!firstMove){
 			firstMove = true;
@@ -194,7 +208,7 @@ public class GenerateBoard : MonoBehaviour {
         int y = (int)shroomPosition.y;
 
         var previousState = tiles[x, y].tileState;
-        var scoreChange = previousState == TileState.Shroom ? 1 : 2;
+        var scoreChange = previousState == TileState.Shroom ? 2 : 4;
         ScoreManager.Instance.GenerateFloatText(scoreChange, false);
 
         tiles[x, y].ChangeOwner(TileState.Shroom);
@@ -214,8 +228,9 @@ public class GenerateBoard : MonoBehaviour {
             if (prev != tileState)
             {
                 tiles[x, y].ChangeOwner(tileState);
-                return 1;
+                return 3;
             }
+            return 2;
         }
         return 0;
     }

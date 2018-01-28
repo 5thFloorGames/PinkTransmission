@@ -30,6 +30,10 @@
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="End" ID="{CAEA5089-BCCC-46E9-AA5D-437966B8B00A}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="PercussionStinger" ID="{EDD4A3FD-1184-4900-B27A-D281CD1E89A5}" WorkUnitID="{04CC140F-E2AC-4D83-81EA-2A999FA95B5A}"/>
 							<Position X="3" Y="1"/>
 						</Module>
@@ -49,7 +53,7 @@
 						<CurrentStateRef Name="Neutral" ID="{199C2F68-118D-40DD-9A66-99E5BAB6291F}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Start" ID="{3E1FEDAB-C607-4C29-8F5E-ABB850BC91F3}"/>
+						<CurrentSwitchRef Name="End" ID="{82E01519-4052-471C-880F-8809B72837B1}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

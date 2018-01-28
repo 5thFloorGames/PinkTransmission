@@ -24,6 +24,7 @@
 				<Event Id="1492365381" Name="ActionBiteStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionBiteStinger"/>
 				<Event Id="854939776" Name="ActionFirstMove" ObjectPath="\Events\Default Work Unit\Actions\ActionFirstMove" MaxAttenuation="0,000000"/>
 				<Event Id="4202577283" Name="ActionShroomStinger" ObjectPath="\Events\Default Work Unit\Actions\ActionShroomStinger"/>
+				<Event Id="529726532" Name="End" ObjectPath="\Events\Default Work Unit\Actions\End" MaxAttenuation="0,000000"/>
 				<Event Id="1313304943" Name="Marker" ObjectPath="\Events\Default Work Unit\Markers\Marker" MaxAttenuation="0,000000"/>
 				<Event Id="4091047182" Name="PauseAll" ObjectPath="\Events\Default Work Unit\Actions\PauseAll" MaxAttenuation="0,000000"/>
 				<Event Id="2526194360" Name="PercussionStinger" ObjectPath="\Events\Default Work Unit\Actions\PercussionStinger" MaxAttenuation="0,000000"/>
@@ -84,6 +85,10 @@
 				<File Id="455516844" Language="SFX">
 					<ShortName>StingerBite1.wav</ShortName>
 					<Path>SFX\StingerBite1_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="495719197" Language="SFX">
+					<ShortName>Ending.wav</ShortName>
+					<Path>SFX\Ending_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="506096902" Language="SFX">
 					<ShortName>Stinger1.wav</ShortName>
