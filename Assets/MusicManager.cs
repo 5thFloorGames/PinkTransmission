@@ -58,7 +58,7 @@ public class MusicManager : MonoBehaviour {
 
 	void Beat(object in_cookie, AkCallbackType in_type, object in_info){
 		if(Time.time - lastBeat > 0.1){
-			print(Time.time - lastBeat);
+			//print(Time.time - lastBeat);
 			lastBeat = Time.time;
 			beatCounter++;
 			OnBeat();
