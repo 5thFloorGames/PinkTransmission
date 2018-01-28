@@ -8,6 +8,7 @@ public class LightBeamController : MonoBehaviour {
 	List<GameObject> leftLights;
 
 	bool lightsMoving = true;
+	bool lightsFlashing = true;
 
 	void Start () {
 
@@ -22,13 +23,20 @@ public class LightBeamController : MonoBehaviour {
 		}
 
 		lightsMoving = false;
+		lightsFlashing = false;
 		
 	}
 	void Update () {
 		if (!lightsMoving) {
 			if (Input.GetKeyDown(KeyCode.P)) {
-				StartCoroutine(WaveFromFront());
-				lightsMoving = true;
+				SlowLights();
+			}
+
+			if (Input.GetKeyDown(KeyCode.L)) {
+				VerySlowLights();
+			}
+			if (Input.GetKeyDown(KeyCode.O)) {
+				SharpFlash();
 			}
 		}
 	}
@@ -40,27 +48,68 @@ public class LightBeamController : MonoBehaviour {
 		}
 	}
 
-	void Hello(GameObject go) {
-		Debug.Log(go.name);
+	void SlowLights() {
+		if (lightsMoving) {
+			return;
+		}
+		lightsMoving = true;
+		StartCoroutine(WaveFromFront(1f, 1f, 0.3f, 1.0f));
 	}
 
-	void TweenZ(GameObject obj, float rotatingTo, float time) {
+	void VerySlowLights() {
+		if (lightsMoving) {
+			return;
+		}
+		lightsMoving = true;
+		StartCoroutine(WaveFromFront(5f, 2f, 1f, 7.0f));
+	}
+
+	void SharpFlash() {
+		if (lightsFlashing) {
+			return;
+		}
+		StartCoroutine(FlashTheLights(0.1f, 5));
+	}
+
+	void TweenZ(GameObject obj, float rotatingTo, float time, float back) {
 		LeanTween.rotateZ(obj, rotatingTo, time);
 		LeanTween.delayedCall(obj, time, ()=>{ 
-		LeanTween.rotateZ(obj, 0f, time);
+			LeanTween.rotateZ(obj, 0f, back);
 		});
 	}
 
-	IEnumerator WaveFromFront() {
+	IEnumerator WaveFromFront(float moveTimeTo, float moveTimeBack, float waitTimeBetween, float waitTimeAfter) {
 		
 		for (int i = 0; i < 5; i++) {
-			TweenZ(rightLights[i], 90f, 1.0f);
-			TweenZ(leftLights[i], -90f, 1.0f);
-			yield return new WaitForSeconds(0.1f);
+			TweenZ(rightLights[i], 90f, moveTimeTo, moveTimeBack);
+			TweenZ(leftLights[i], -90f, moveTimeTo, moveTimeBack);
+			yield return new WaitForSeconds(waitTimeBetween);
 		}
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(waitTimeAfter);
 		lightsMoving = false;
-		//ReturnToDefault();
+	}
+
+	IEnumerator FlashTheLights(float flashTime, int howMany) {
+
+		Color original = rightLights[0].transform.Find("LightBeam").GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+
+		for (int j = 0; j < howMany; j++) {
+		
+			for (int i = 0; i < 5; i++) {
+				rightLights[i].transform.Find("LightBeam").GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+				leftLights[i].transform.Find("LightBeam").GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+			}
+			yield return new WaitForSeconds(flashTime);
+
+			for (int i = 0; i < 5; i++) {
+				rightLights[i].transform.Find("LightBeam").GetComponent<SpriteRenderer>().color = original;
+				leftLights[i].transform.Find("LightBeam").GetComponent<SpriteRenderer>().color = original;
+			}
+			yield return new WaitForSeconds(flashTime);
+
+		}
+
+		lightsFlashing = false;
 	}
 
 }
