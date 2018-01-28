@@ -69,7 +69,7 @@ Transform:
   m_GameObject: {fileID: 1372895862312644}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4895501045039920}
   m_RootOrder: 1
@@ -116,7 +116,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 248669424115ee84c918d22c26258163, type: 3}
+  - {fileID: 2100000, guid: 8edac83ba034942378326e70f4bda010, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,13 +191,13 @@ TextMesh:
   m_Anchor: 7
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 20
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 248669424115ee84c918d22c26258163, type: 3}
+  m_Font: {fileID: 12800000, guid: 8edac83ba034942378326e70f4bda010, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278234879
+    rgba: 4285726530
 --- !u!114 &114101907133710144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,5 +212,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: ec7af29132cae5440b97fd16bba0aa7e, type: 3}
   x: 0
   y: 0
-  explosionTurns: 4
-  explosionRadius: 4
+  shroomType: 0

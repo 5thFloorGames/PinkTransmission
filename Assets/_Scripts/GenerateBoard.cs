@@ -53,6 +53,9 @@ public class GenerateBoard : MonoBehaviour {
 	
 	public void MoveFawn(MoveDirection direction, int factor)
     {
+        if (ScoreManager.end)
+            return;
+
 		if(direction == MoveDirection.Right){
 			fawn.transform.rotation = Quaternion.Euler(0,0,0);
 		} else if(direction == MoveDirection.Left){
@@ -121,6 +124,7 @@ public class GenerateBoard : MonoBehaviour {
 
         var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
         if (shroomType != ShroomType.None) {
+            ScoreManager.Instance.GenerateFloatText(3, true);
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
 			lbc.SharpFlash();
 			if(shroomType == ShroomType.Normal){
@@ -134,6 +138,9 @@ public class GenerateBoard : MonoBehaviour {
     
     public void MoveShroom(MoveDirection direction)
     {
+        if (ScoreManager.end)
+            return;
+
         Vector2 newPos = shroomPosition;
 		if(!firstMove){
 			firstMove = true;
@@ -201,7 +208,7 @@ public class GenerateBoard : MonoBehaviour {
         int y = (int)shroomPosition.y;
 
         var previousState = tiles[x, y].tileState;
-        var scoreChange = previousState == TileState.Shroom ? 1 : 2;
+        var scoreChange = previousState == TileState.Shroom ? 2 : 4;
         ScoreManager.Instance.GenerateFloatText(scoreChange, false);
 
         tiles[x, y].ChangeOwner(TileState.Shroom);
@@ -221,8 +228,9 @@ public class GenerateBoard : MonoBehaviour {
             if (prev != tileState)
             {
                 tiles[x, y].ChangeOwner(tileState);
-                return 1;
+                return 3;
             }
+            return 2;
         }
         return 0;
     }

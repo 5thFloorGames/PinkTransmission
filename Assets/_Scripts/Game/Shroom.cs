@@ -42,6 +42,7 @@ public class Shroom : MonoBehaviour {
 
         if(explosionTurns <= 0)
         {
+            Instantiate(Resources.Load("ShroomExplosion", typeof(GameObject)), transform.position, Quaternion.identity);
             OnTurnsPassed();
             ScoreManager.Instance.shroomBeatAnimator.OnBeat -= CheckTurn;
         }
@@ -77,13 +78,11 @@ public class Shroom : MonoBehaviour {
 
     public virtual void TriggerExplosion()
     {
-        /*
         var r = GetComponentInChildren<Renderer>();
         if (r)
             r.enabled = false;
 
         turnText.gameObject.SetActive(false);
-        */
         previousTime = Time.time;
         Tick();
         ScoreManager.Instance.fawnBeatAnimator.OnBeat += Tick;
