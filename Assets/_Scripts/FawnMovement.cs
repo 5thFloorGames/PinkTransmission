@@ -95,6 +95,7 @@ public class FawnMovement : MonoBehaviour {
 			doubleMove = false;
 			shuffleOn = false;
 			music.EffectSwitch("Neutral");
+			FindObjectOfType<LightBeamController>().Flash();
 		}
 		animator.SetTrigger("Jump");
 	}

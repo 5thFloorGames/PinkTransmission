@@ -252,6 +252,50 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="End" ID="{CAEA5089-BCCC-46E9-AA5D-437966B8B00A}">
+							<ChildrenList>
+								<Action Name="" ID="{3115E63F-31AC-4116-9F4E-C83C4B7DA19C}" ShortID="1053664226">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="End" ID="{82E01519-4052-471C-880F-8809B72837B1}" WorkUnitID="{181486C1-4F4B-4297-AE55-D26E38CF5C72}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{01DA3605-0233-4898-B6BF-26D3E4B197BC}" ShortID="155330588">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StingersBite" ID="{1D6A70EB-2BC1-4C68-B7C9-177E3225078A}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AFB2C225-C5B1-478F-BDB8-B5DD65AB83F1}" ShortID="789902802">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StingersPerc" ID="{250B7399-4E77-41DF-B95E-68ABCB4491BB}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2E8D95F5-1A53-4631-B570-3E8FFBCD74E7}" ShortID="922932266">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StingersShroom" ID="{C5706423-7627-4B59-8154-25E46FC59B55}" WorkUnitID="{D8E9A37B-AE19-4E84-96C2-4F694C19C1EF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

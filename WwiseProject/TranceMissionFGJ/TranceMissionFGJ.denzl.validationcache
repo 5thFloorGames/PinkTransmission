@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="85">
-	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1517094215" DateHigh="0"/>
+	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1517143415" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Attenuations\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Audio Devices\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Control Surface Sessions\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
@@ -9,9 +9,9 @@
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Effects\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Effects\Factory Effects.wwu" DateLow="1517094215" DateHigh="0"/>
-	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Events\Default Work Unit.wwu" DateLow="1517141179" DateHigh="0"/>
+	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Events\Default Work Unit.wwu" DateLow="1517142476" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Game Parameters\Default Work Unit.wwu" DateLow="1517060450" DateHigh="0"/>
-	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1517141179" DateHigh="0"/>
+	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1517143415" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1517087425" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Mixing Sessions\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Modulators\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
@@ -19,10 +19,10 @@
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Queries\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Queries\Factory Queries.wwu" DateLow="1516990657" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\SoundBanks\Default Work Unit.wwu" DateLow="1517078778" DateHigh="0"/>
-	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1517141179" DateHigh="0"/>
+	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1517143415" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\States\Default Work Unit.wwu" DateLow="1517141179" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Switches\Default Work Unit.wwu" DateLow="1517141179" DateHigh="0"/>
-	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\TranceMissionFGJ.denzl.wsettings" DateLow="1517141198" DateHigh="0"/>
+	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\TranceMissionFGJ.denzl.wsettings" DateLow="1517143925" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\TranceMissionFGJ.wproj" DateLow="1517055201" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Triggers\Default Work Unit.wwu" DateLow="1517088465" DateHigh="0"/>
 	<ValidationCacheItem File="F:\TranceMission\PinkTransmission\WwiseProject\TranceMissionFGJ\Virtual Acoustics\Default Work Unit.wwu" DateLow="1517046541" DateHigh="0"/>
