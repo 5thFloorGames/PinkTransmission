@@ -105,6 +105,10 @@
 					<ShortName>IdleLoop.wav</ShortName>
 					<Path>SFX\IdleLoop_4FEDAFB7.wem</Path>
 				</File>
+				<File Id="617425295" Language="SFX">
+					<ShortName>ShroomPuff1.wav</ShortName>
+					<Path>SFX\ShroomPuff1_4FEDAFB7.wem</Path>
+				</File>
 				<File Id="693534822" Language="SFX">
 					<ShortName>BaseLoop-neutral.wav</ShortName>
 					<Path>SFX\BaseLoop-neutral_4FEDAFB7.wem</Path>
@@ -124,6 +128,14 @@
 				<File Id="806302841" Language="SFX">
 					<ShortName>StingerBite3.wav</ShortName>
 					<Path>SFX\StingerBite3_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="869757597" Language="SFX">
+					<ShortName>ShroomPuff2.wav</ShortName>
+					<Path>SFX\ShroomPuff2_4FEDAFB7.wem</Path>
+				</File>
+				<File Id="875566490" Language="SFX">
+					<ShortName>ShroomPuff3.wav</ShortName>
+					<Path>SFX\ShroomPuff3_4FEDAFB7.wem</Path>
 				</File>
 				<File Id="887608893" Language="SFX">
 					<ShortName>StingerPerc7.wav</ShortName>
