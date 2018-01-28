@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour {
     public Text missTextPrefab, scoreTextPrefab;
     public BeatAnimator fawnBeatAnimator, shroomBeatAnimator;
 
+    // Score
+
 
     private void Start()
     {
@@ -22,8 +24,24 @@ public class ScoreManager : MonoBehaviour {
         shroomBeatAnimator = shroomTargetTransform.GetComponentInParent<BeatAnimator>();
     }
 
+    private void FixedUpdate()
+    {
+        if(shroomTextScore < shroomScore)
+        {
+            shroomTextScore++;
+            shroomTargetTransform.GetComponent<Text>().text = shroomTextScore.ToString("000");
+        }
+
+        if(fawnTextScore < fawnScore)
+        {
+            fawnTextScore++;
+            fawnTargetTransform.GetComponent<Text>().text = fawnTextScore.ToString("000");
+        }
+    }
+
     private bool fawnTriggered, shroomTriggered;
-    private int fawnScore, shroomScore;
+    private int fawnDelta, shroomDelta;
+    private int fawnScore, fawnTextScore, shroomScore, shroomTextScore;
     public void GenerateFloatText(int score, bool isFawn)
     {
         if(isFawn)
@@ -31,13 +49,13 @@ public class ScoreManager : MonoBehaviour {
             if (!fawnTriggered)
                 StartCoroutine(GenerateFawnScore());
             fawnTriggered = true;
-            fawnScore += score;
+            fawnDelta += score;
         } else
         {
             if (!shroomTriggered)
                 StartCoroutine(GenerateShroomScore());
             shroomTriggered = true;
-            shroomScore += score;
+            shroomDelta += score;
         }
     }   
 
@@ -45,12 +63,13 @@ public class ScoreManager : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
 
-        var text = Instantiate(fawnScore == 0 ? missTextPrefab : scoreTextPrefab, transform);
-        if (fawnScore > 0)
-            text.text = "+" + fawnScore.ToString("00");
+        var text = Instantiate(fawnDelta == 0 ? missTextPrefab : scoreTextPrefab, transform);
+        if (fawnDelta > 0)
+            text.text = "+" + fawnDelta.ToString("00");
         text.transform.position = fawnTargetTransform.position;
         text.transform.localPosition += delta;
-        fawnScore = 0;
+        fawnScore += fawnDelta;
+        fawnDelta = 0;
         fawnTriggered = false;
     }
 
@@ -58,12 +77,13 @@ public class ScoreManager : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
 
-        var text = Instantiate(shroomScore == 0 ? missTextPrefab : scoreTextPrefab, transform);
-        if (shroomScore > 0)
-            text.text = "+" + shroomScore.ToString("00");
+        var text = Instantiate(shroomDelta == 0 ? missTextPrefab : scoreTextPrefab, transform);
+        if (shroomDelta > 0)
+            text.text = "+" + shroomDelta.ToString("00");
         text.transform.position = shroomTargetTransform.position;
         text.transform.localPosition += delta;
-        shroomScore = 0;
+        shroomScore += shroomDelta;
+        shroomDelta = 0;
         shroomTriggered = false;
     }
 }
