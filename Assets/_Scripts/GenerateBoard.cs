@@ -92,7 +92,7 @@ public class GenerateBoard : MonoBehaviour {
                 });
             FawnPosition = newPos;
             StartCoroutine(PlayDelayed(0.3f, true));
-        }
+        } 
 	}
     
 	void UpdateTileOnFawn(){
@@ -178,5 +178,15 @@ public class GenerateBoard : MonoBehaviour {
     public void SpawnShroom()
     {
         ShroomSlotManager.Instance.SpawnShroom((int)shroomPosition.x, (int)shroomPosition.y);
+    }
+
+    public int ChangeTileOwner(int x, int y, TileState tileState)
+    {
+        if (x >= 0 && x <= XSize && y >= 0 && y <= YSize)
+        {
+            tiles[x, y].ChangeOwner(tileState);
+            return 1;
+        }
+        return 0;
     }
 }

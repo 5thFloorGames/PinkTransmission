@@ -18,37 +18,36 @@ public class ShroomMovement : MonoBehaviour {
         animator = GetComponentInChildren<Animator>();
     }
     
+    private void CheckDirection(MoveDirection d){
+        if(music.CloseToHalfBar()){
+            GenerateBoard.Instance.MoveShroom(d);
+            StartCoroutine(ResetMove());
+        } else {
+            ScoreManager.Instance.GenerateFloatText(0, false);
+        }
+    }
+
     private void Update(){
         if(!jumpedAlready){
             if(Input.GetKeyDown(KeyCode.UpArrow)){
-                if(music.CloseToHalfBar()){
-                    GenerateBoard.Instance.MoveShroom(MoveDirection.Up);
-                    StartCoroutine(ResetMove());
-                }
+                CheckDirection(MoveDirection.Up);
             }
             if(Input.GetKeyDown(KeyCode.DownArrow)){
-                if(music.CloseToHalfBar()){
-                    GenerateBoard.Instance.MoveShroom(MoveDirection.Down);
-                    StartCoroutine(ResetMove());
-                }
+                CheckDirection(MoveDirection.Down);
             }
             if(Input.GetKeyDown(KeyCode.LeftArrow)){
-                if(music.CloseToHalfBar()){
-                    GenerateBoard.Instance.MoveShroom(MoveDirection.Right);
-                    StartCoroutine(ResetMove());
-                }
+                CheckDirection(MoveDirection.Right);
             }
             if(Input.GetKeyDown(KeyCode.RightArrow)){
-                if(music.CloseToHalfBar()){
-                    GenerateBoard.Instance.MoveShroom(MoveDirection.Left);
-                    StartCoroutine(ResetMove());
-                }
+                CheckDirection(MoveDirection.Left);
             }
             if(Input.GetKeyDown(KeyCode.Space)){
                 if(music.CloseToHalfBar()){
                     GenerateBoard.Instance.SpawnShroom();
                     ShroomStinger();
                     StartCoroutine(ResetMove());
+                } else {
+                    ScoreManager.Instance.GenerateFloatText(0, false);
                 }
             }
         }
