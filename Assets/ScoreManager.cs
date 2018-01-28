@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour {
     public BeatAnimator fawnBeatAnimator, shroomBeatAnimator;
 
     // Score
-
+    public int maxScore = 200;
 
     private void Start()
     {
@@ -30,12 +30,23 @@ public class ScoreManager : MonoBehaviour {
         {
             shroomTextScore++;
             shroomTargetTransform.GetComponent<Text>().text = shroomTextScore.ToString("000");
+
+            if(shroomTextScore >= maxScore)
+            {
+
+            }
         }
 
         if(fawnTextScore < fawnScore)
         {
             fawnTextScore++;
             fawnTargetTransform.GetComponent<Text>().text = fawnTextScore.ToString("000");
+
+
+            if (shroomTextScore >= maxScore)
+            {
+
+            }
         }
     }
 

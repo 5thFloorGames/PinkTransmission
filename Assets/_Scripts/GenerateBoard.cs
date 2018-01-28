@@ -120,6 +120,7 @@ public class GenerateBoard : MonoBehaviour {
 
         var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
         if (shroomType != ShroomType.None) {
+            ScoreManager.Instance.GenerateFloatText(3, true);
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
         }
         
