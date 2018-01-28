@@ -12,6 +12,7 @@ public class FawnMovement : MonoBehaviour {
 	private MoveDirection[] moves;
 	private Dictionary<MoveDirection, MoveDirection> shuffled;
 	private bool shuffleOn = false;
+	private bool doubleMove = false;
 	private int confuseCountdown = 0;
 
 	// Use this for initialization
@@ -30,10 +31,12 @@ public class FawnMovement : MonoBehaviour {
 
     private void CheckDirection(MoveDirection d){
         if(music.CloseToBeat()){
-			if(!shuffleOn){
-	            GenerateBoard.Instance.MoveFawn(d);
+			if(shuffleOn){
+	            GenerateBoard.Instance.MoveFawn(shuffled[d], 1);
+			} else if(doubleMove){
+				GenerateBoard.Instance.MoveFawn(d, 2);
 			} else {
-				GenerateBoard.Instance.MoveFawn(shuffled[d]);
+				GenerateBoard.Instance.MoveFawn(d, 1);
 			}
             StartCoroutine(ResetMove());
         } else {
@@ -69,8 +72,16 @@ public class FawnMovement : MonoBehaviour {
 		jumpedAlready = false;
 	}
 
+	public void Double(){
+		shuffleOn = false;
+		doubleMove = true;
+		confuseCountdown = 8;
+		music.EffectSwitch("DoubleJump");		
+	}
+
 	public void Confuse(){
 		shuffleOn = true;
+		doubleMove = false;
 		ShuffleMoves();
 		confuseCountdown = 8;
 		music.EffectSwitch("MixedControls");
@@ -80,25 +91,11 @@ public class FawnMovement : MonoBehaviour {
 		if(confuseCountdown > 0){
 			confuseCountdown--;
 		} else {
+			doubleMove = false;
 			shuffleOn = false;
 			music.EffectSwitch("Neutral");
 		}
 		animator.SetTrigger("Jump");
 	}
-    
-	void Move(){
-		if(i++ % 1 == 0 && music.CloseToBeat())
-        {
-			animator.SetTrigger("Jump");
-			if(Input.GetAxis("HorizontalA") > 0){
-				board.MoveFawn(MoveDirection.Left);
-			} else if (Input.GetAxis("HorizontalA") < 0){
-				board.MoveFawn(MoveDirection.Right);
-			} else if (Input.GetAxis("VerticalA") > 0){
-				board.MoveFawn(MoveDirection.Up);
-			} else if (Input.GetAxis("VerticalA") < 0){
-				board.MoveFawn(MoveDirection.Down);
-			}
-		}
-	}
+
 }

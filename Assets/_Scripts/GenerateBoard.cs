@@ -51,7 +51,7 @@ public class GenerateBoard : MonoBehaviour {
         return new Vector3(x - XSize / 2f, 0, y - YSize / 2f);
     }
 	
-	public void MoveFawn(MoveDirection direction)
+	public void MoveFawn(MoveDirection direction, int factor)
     {
 		if(direction == MoveDirection.Right){
 			fawn.transform.rotation = Quaternion.Euler(0,0,0);
@@ -67,28 +67,25 @@ public class GenerateBoard : MonoBehaviour {
 			FindObjectOfType<MusicManager>().FirstMove();
 		}
         Vector2 newPos = FawnPosition;
-        Vector3 delta = Vector3.zero;
         if (direction == MoveDirection.Down){
 			if(newPos.y > 0){
-				delta = new Vector3(0,0,-1);
-                newPos += new Vector2(0,-1);
+                newPos += new Vector2(0,-1 * factor);
 			}
 		} else if (direction == MoveDirection.Up){
 			if(newPos.y < YSize){
-                delta = new Vector3(0,0,1);
-                newPos += new Vector2(0,1);
+                newPos += new Vector2(0,1 * factor);
 			}
 		} else if(direction == MoveDirection.Right){
 			if(newPos.x > 0){
-                delta = new Vector3(-1,0,0);
-                newPos += new Vector2(-1,0);
+                newPos += new Vector2(-1 * factor,0);
 			}
 		} else if (direction == MoveDirection.Left){
 			if(newPos.x < XSize){
-                delta = new Vector3(1,0,0);
-                newPos += new Vector2(1,0);
+                newPos += new Vector2(1 * factor,0);
 			}
         }
+
+		newPos = ClampPosition(newPos);
 
         if (newPos != shroomPosition && newPos != FawnPosition)
         {
@@ -107,6 +104,10 @@ public class GenerateBoard : MonoBehaviour {
             StartCoroutine(PlayDelayed(0.3f, true));
         } 
 	}
+
+	Vector2 ClampPosition(Vector2 pos){
+		return new Vector2(Mathf.Clamp(pos.x,0,XSize), Mathf.Clamp(pos.y,0,YSize));
+	}
     
 	void UpdateTileOnFawn(){
 		int x = (int)FawnPosition.x;
@@ -116,7 +117,8 @@ public class GenerateBoard : MonoBehaviour {
         var shroomType = ShroomSlotManager.Instance.CheckShroomDestroy(x, y);
         if (shroomType != ShroomType.None) {
 			AkSoundEngine.PostEvent("ActionBiteStinger",fawn);
-			fawn.SendMessage("Confuse");
+			//fawn.SendMessage("Confuse");
+			fawn.SendMessage("Double");
         }
         
 	}
