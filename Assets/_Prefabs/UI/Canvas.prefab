@@ -311,8 +311,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2af421354e14996438c4fe645f06a945, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -338,8 +338,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2af421354e14996438c4fe645f06a945, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shroomPrefabs:
-  - {fileID: 114101907133710144, guid: 4c96a86bb81cb2c41acc8636d5e48c65, type: 2}
+  - {fileID: 114101907133710144, guid: ca65597244b874a5a90dd5da681a9396, type: 2}
   - {fileID: 114484194954730550, guid: 0156d34b27207764a883448569fdd14c, type: 2}
 --- !u!114 &114399516493464480
 MonoBehaviour:
@@ -567,8 +567,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2af421354e14996438c4fe645f06a945, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -636,6 +636,8 @@ MonoBehaviour:
     type: 2}
   scoreTextPrefab: {fileID: 114876190268330664, guid: 4157f7f783ecfc2479a722bfbfb758f1,
     type: 2}
+  fawnBeatAnimator: {fileID: 0}
+  shroomBeatAnimator: {fileID: 0}
 --- !u!114 &114730295679751288
 MonoBehaviour:
   m_ObjectHideFlags: 1
