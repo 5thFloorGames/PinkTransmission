@@ -65,7 +65,7 @@ public class MusicManager : MonoBehaviour {
 		}
 	}
 
-	void EffectSwitch(){
-		AkSoundEngine.SetSwitch("Effect", "MixedControls", gameObject);
+	public void EffectSwitch(string effectName){
+		AkSoundEngine.SetState("Effect", effectName);
 	}
 }

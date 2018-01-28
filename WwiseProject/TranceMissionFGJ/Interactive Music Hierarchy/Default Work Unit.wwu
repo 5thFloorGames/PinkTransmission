@@ -1463,6 +1463,76 @@
 												</MusicTrackSequence>
 											</SequenceList>
 										</MusicTrack>
+										<MusicTrack Name="Puff" ID="{E7F14644-E6CF-4651-900A-54171CE4AECD}" ShortID="41855789">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C750C293-BF5F-4D25-8BEF-AD426F29570E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ShroomPuff1" ID="{358E477B-F891-4AC1-A343-6210D29AEBE6}" ShortID="617425295">
+													<Language>SFX</Language>
+													<AudioFile>ShroomPuff1.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="ShroomPuff2" ID="{A3234F33-1F1E-4C1F-B7E6-DB1B14A05C67}" ShortID="869757597">
+													<Language>SFX</Language>
+													<AudioFile>ShroomPuff2.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="ShroomPuff3" ID="{9757002A-AA68-4A5A-A64A-94CC0A9DF81A}" ShortID="875566490">
+													<Language>SFX</Language>
+													<AudioFile>ShroomPuff3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{9B5F3EAD-20F6-4991-9635-F0C9FB96A41C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{E18FB852-584A-447D-A91E-027B9F3481B5}">
+													<ClipList>
+														<MusicClip Name="ShroomPuff1" ID="{51ED0D14-A0B9-4902-90EE-10E7850BEC44}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="1967.08333333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="ShroomPuff1" ID="{358E477B-F891-4AC1-A343-6210D29AEBE6}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{E5563060-E16D-482A-BA95-F6F64543A695}">
+													<ClipList>
+														<MusicClip Name="ShroomPuff2" ID="{E666EEF1-0365-443D-B3A3-F235E6F3C543}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="2369.85416666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="ShroomPuff2" ID="{A3234F33-1F1E-4C1F-B7E6-DB1B14A05C67}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{632893AA-36A7-4B35-83ED-B1A412012F07}">
+													<ClipList>
+														<MusicClip Name="ShroomPuff3" ID="{66906507-EEE4-477A-87B9-67435FB408BD}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="1929.60416666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="ShroomPuff3" ID="{9757002A-AA68-4A5A-A64A-94CC0A9DF81A}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
 									</ChildrenList>
 									<PositioningInfo>
 										<Panner Name="" ID="{97580CCA-56D9-4005-BA19-2508323748D1}"/>
