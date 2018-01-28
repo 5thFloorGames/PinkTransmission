@@ -15,6 +15,6 @@ public class LoadGame : MonoBehaviour {
     {
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadSceneAsync("Game");
     }
 }
