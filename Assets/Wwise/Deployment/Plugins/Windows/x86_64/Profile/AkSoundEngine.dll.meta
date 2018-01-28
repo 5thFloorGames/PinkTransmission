@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7f9dc25ef21c57449b3881a9fc7d42eb
-timeCreated: 1517090058
+timeCreated: 1517145648
 licenseType: Free
 PluginImporter:
   externalObjects: {}
@@ -92,7 +92,7 @@ PluginImporter:
   - first:
       Standalone: Win64
     second:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: AnyCPU
   userData: 
