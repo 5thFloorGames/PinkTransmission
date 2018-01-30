@@ -25,8 +25,11 @@ public class ScoreManager : MonoBehaviour {
     private void Start()
     {
         Instance = this;
-        fawnBeatAnimator = fawnTargetTransform.GetComponentInParent<BeatAnimator>();
-        shroomBeatAnimator = shroomTargetTransform.GetComponentInParent<BeatAnimator>();
+
+        if(!fawnBeatAnimator)
+            fawnBeatAnimator = fawnTargetTransform.GetComponentInParent<BeatAnimator>();
+        if(!shroomBeatAnimator)
+            shroomBeatAnimator = shroomTargetTransform.GetComponentInParent<BeatAnimator>();
     }
 
     private void FixedUpdate()

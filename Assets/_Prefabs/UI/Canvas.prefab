@@ -880,8 +880,8 @@ MonoBehaviour:
     type: 2}
   scoreTextPrefab: {fileID: 114876190268330664, guid: 4157f7f783ecfc2479a722bfbfb758f1,
     type: 2}
-  fawnBeatAnimator: {fileID: 0}
-  shroomBeatAnimator: {fileID: 0}
+  fawnBeatAnimator: {fileID: 114600215495497886}
+  shroomBeatAnimator: {fileID: 114730295679751288}
   maxScore: 200
   fawnWinScreen: {fileID: 1990885289561734}
   shroomWinScreen: {fileID: 1251545677078946}
