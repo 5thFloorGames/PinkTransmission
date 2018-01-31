@@ -8,7 +8,7 @@ public class LoadGame : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        StartCoroutine(Load(2.0f));
+        StartCoroutine(Load(1.0f));
 	}
 	
     private IEnumerator Load(float delay)

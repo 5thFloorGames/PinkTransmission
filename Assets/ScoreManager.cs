@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour {
                 delay = 0;
                 end = false;
                 preend = false;
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadSceneAsync("Dummy");
                 return;
             }
             return;

@@ -38,10 +38,20 @@ public class BeatAnimator : MonoBehaviour {
         MusicManager.OnBeat -= CheckTime;
     }
 
+    public float Ratio
+    {
+        get { return (Time.time - previousTime) / animationTime; }
+    }
+
+    public bool CloseToBeat()
+    {
+        var ratio = Ratio;
+        return (counter % coeff == 0 && ratio >= 0.65f) || (counter % coeff == coeff - 1 && ratio <= 0.35f);
+    }
+
     private void CheckTime()
     {
-        var delta = Time.time - previousTime;
-        var ratio = delta / animationTime;
+        var ratio = Ratio;
         if (ratio >= 0.5f && ratio <= 2.0f)
         {
             if (counter++ % coeff == 0)

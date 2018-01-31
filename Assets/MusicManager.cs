@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MusicManager : MonoBehaviour {
 
@@ -9,14 +10,15 @@ public class MusicManager : MonoBehaviour {
 	public delegate void BeatAction();
 	public static event BeatAction OnBeat;
 	private float lastBeat = 0;
-
 	private int beatCounter = 0;
 
 	void Awake()
 	{
 		Instance = this;
+        lastBeat = 0;
+        beatCounter = 0;
 	}
-
+    
 	// Use this for initialization
 	void Start () {
 		AkSoundEngine.PostEvent("PlayPlaceholderLoop", gameObject, 0x0100, Beat, null);		
@@ -43,6 +45,7 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	public bool CloseToHalfBar(){
+
 		if(beatCounter % 2 == 1 && Time.time - lastBeat < 0.2){
 			return true;
 		}
@@ -61,7 +64,9 @@ public class MusicManager : MonoBehaviour {
 			//print(Time.time - lastBeat);
 			lastBeat = Time.time;
 			beatCounter++;
-			OnBeat();
+
+            if(OnBeat != null)
+			    OnBeat();
 		}
 	}
 

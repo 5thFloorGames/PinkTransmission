@@ -13,18 +13,19 @@ public class ShroomMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        i = 0;
         music = FindObjectOfType<MusicManager>();
-        MusicManager.OnBeat += Move;
+        MusicManager.OnBeat += Jump;
         animator = GetComponentInChildren<Animator>();
     }
 
     void OnDestroy()
     {
-        MusicManager.OnBeat -= Move;
+        MusicManager.OnBeat -= Jump;
     }
 
     private void CheckDirection(MoveDirection d){
-        if(music.CloseToHalfBar()){
+        if(/*music.CloseToHalfBar()*/ScoreManager.Instance.shroomBeatAnimator.CloseToBeat()){
             GenerateBoard.Instance.MoveShroom(d);
             StartCoroutine(ResetMove());
         } else {
@@ -47,7 +48,8 @@ public class ShroomMovement : MonoBehaviour {
                 CheckDirection(MoveDirection.Left);
             }
             if(Input.GetKeyDown(KeyCode.Space)){
-                if(music.CloseToHalfBar()){
+                if(/*music.CloseToHalfBar()*/ScoreManager.Instance.shroomBeatAnimator.CloseToBeat())
+                {
                     GenerateBoard.Instance.SpawnShroom();
                     ShroomStinger();
                     StartCoroutine(ResetMove());
@@ -64,7 +66,7 @@ public class ShroomMovement : MonoBehaviour {
 		jumpedAlready = false;
 	}
 
-    private void Move()
+    private void Jump()
     {
         if (i++ % 2 == 0)
         {
